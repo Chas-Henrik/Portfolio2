@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <title>Henrik's Portfolio Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="flex__nav">
+            <aside class="flex__logo">
+                <p class="gradient__text gradient-logo paragraph__size--logo"><span
+                        class="logo__font">{007}</span><br>henriksuurik</p>
+            </aside>
+            <input id="input__checkbox" type="checkbox">
+            <nav class="flex--menu paragraph__size--default-bold">
+                <ul class="menu__list menu__list--buttons">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-tech-stack">Tech Stack</a></li>
+                    <li><a href="#section-projects">Projects</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+                <ul class="menu__list menu__list--icons">
+                    <li><a href="https://github.com/" target="_blank"><img class="icon__size--menu"
+                                src="./svg/GitHubHeader.svg" alt="GitHub Icon"></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank"><img class="icon__size--menu"
+                                src="./svg/LinkedInHeader.svg" alt="LinkedIn Icon"></a></li>
+                    <li><a href="https://x.com/home" target="_blank"><img class="icon__size--menu"
+                                src="./svg/TwitterHeader.svg" alt="Twitter Icon"></a></li>
+                </ul>
+            </nav>
+            <label class="label__size--hamburger label__cursor--hamburger image__color--invert" for="input__checkbox">
+                <img class="icon__display--hamburger icon__size--hamburger icon__position--hamburger"
+                    src="./svg/hamburger-menu.svg" alt="Hamburger Menu Icon">
+            </label>
+        </nav>
+    </header>
+    <main>
+        <!-- Introduction (Home) -->
+        <section id="home" class="flex-row-wrap flex-row-wrap__gap--introduction">
+            <h2 class="heading--title heading__size--title">Hi👋,<br>
+                My name is<br>
+                <span class="gradient__text gradient-name">Henrik Suurik</span><br>
+                I build things for web
+            </h2>
+            <figure
+                class="flex-container flex-container__border-radius--circle flex-container__size--medium gradient-border">
+                <img class="image--profile" src="./img/Henrik.jpg" alt="Henrik Image">
+            </figure>
+        </section>
+        <!-- About Section -->
+        <section id="section-about">
+            <h2 class="heading__margin--vertical heading__size--default">About Me</h2>
+            <p class="paragraph__size--default-small">The Generator App is an online tool that helps you to export
+                ready-made templates ready to work as your future website. It helps you to combine slides, panels and
+                other components and export it as a set of static files: HTML/CSS/JS.</p>
+            <h2 class="heading__margin--vertical heading__size--default">Work Experience</h2>
+            <article class="grid grid--experience">
+                <h2 class="grid__item--role paragraph__size--grid-role">Junior Web Developer</h2>
+                <p class="grid__item--type paragraph__size--grid-type">Full-Time</p>
+                <figure class="grid__figure grid__item--provider"><img src="./svg/office-building.svg"
+                        alt="Office Building Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Dr. Rajkumar's Learning App</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--date"><img src="./svg/calender.svg" alt="Calender Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Sep 2021 - Dec 2021</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--location"><img src="./svg/location.svg" alt="Location Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Bengaluru</figcaption>
+                </figure>
+            </article>
+            <article class="grid grid--experience">
+                <h2 class="grid__item--role paragraph__size--grid-role">Web Development Intern</h2>
+                <p class="grid__item--type paragraph__size--grid-type">Internship</p>
+                <figure class="grid__figure grid__item--provider"><img src="./svg/office-building.svg"
+                        alt="Office Building Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">IonPixelz Web Solutions</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--date"><img src="./svg/calender.svg" alt="Calender Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Sep 2021 - Dec 2021</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--location"><img src="./svg/location.svg" alt="Location Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Bengaluru</figcaption>
+                </figure>
+            </article>
+            <article class="grid grid--experience">
+                <h2 class="grid__item--role paragraph__size--grid-role">SEO / SEM Specialist</h2>
+                <p class="grid__item--type paragraph__size--grid-type">Internship</p>
+                <figure class="grid__figure grid__item--provider"><img src="./svg/office-building.svg"
+                        alt="Office Building Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">HAAPS</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--date"><img src="./svg/calender.svg" alt="Calender Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Sep 2021 - Dec 2021</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--location"><img src="./svg/location.svg" alt="Location Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Bengaluru</figcaption>
+                </figure>
+            </article>
+            <h2 class="heading__margin--vertical heading__size--default">Education</h2>
+            <article class="grid grid--education">
+                <h2 class="grid__item--role paragraph__size--grid-role">Frontend Development</h2>
+                <p class="grid__item--type paragraph__size--grid-type">Full-Time</p>
+                <figure class="grid__figure grid__item--provider"><img src="./svg/office-building.svg"
+                        alt="Office Building Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Udemy, YouTube, Google, Medium</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--date"><img src="./svg/calender.svg" alt="Calender Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Jan 2022 - Present</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--location"><img src="./svg/location.svg" alt="Location Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Online</figcaption>
+                </figure>
+            </article>
+            <article class="grid grid--education">
+                <h2 class="grid__item--role paragraph__size--grid-role">Bachelor in Electronics and Communications</h2>
+                <p class="grid__item--type paragraph__size--grid-type">Full-Time</p>
+                <figure class="grid__figure grid__item--provider"><img src="./svg/office-building.svg"
+                        alt="Office Building Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Bangalore Institute of Technology</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--date"><img src="./svg/calender.svg" alt="Calender Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Aug 2015 - Dec 2020</figcaption>
+                </figure>
+                <figure class="grid__figure grid__item--location"><img src="./svg/location.svg" alt="Location Icon">
+                    <figcaption class="paragraph__size--grid-fig-caption">Bengaluru</figcaption>
+                </figure>
+            </article>
+        </section>
+        <!-- Tech Stack Section -->
+        <section id="section-tech-stack">
+            <h2 class="heading__margin--vertical heading__size--default">My Tech Stack</h2>
+            <p class="paragraph__size--default">Technologies I've been working with recently</p>
+            <div class="flex-row-wrap flex-row-wrap__gap--tech-stack flex-row-wrap__margin--tech-stack">
+                <figure><img class="image__size--tech-stack" src="./svg/HTML5.svg" alt="HTML5 Image"></figure>
+                <figure><img class="image__size--tech-stack" src="./svg/CSS3.svg" alt="CSS3 Image"></figure>
+                <figure><img class="image__size--tech-stack" src="./svg/JavaScript.svg" alt="JavaScript Image">
+                </figure>
+                <figure><img class="image__size--tech-stack" src="./svg/React.svg" alt="React Image"></figure>
+                <figure><img class="image__size--tech-stack" src="./svg/Redux.svg" alt="Redux Image"></figure>
+                <figure><img class="image__size--tech-stack" src="./svg/Bootstrap.svg" alt="Bootstrap Image">
+                </figure>
+                <figure><img class="image__size--tech-stack" src="./svg/TailwindCSS.svg" alt="TailwindCSS Image">
+                </figure>
+                <figure><img class="image__size--tech-stack" src="./svg/Sass.svg" alt="Sass Image"></figure>
+                <figure><img class="block__display--tablet-desktop image__size--tech-stack" src="./svg/Git.svg"
+                        alt="Git Image"></figure>
+                <picture class="block__display--tablet-desktop">
+                    <source srcset="./svg/Greensock.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/Greensock-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/Greensock.svg" alt="Greensock Image">
+                </picture>
+                <figure><img class="block__display--tablet-desktop image__size--tech-stack" src="./svg/VSCode.svg"
+                        alt="VSCode Image"></figure>
+                <picture class="block__display--tablet-desktop">
+                    <source srcset="./svg/GitHub.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/GitHub-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/GitHub.svg" alt="GitHub Image">
+                </picture>
+            </div>
+            <h2 class="heading__size--default block__display--mobile">Tools</h2>
+            <div
+                class="flex__display--mobile flex-row-wrap flex-row-wrap__gap--tech-stack flex-row-wrap__margin--tech-stack">
+                <figure><img class="block__display--mobile image__size--tech-stack" src="./svg/VSCode.svg"
+                        alt="VSCode Image"></figure>
+                <figure><img class="block__display--mobile image__size--tech-stack" src="./svg/Git.svg" alt="Git Image">
+                </figure>
+                <picture class="block__display--mobile">
+                    <source srcset="./svg/GitHub.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/GitHub-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/GitHub.svg" alt="GitHub Image">
+                </picture>
+                <figure><img class="block__display--mobile image__size--tech-stack" src="./svg/Figma.svg"
+                        alt="Figma Image"></figure>
+                <figure><img class="block__display--mobile image__size--tech-stack" src="./svg/NPM.svg" alt="NPM Image">
+                </figure>
+                <figure><img class="block__display--mobile image__size--tech-stack" src="./svg/Postman.svg"
+                        alt="Postman Image"></figure>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="section-projects">
+            <h2 class="heading__margin--vertical heading__size--default">Projects</h2>
+            <p class="paragraph__size--default">Things I've built so far</p>
+            <div class="flex-row-wrap flex-row-wrap__gap--project-card flex-row-wrap__margin--project-card">
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project1.png" alt="Project1 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project2.png" alt="Project2 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project3.png" alt="Project3 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project4.png" alt="Project4 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project5.png" alt="Project5 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__figure"><img class="card__image" src="./img/Project6.png" alt="Project6 Image">
+                    </figure>
+                    <div class="card__content">
+                        <h2 class="card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="paragraph__size--footnote-span">HTML, JavaScript, SASS, React</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://app.netlify.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="paragraph__size--footer-link" href="https://github.com/" target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="section-contact">
+            <h2 class="contact-dummy-heading">Contact Information</h2>
+            <address class="container--contact">
+                <p
+                    class="block__display--mobile-tablet paragraph__size--contact-mobile-small-bold contact-questions contact-questions__margin">
+                    For any questions please drop a mail</p>
+                <p
+                    class="block__display--mobile-tablet gradient__text paragraph__size--contact-mobile gradient-contact">
+                    hi@example.com</p>
+                <p class="block__display--mobile-tablet paragraph__size--contact-small">or</p>
+                <p
+                    class="block__display--mobile-tablet gradient__text paragraph__size--contact-mobile gradient-contact">
+                    +91&ensp;12345&ensp;67890</p>
+                <p class="block__display--desktop paragraph__size--contact-desktop contact-questions">For any questions
+                    please mail us:</p>
+                <p class="block__display--desktop gradient__text gradient-contact paragraph__size--contact-desktop">
+                    hi@pavanmg.in</p>
+            </address>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <p class="paragraph__size--default-small">Designed and built by <span
+                    class="gradient__text gradient-name">Henrik Suurik</span> with <span
+                    class="gradient__text gradient-love">Love</span> & <span
+                    class="gradient__text gradient-coffee">Coffee</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

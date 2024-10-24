@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Fonts*/
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "DM Sans", sans-serif;
+    --logo-font: "Noto Sans Mono", monospace; 
+
+    /* Theme colors */
+    --background-light-mode: #FFFFFF;
+    --background-dark-mode: #191919;
+    --background-card-dark-mode: #363636;
+    --solid-heading-light-mode: #42446E;
+    --solid-heading-dark-mode: #CCCCCC;
+    --dark-content-light-mode: #666666;
+    --light-content-dark-mode: #A7A7A7;
+    --very-light-content-dark-mode: #D9D9D9;
+    --black-content-light-mode: #000000;
+    --black-content-dark-mode: #FFFFFF;
+    --box-shadow-light-mode: 2px 2px 100px 0px #00000033;
+    --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
+    --box-shadow-dark-mode: 2px 2px 100px 0px #FFFFFF33;
+    --box-shadow-hover-dark-mode: 2px 2px 2px 0px #FFFFFF33;
+    --contact-light-mode: #1E0E62;
+    --contact-dark-mode: #D9D9D9;
+    --border-color-light-mode: #EBEAED;
+    --border-color-dark-mode: #42446E;
+    --button-text: #018C0F;
+    --button-success: #D7FFE0;
+    --menu-color-hover: #54C4F8;
+    --border-color-card: rgb(77, 188, 224);
+
+    /* gradient colors */
+    --gradient-logo-start: #13B0F5;
+    --gradient-logo-end: #CA24B4;
+    --gradient-name-start: #25A5FA;
+    --gradient-name-end: #A74AFD;
+    --gradient-border-start: #E70FAA;
+    --gradient-border-end: #00C0FD;
+    --gradient-contact-start: #13B0F5;
+    --gradient-contact-end: #E70FAA;
+    --gradient-love-start: #9C27BA;
+    --gradient-love-end: #A816B4;
+    --gradient-coffee-start: #B106B1;
+    --gradient-coffee-end: #C500A8;
+
+}
+
+.gradient-logo {
+    background: var(--gradient-logo-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-logo-start), var(--gradient-logo-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-logo-start), var(--gradient-logo-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-name {
+    background: var(--gradient-name-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-border {
+    background: var(--gradient-border-start);
+    background: -webkit-linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-contact {
+    background: var(--gradient-contact-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-contact-start) -2.06%, var(--gradient-contact-end) 100%); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-contact-start) -2.06%, var(--gradient-contact-end) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-love {
+    background: var(--gradient-love-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-love-start), var(--gradient-love-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-love-start), var(--gradient-love-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-coffee {
+    background: var(--gradient-coffee-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-coffee-start), var(--gradient-coffee-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-coffee-start), var(--gradient-coffee-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text-shadow-active {
+    color: var(--gradient-name-end) !important;
+    text-shadow: 1px 1px 2px var(--gradient-name-start), 0 0 1em var(--gradient-name-end), 0 0 0.2em var(--gradient-name-end);
+}
