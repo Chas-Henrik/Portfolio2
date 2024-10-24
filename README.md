@@ -1,13 +1,13 @@
-# Portfolio page from design sketch
+# Personal portfolio page
 
-This is a multi-page, 'Portfolio Site' consisting of 5 pages:
+This is a single-page, 'Portfolio Site' consisting of 5 sections:
 - Home
 - About
 - Tech Stack
 - Projects
 - Contact
 
-The design is a 'Mobile First' responsive design that also support Tablet's and Desktop's. Breakpoints have been set at 768px for Tablet's & Small Desktop's, and 1024px for Medium & Large Desktop's.  
+The design is a 'Mobile First' responsive design that also support Tablet's and Desktop's. Breakpoints have been set at 600px for Tablet's & Small Desktop's, and 1024px for Medium & Large Desktop's.  
   
 Two additional content driven breakpoints have been set at 815px and 1350px:  
 - The 815px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint.  
