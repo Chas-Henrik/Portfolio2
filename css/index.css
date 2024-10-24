@@ -216,11 +216,6 @@ section {
     letter-spacing: -1px;
 }
 
-.paragraph__size--logo {
-    font-weight: 800;
-    font-size: 2.3rem;
-}
-
 /*** Header ***/
 
 .flex__nav {
@@ -230,7 +225,7 @@ section {
     text-align: center;
 }
 
-.flex__logo {
+.flex__logo--chas {
     flex: 1 1 15%;
     display: flex;
     align-items: flex-start;
@@ -239,11 +234,9 @@ section {
     margin-left: 0.5rem;
 }
 
-.logo__font {
-    font-family: var(--logo-font);
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+.image__logo--chas {
+    width: 6rem;
+    height: auto;
 }
 
 #input__checkbox {

@@ -8,7 +8,6 @@
     /* Fonts*/
     --primary-font: "Poppins", sans-serif;
     --secondary-font: "DM Sans", sans-serif;
-    --logo-font: "Noto Sans Mono", monospace; 
 
     /* Theme colors */
     --background-light-mode: #FFFFFF;
@@ -35,8 +34,6 @@
     --border-color-card: rgb(77, 188, 224);
 
     /* gradient colors */
-    --gradient-logo-start: #13B0F5;
-    --gradient-logo-end: #CA24B4;
     --gradient-name-start: #25A5FA;
     --gradient-name-end: #A74AFD;
     --gradient-border-start: #E70FAA;
@@ -48,12 +45,6 @@
     --gradient-coffee-start: #B106B1;
     --gradient-coffee-end: #C500A8;
 
-}
-
-.gradient-logo {
-    background: var(--gradient-logo-start);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--gradient-logo-start), var(--gradient-logo-end)); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--gradient-logo-start), var(--gradient-logo-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .gradient-name {
