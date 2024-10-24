@@ -642,16 +642,6 @@ section {
         order: 4;
     }
 
-    /* We must explicitly remove the location grid item, so the grid doesn't put it in implicitly */
-    .grid--education > .grid__item--location {
-        display: none;
-    }
-    
-    .grid--education {
-        grid-template-areas: "role type"
-        "provider date";
-    }
-
     /*** General Selectors ***/
 
     .block__display--mobile {
