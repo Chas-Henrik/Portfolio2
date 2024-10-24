@@ -6,16 +6,19 @@
             "provider": "Evidente ES East AB",
             "date": "2019 - 2024",
             "location": "Stockholm, Sweden",
-            "description": ["Consultant (prevented to disclose any details by contract)"],
-            "technologies": ["ARM assembler", "C/C++/C++11/C++17", "Python 3.X & Tcl/Tk", "Embedded Linux", "C#/.Net", "Windows Forms", "WPF", 
-            "Xamarin", "eCos operating system", "Eclipse", "ARM926EJ-S", "STM32 NUCLEO-F722ZE", 
-            "Developed secondary bootloaders for the ERTEC200P-2 evaluation board", 
-            "Ported the NUCLEO-F722ZE Secondary Bootloader to the customers F723ZC board.", "NUCLEO-F722ZE", 
-            "Flash burner for S29WS512PCypressSemiconductor NOR flash memory.", "STM32 CubeMX, STM32 CubeIDE, STM32 CubeProgrammer", "U-boot", 
-            "Buildroot", "Scons", "CMake", "Make", "GCC", "Bash", "Git", "GitLab", "Jenkins", "Docker", "Visual Studio Code", "Vagrant", 
-            "Codescape’s MIPS-MTI gnu-g++ Linux crosscompiler version 9.3.0", "Ported SW from x86-64 to MIPS-MTI (32bit, littleendian)", 
-            "Board bring up", "Upgraded Linux kernel from 4.5.3 to 4.9.249", "Linux kernel module development", "Linux application development", 
-            "MQTT", "Jira"]
+            "description": ["Consultant", 
+            "Developed secondary bootloaders for the ERTEC200P-2 evaluation board",
+            "Ported the NUCLEO-F722ZE Secondary Bootloader to the customers F723ZC board.",
+            "Flash burner for S29WS512PCypressSemiconductor NOR flash memory.",
+            "Ported SW from x86-64 to MIPS-MTI (32bit, littleendian)",
+            "Upgraded Linux kernel from 4.5.3 to 4.9.249", 
+            "Linux kernel module development", 
+            "Linux application development"],
+            "technologies": ["ARM assembler", "C", "C++", "C++11", "C++17", "Python 3.X", "Tcl/Tk", "Embedded Linux", "C#/.Net", "Windows Forms",
+            "WPF", "Xamarin", "eCos operating system", "Eclipse", "ARM926EJ-S", "STM32 NUCLEO-F722ZE", "ERTEC200P-2", "F723ZC board"
+            "S29WS512PCypressSemiconductor NOR flash memory", "STM32 CubeMX", "STM32 CubeIDE", "STM32 CubeProgrammer", 
+            "U-boot", "Buildroot", "Scons", "CMake", "Make", "GCC", "Bash", "Git", "GitLab", "Jenkins", "Docker", "Visual Studio Code", "Vagrant", 
+            "Codescape's MIPS-MTI gnu-g++ Linux crosscompiler version 9.3.0", "x86-64", "MIPS-MTI (32bit, littleendian)", "Board bring up", "MQTT", "Jira"]
         },
         {
             "role": "System/Software Designer",
@@ -23,7 +26,7 @@
             "provider": "Plockmatic International AB",
             "date": "2017-2019",
             "location": "Stockholm, Sweden",
-            "description": ["Responsible for the SW development of the Booklet Maker & Internal Feeder module (see https://plockmaticgroup.com/plockmatic/product/pbm5000-series/", 
+            "description": ["Responsible for the SW development of the Booklet Maker & Internal Feeder module (see https://plockmaticgroup.com/plockmatic/product/pbm5000-series/)", 
             "Responsible for the SW System Design of NorthStar (PBM5000 Series) SW modules (see https://plockmaticgroup.com/plockmatic/product/pbm5000-series/)"],
             "technologies": ["C++", "Bare-Metal", "STM32F105VBT6", "SVN"]
         },
