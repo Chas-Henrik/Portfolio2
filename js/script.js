@@ -49,7 +49,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 break;
             case 'type':
                 const p = document.createElement("p");
-                p.classList.add("grid__item--type", "paragraph__size--grid-type");
+                p.classList.add("grid__item--type", "paragraph__size--grid-fig-caption");
                 p.innerText = workExperienceObj[key];
                 gridContainerElement.appendChild(p);
                 break;

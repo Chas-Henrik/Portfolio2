@@ -174,12 +174,6 @@ section {
     line-height: 2.6rem;
 }
 
-.paragraph__size--grid-type {
-    font-weight: 600;
-    font-size: 0.9rem;
-    line-height: 2.6rem;
-}
-
 .paragraph__size--contact {
     font-weight: 600;
     font-size: 2rem;
@@ -372,13 +366,7 @@ section {
 
 .grid__item--type {
     grid-area: type;
-    width: 8.4rem;
-    height: 2.4rem;
-    border-radius: 10rem;
-    text-align: center;
     justify-self: right;
-    color: var(--details-experience);
-    background-color: var(--background-button-success);
 }
 
 .grid__figure > * {
@@ -421,6 +409,9 @@ section {
 
 .grid__item--clickable {
     cursor: pointer;
+    width: fit-content;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .grid__ul--technology {
@@ -438,9 +429,8 @@ section {
     border-radius: 0.5rem;
     text-align: center;
     justify-self: left;
-    color: var(--button-text);
-    background-color: var(--background-details-experience);
 }
+
 /*** Tech Stack Section ***/
 
 .flex-row-wrap__gap--tech-stack {
@@ -690,6 +680,9 @@ section {
         order: 7;
     }
 
+    .grid__item--location {
+        justify-self: center;
+    }
 
     /*** General Selectors ***/
 
@@ -864,6 +857,16 @@ section {
         color: var(--dark-content-light-mode);
     }
 
+    .grid__item--clickable {
+        color: var(--details-technology);
+        background-color: var(--background-details-technology);
+    }
+
+    .grid__ul--technology > li {
+        color: var(--button-text);
+        background-color: var(--background-details-technology);
+    }
+
     .card {
         background-color: var(--background-light-mode);
     }
@@ -958,6 +961,16 @@ section {
 
     .grid__item--role {
         color: var(--solid-heading-dark-mode);
+    }
+
+    .grid__item--clickable {
+        color: var(--details-technology);
+        background-color: var(--background-details-technology-dark-mode);
+    }
+
+    .grid__ul--technology > li {
+        color: var(--button-text);
+        background-color: var(--background-details-technology-dark-mode);
     }
 
     .card {

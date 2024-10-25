@@ -31,8 +31,9 @@
     --border-color-dark-mode: #42446E;
     --button-text: #018C0F;
     --background-button-success: #D7FFE0;
-    --details-experience: #018C0F;
-    --background-details-experience: #f1f0f0;
+    --details-technology: #018C0F;
+    --background-details-technology: #F1F0F0;
+    --background-details-technology-dark-mode: #CCCCCC;
     --menu-color-hover: #54C4F8;
     --border-color-card: rgb(77, 188, 224);
 
