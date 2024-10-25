@@ -77,9 +77,9 @@ section {
 }
 
 .gradient__text {
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     border: 1px solid transparent; /* Workaround to alleviate the Google Chrome print bug */
 }
 
@@ -384,7 +384,7 @@ section {
         "provider date"
         "location location"
         "description description"
-        "experience experience";
+        "technology technology";
     row-gap: 0;
     padding-bottom: 1.8rem;
     margin: 2rem 0;
@@ -427,35 +427,33 @@ section {
 
 .grid__item--location {
     grid-area: location;
-    width: 100%;
-    text-align: center;
 }
 
 .grid__item--description {
     grid-area: description;
 }
 
-.grid__item--experience {
-    grid-area: experience;
+.grid__item--technology {
+    grid-area: technology;
 }
 
 .grid__item--details {
     width: 100%;
     padding: 0.5rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 .grid__item--clickable {
     cursor: pointer;
 }
 
-.grid__ul--experiences {
+.grid__ul--technology {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.grid__ul--experiences > li {
+.grid__ul--technology > li {
     display: inline-block;
     width: fit-content;
     height: fit-content;
@@ -670,7 +668,7 @@ section {
         grid-template-areas: "role role type"
             "provider location date"
             "description description description"
-            "experience experience experience";
+            "technology technology technology";
     }
 
     .grid--experience :nth-child(1) {
