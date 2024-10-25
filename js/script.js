@@ -1,4 +1,5 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
+import { Octokit, App } from "https://esm.sh/octokit";
 
 // ***Populate grids from JSON file***
 
@@ -97,3 +98,23 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
     }
 }
 
+// ***Populate projects from GitHub***
+
+// Authenticate on GitHub
+// Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+const GITHUB_ACCESS_TOKEN = "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";
+const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
+
+
+// Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
+const {
+    data: { login },
+} = await octokit.rest.users.getAuthenticated();
+console.log("Hello, %s", login);
+
+
+await octokit.request("GET /repos/{owner}/{repo}/issues", {
+    owner: "Chas-Henrik",
+    repo: "Portfolio",
+    per_page: 2
+});
