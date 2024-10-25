@@ -28,17 +28,17 @@ async function populateGrid() {
 // Populate grid container
 function populateGridContainer(workExperienceObjs, parentElementId) {
     const workExperienceElement = document.getElementById(parentElementId);
-    workExperienceObjs.forEach((obj) => {
+    for(const obj in workExperienceObjs){
         const article = document.createElement('article');
         article.classList.add('grid', 'grid--experience');
         workExperienceElement.appendChild(article);
-        populateGridElements(obj, article);
-    });
+        populateGridElements(workExperienceObjs[obj], article);
+    };
 }
 
 // Populate grid elements
 function populateGridElements(workExperienceObj, gridContainerElement) {
-    for(key in workExperienceObj) {
+    for(const key in workExperienceObj) {
         switch(key) {
             case 'role':
                 const h2 = document.createElement("h2");
