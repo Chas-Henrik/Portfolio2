@@ -1,5 +1,6 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
 
+// ***Populate grids from JSON file***
 
 populateGrid();
 
@@ -16,7 +17,7 @@ async function fetchJSONData(file) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData('./json/cv.json');
+        const dataObj = await fetchJSONData('./../json/cv.json');
         populateGridContainer(dataObj["workExperience"], 'grid-work-experience');
         populateGridContainer(dataObj["education"], 'grid-education');
     } catch (error) {
@@ -37,7 +38,6 @@ function populateGridContainer(workExperienceObjs, parentElementId) {
 
 // Populate grid elements
 function populateGridElements(workExperienceObj, gridContainerElement) {
-    console.log("No4", workExperienceObj);
     for(key in workExperienceObj) {
         switch(key) {
             case 'role':
