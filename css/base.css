@@ -40,8 +40,6 @@
     --gradient-name-end: #A74AFD;
     --gradient-border-start: #E70FAA;
     --gradient-border-end: #00C0FD;
-    --gradient-contact-start: #13B0F5;
-    --gradient-contact-end: #E70FAA;
     --gradient-love-start: #9C27BA;
     --gradient-love-end: #A816B4;
     --gradient-coffee-start: #B106B1;
@@ -59,12 +57,6 @@
     background: var(--gradient-border-start);
     background: -webkit-linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.gradient-contact {
-    background: var(--gradient-contact-start);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--gradient-contact-start) -2.06%, var(--gradient-contact-end) 100%); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--gradient-contact-start) -2.06%, var(--gradient-contact-end) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .gradient-love {
