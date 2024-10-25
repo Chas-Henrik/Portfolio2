@@ -15,7 +15,7 @@
             "Linux kernel module development", 
             "Linux application development"],
             "technologies": ["ARM assembler", "C", "C++", "C++11", "C++17", "Python 3.X", "Tcl/Tk", "Embedded Linux", "C#/.Net", "Windows Forms",
-            "WPF", "Xamarin", "eCos operating system", "Eclipse", "ARM926EJ-S", "STM32 NUCLEO-F722ZE", "ERTEC200P-2", "F723ZC board"
+            "WPF", "Xamarin", "eCos operating system", "Eclipse", "ARM926EJ-S", "STM32 NUCLEO-F722ZE", "ERTEC200P-2", "F723ZC board",
             "S29WS512PCypressSemiconductor NOR flash memory", "STM32 CubeMX", "STM32 CubeIDE", "STM32 CubeProgrammer", 
             "U-boot", "Buildroot", "Scons", "CMake", "Make", "GCC", "Bash", "Git", "GitLab", "Jenkins", "Docker", "Visual Studio Code", "Vagrant", 
             "Codescape's MIPS-MTI gnu-g++ Linux crosscompiler version 9.3.0", "x86-64", "MIPS-MTI (32bit, littleendian)", "Board bring up", "MQTT", "Jira"]
