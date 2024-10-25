@@ -30,7 +30,6 @@ The site is published on Netlify (see hyperlink below):
 2. Gradients don't render properly when printed with Safari on iPad and iPhone.
 
 *Notes:*
-1. The 'Live Preview', GitHub, Twitter & LinkedIn icons have not been linked to any profile at this time.
 
 *Deviations from Figma:*
 1. The Tech Stack icons have been scaled to a unified width of 11rem (while keeping their aspect ratio). This is to align them perfectly underneath each other when the flex-box wraps, and to resize them as part of a responsive design.
