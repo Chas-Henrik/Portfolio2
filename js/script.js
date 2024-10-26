@@ -24,7 +24,7 @@ populateGrid();
 // Fetch JSON file
 async function fetchJSONData(file) {
     try {
-        const response = await fetch(URL(file, "https://chas-henrik.github.io/Portfolio2/"));
+        const response = await fetch(new URL(file, "https://chas-henrik.github.io/Portfolio2/"));
         return await response.json();
     } catch (error) {
         console.error("Error fetching JSON data:", error);
