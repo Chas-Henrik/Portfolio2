@@ -2,9 +2,9 @@
 import { Octokit, App } from "https://esm.sh/octokit";
 
 
-// *** Update scroll-padding-top after DOM is loaded & when window is resized ***
+// *** Update scroll-padding-top the whole page has loaded & when window is resized ***
 
-// Initialize scroll-padding-top after DOM is loaded
+// Initialize scroll-padding-top the whole page has loaded
 window.addEventListener("load", updateScrollPaddingTop);
 
 // We use globalThis instead of window because globalThis works in both Node.js and browsers, instead of global or window.
@@ -38,13 +38,26 @@ function updateProgressBar(progress) {
     container.style.background = `conic-gradient(#0f0bfc ${progress * 3.6}deg, #ddf5fc 0deg)`;
 }
 
+// *** Connect to GitHub & populate page ***
 
-// ***Populate page from JSON data***
+await main();
 
-// Authenticate on GitHub
-// Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+async function main() {
+    try {
+        updateProgressControlDisplay("flex");
+        updateProgressAction("Populating page with JSON data...");
+        updateProgressBar(0);
+        const octokit = await connectToGitHub(true);
+        await populatePage(octokit);
+    } catch (error) {
+        console.error("Error:", error);
+    } finally {
+        updateProgressControlDisplay("none");
+    }
+}
 
-// Fetch JSON data
+// ***Connect to GitHub***
+
 async function fetchJSONData(url) {
     try {
         const response = await fetch(url);
@@ -56,8 +69,9 @@ async function fetchJSONData(url) {
 
 async function connectToGitHub(authenticate) {
     if(authenticate){
-        const projectData = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
-        const GITHUB_ACCESS_TOKEN = projectData.accessToken;
+        // Authenticate on GitHub
+        // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+        const GITHUB_ACCESS_TOKEN = "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";
         const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
         const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
         console.log("Hello, %s", login);
@@ -67,32 +81,13 @@ async function connectToGitHub(authenticate) {
     }
 }
 
-await main();
-
-// *** Fetch selected repositories & populate project cards ***
-
-async function main() {
-    try {
-        const octokit = await connectToGitHub(false);
-        await populatePage(octokit);
-    } catch (error) {
-        console.error("Error fetching JSON data:", error);
-    }
-}
+// *** Populate Page ***
 
 async function populatePage(octokit) {
-    updateProgressControlDisplay("flex");
-    updateProgressAction("Populating page with JSON data...");
-    updateProgressBar(0);
-    try {
-        await populateGrid();
-        await populateProjectCards(octokit);
-    } catch (error) {
-        console.error("Error fetching JSON data:", error);
-    } finally {
-        updateProgressControlDisplay("none");
-    }
+    await populateGrid();
+    await populateProjectCards(octokit);
 }
+
 
 // *** Populate grids from JSON file ***
 
@@ -180,6 +175,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
     }
 }
 
+
 // *** Populate projects from GitHub ***
 
 async function populateProjectCards(octokit) {
@@ -187,6 +183,7 @@ async function populateProjectCards(octokit) {
     const repoObjs = await getRepos(octokit, repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
+    //const projectData = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
