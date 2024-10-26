@@ -34,9 +34,9 @@ async function fetchJSONData(file) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData('./../json/cv.json');
-        populateGridContainer(dataObj["workExperience"], 'grid-work-experience');
-        populateGridContainer(dataObj["education"], 'grid-education');
+        const dataObj = await fetchJSONData("../json/cv.json");
+        populateGridContainer(dataObj["workExperience"], "grid-work-experience");
+        populateGridContainer(dataObj["education"], "grid-education");
     } catch (error) {
         console.error("Unable to read JSON file:", error);
     }
