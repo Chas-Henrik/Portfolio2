@@ -125,6 +125,24 @@ console.log("Hello, %s", login);
 
 await populateProjectCards();
 
+function updateProgressControlDisplay(value) {
+    let progressControl = document.getElementById("progress-control");
+    progressControl.style.display = value;
+}
+
+function updateProgressAction(progress) {
+    let progressAction = document.getElementById("progress-action");
+    progressAction.textContent = progress;
+}
+
+function updateProgressBar(progress) {
+    let container = document.getElementById("progress-container");
+    let progressValue = document.getElementById("progress-value");
+
+    progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
+    container.style.background = `conic-gradient(#0f0bfc ${progress * 3.6}deg, #ddf5fc 0deg)`;
+}
+
 async function populateProjectCards() {
     const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
     const repoObjs = await getRepos(repoNames);
@@ -147,13 +165,18 @@ async function populateProjectCards() {
 
 async function getRepos(repoNames) {
     const repoObjs = [];
-
-    for(const repoName of repoNames) {
+    updateProgressBar(0);
+    updateProgressAction("Loading repos from GitHub...");
+    updateProgressControlDisplay("flex");
+    for(let i=0; i<repoNames.length; i++) {
+        const repoName = repoNames[i];
         const repoObj = await getRepo(repoName);
+        updateProgressBar(100*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
         console.log("repoObj.data.name", repoObj.data.name);
         console.log("repoObj.data.description", repoObj.data.description);
     };
+    updateProgressControlDisplay("none");
 
     return repoObjs;
 }

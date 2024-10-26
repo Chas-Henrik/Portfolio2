@@ -835,6 +835,18 @@ section {
         color: var(--dark-content-light-mode);
     }
 
+    #progress-control {
+        background-color: var(--background-light-mode);
+    }
+
+    #progress-value {
+        background-color: var(--background-light-mode);
+    }
+    
+    #progress-action {
+        color: var(--black-content-light-mode);
+    }
+
     header,
     .flex__nav {
         background-color: var(--background-light-mode);
@@ -926,6 +938,18 @@ section {
 
     p {
         color: var(--light-content-dark-mode);
+    }
+
+    #progress-control {
+        background-color: var(--background-card-dark-mode);
+    }
+
+    #progress-value {
+        background-color: var(--background-card-dark-mode);
+    }
+    
+    #progress-action {
+        color: var(--black-content-dark-mode);
     }
 
     header,
