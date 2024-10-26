@@ -24,7 +24,7 @@ populateGrid();
 // Fetch JSON file
 async function fetchJSONData(file) {
     try {
-        const response = await fetch(file);
+        const response = await fetch(URL(file));
         return await response.json();
     } catch (error) {
         console.error("Error fetching JSON data:", error);
@@ -34,7 +34,7 @@ async function fetchJSONData(file) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData("../json/cv.json");
+        const dataObj = await fetchJSONData("./../json/cv.json");
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
     } catch (error) {
