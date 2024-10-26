@@ -17,6 +17,28 @@ function updateScrollPaddingTop() {
     htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 20}px`;
 }
 
+
+// *** Progress Bar functions ***
+
+function updateProgressControlDisplay(value) {
+    let progressControl = document.getElementById("progress-control");
+    progressControl.style.display = value;
+}
+
+function updateProgressAction(progress) {
+    let progressAction = document.getElementById("progress-action");
+    progressAction.textContent = progress;
+}
+
+function updateProgressBar(progress) {
+    let container = document.getElementById("progress-container");
+    let progressValue = document.getElementById("progress-value");
+
+    progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
+    container.style.background = `conic-gradient(#0f0bfc ${progress * 3.6}deg, #ddf5fc 0deg)`;
+}
+
+
 // ***Populate page from JSON data***
 
 // Authenticate on GitHub
@@ -26,12 +48,21 @@ function updateScrollPaddingTop() {
 // const projectData = await getProjectData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
 // const GITHUB_ACCESS_TOKEN = projectData.accessToken;
 // const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); 
+
+// Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
+// Use these lines if you want to authenticate with a personal access token
+// const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
+// console.log("Hello, %s", login);
+
 const octokit = new Octokit({});
+
+// *** Fetch selected repositories & populate project cards ***
 
 await populatePage();
 
 async function populatePage() {
     updateProgressControlDisplay("flex");
+    updateProgressAction("Populating page with JSON data...");
     updateProgressBar(0);
     try {
         await populateGrid();
@@ -43,7 +74,7 @@ async function populatePage() {
     }
 }
 
-// ***Populate grids from JSON file***
+// *** Populate grids from JSON file ***
 
 // Fetch JSON file
 async function fetchJSONData(url) {
@@ -57,7 +88,6 @@ async function fetchJSONData(url) {
 
 // Populate grid containers
 async function populateGrid() {
-    updateProgressAction("Loading cv from JSON file...");
     try {
         const dataObj = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/cv.json"));
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
@@ -140,7 +170,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
     }
 }
 
-// ***Populate projects from GitHub***
+// *** Populate projects from GitHub ***
 
 // Fetch JSON file
 async function getProjectData(url) {
@@ -151,39 +181,11 @@ async function getProjectData(url) {
     }
 }
 
-// Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-// Use these lines if you want to authenticate with a personal access token
-// const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
-// console.log("Hello, %s", login);
-
-// Fetch selected repositories & populate project cards
-
-
-function updateProgressControlDisplay(value) {
-    let progressControl = document.getElementById("progress-control");
-    progressControl.style.display = value;
-}
-
-function updateProgressAction(progress) {
-    let progressAction = document.getElementById("progress-action");
-    progressAction.textContent = progress;
-}
-
-function updateProgressBar(progress) {
-    let container = document.getElementById("progress-container");
-    let progressValue = document.getElementById("progress-value");
-
-    progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
-    container.style.background = `conic-gradient(#0f0bfc ${progress * 3.6}deg, #ddf5fc 0deg)`;
-}
-
 async function populateProjectCards() {
     const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
     const repoObjs = await getRepos(repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
-
-    updateProgressAction("Loading repos from GitHub...");
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
