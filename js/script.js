@@ -5,7 +5,7 @@ import { Octokit, App } from "https://esm.sh/octokit";
 // *** Update scroll-padding-top after DOM is loaded & when window is resized ***
 
 // Initialize scroll-padding-top after DOM is loaded
-document.addEventListener("DOMContentLoaded", updateScrollPaddingTop);
+window.addEventListener("load", updateScrollPaddingTop);
 
 // We use globalThis instead of window because globalThis works in both Node.js and browsers, instead of global or window.
 globalThis.addEventListener("resize", updateScrollPaddingTop);
