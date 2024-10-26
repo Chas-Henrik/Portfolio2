@@ -47,7 +47,7 @@ async function main() {
         updateProgressControlDisplay("flex");
         updateProgressAction("Populating page with JSON data...");
         updateProgressBar(0);
-        const octokit = await connectToGitHub(true);
+        const octokit = await connectToGitHub(false);
         await populatePage(octokit);
     } catch (error) {
         console.error("Error:", error);
