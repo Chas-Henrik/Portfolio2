@@ -17,9 +17,33 @@ function updateScrollPaddingTop() {
     htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 20}px`;
 }
 
-// ***Populate grids from JSON file***
+// ***Populate page from JSON data***
 
-populateGrid();
+// Authenticate on GitHub
+// Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+
+// Use the following lines if you want to authenticate with a personal access token
+// const projectData = await getProjectData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
+// const GITHUB_ACCESS_TOKEN = projectData.accessToken;
+// const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); 
+const octokit = new Octokit({});
+
+await populatePage();
+
+async function populatePage() {
+    updateProgressControlDisplay("flex");
+    updateProgressBar(0);
+    try {
+        await populateGrid();
+        await populateProjectCards();
+    } catch (error) {
+        console.error("Error fetching JSON data:", error);
+    } finally {
+        updateProgressControlDisplay("none");
+    }
+}
+
+// ***Populate grids from JSON file***
 
 // Fetch JSON file
 async function fetchJSONData(url) {
@@ -33,10 +57,12 @@ async function fetchJSONData(url) {
 
 // Populate grid containers
 async function populateGrid() {
+    updateProgressAction("Loading cv from JSON file...");
     try {
         const dataObj = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/cv.json"));
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
+        updateProgressBar(10);
     } catch (error) {
         console.error("Unable to read JSON file:", error);
     }
@@ -116,14 +142,6 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 // ***Populate projects from GitHub***
 
-// Authenticate on GitHub
-// Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-
-const projectData = await getProjectData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
-const GITHUB_ACCESS_TOKEN = projectData.accessToken;
-// const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); // Use this line if you want to authenticate with a personal access token
-const octokit = new Octokit({});
-
 // Fetch JSON file
 async function getProjectData(url) {
     try {
@@ -140,7 +158,6 @@ async function getProjectData(url) {
 
 // Fetch selected repositories & populate project cards
 
-await populateProjectCards();
 
 function updateProgressControlDisplay(value) {
     let progressControl = document.getElementById("progress-control");
@@ -166,6 +183,8 @@ async function populateProjectCards() {
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
 
+    updateProgressAction("Loading repos from GitHub...");
+
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
         const repoObj = repoObjs[i]; 
@@ -182,16 +201,13 @@ async function populateProjectCards() {
 
 async function getRepos(repoNames) {
     const repoObjs = [];
-    updateProgressBar(0);
-    updateProgressAction("Loading repos from GitHub...");
-    updateProgressControlDisplay("flex");
+
     for(let i=0; i<repoNames.length; i++) {
         const repoName = repoNames[i];
         const repoObj = await getRepo(repoName);
-        updateProgressBar(100*(i+1)/repoNames.length);
+        updateProgressBar(10 + 90*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
     };
-    updateProgressControlDisplay("none");
 
     return repoObjs;
 }
