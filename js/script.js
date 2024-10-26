@@ -102,19 +102,74 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 // Authenticate on GitHub
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-const GITHUB_ACCESS_TOKEN = "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";
+
+const projectData = await getProjectData('./../json/projects.json');
+const GITHUB_ACCESS_TOKEN = projectData.accessToken;
 const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
 
+// Fetch JSON file
+async function getProjectData(file) {
+    try {
+        return await fetchJSONData(file);
+    } catch (error) {
+        console.error("Unable to read JSON file:", error);
+    }
+}
 
 // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-const {
-    data: { login },
-} = await octokit.rest.users.getAuthenticated();
+const {data: { login }} = await octokit.rest.users.getAuthenticated();
+
 console.log("Hello, %s", login);
 
+// Fetch selected repositories & populate project cards
 
-await octokit.request("GET /repos/{owner}/{repo}/issues", {
-    owner: "Chas-Henrik",
-    repo: "Portfolio",
-    per_page: 2
-});
+await populateProjectCards();
+
+async function populateProjectCards() {
+    const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
+    const repoObjs = await getRepos(repoNames);
+    const projectCardsDiv = document.getElementById("projectCards");
+    const cardArticle = projectCardsDiv.querySelectorAll(".card");
+
+    for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
+        const card = cardArticle[i];
+        const repoObj = repoObjs[i]; 
+        const titleElement = card.querySelector(".card__title");
+        const descriptionElement = card.querySelector(".card__description");
+        const footerElement = card.querySelector(".card__footer");
+        const linkElements = card.querySelectorAll("a");
+        titleElement.innerText = repoObj.data.name;
+        descriptionElement.innerText = repoObj.data.description;
+        linkElements[0].href = `https://chas-henrik.github.io/${repoNames[i]}/`;
+        linkElements[1].href = repoObj.data.html_url;
+    };
+}
+
+async function getRepos(repoNames) {
+    const repoObjs = [];
+
+    for(const repoName of repoNames) {
+        const repoObj = await getRepo(repoName);
+        repoObjs.push(repoObj);
+        console.log("repoObj.data.name", repoObj.data.name);
+        console.log("repoObj.data.description", repoObj.data.description);
+    };
+
+    return repoObjs;
+}
+
+async function getRepo(name) {
+    try {
+        const repoObj = await octokit.request('GET /repos/{owner}/{repo}', {
+            owner: "Chas-Henrik",
+            repo: name,
+            headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+            }
+        });
+        return repoObj;
+    } catch (error) {
+        console.error("Error fetching repository:", error);  
+    }
+}
+

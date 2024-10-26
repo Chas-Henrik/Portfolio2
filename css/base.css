@@ -20,10 +20,8 @@
     --very-light-content-dark-mode: #D9D9D9;
     --black-content-light-mode: #000000;
     --black-content-dark-mode: #FFFFFF;
-    --box-shadow-light-mode: 2px 2px 100px 0px #00000033;
+    --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
     --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
-    --box-shadow-dark-mode: 2px 2px 100px 0px #FFFFFF33;
-    --box-shadow-hover-dark-mode: 2px 2px 2px 0px #FFFFFF33;
     --contact-light-mode: #1E0E62;
     --contact-dark-mode: #D9D9D9;
     --background-contact: #f1fbfc;
