@@ -22,9 +22,11 @@
 <body>
     <header>
         <nav class="flex__nav">
-            <figure class="flex__logo--chas">
-            <img class="image__logo--chas" src="./img/ChasAcademy_logo.jpg" alt="Chas Academy Logo">
-            </figure>
+            <picture class="flex__logo--chas">
+                <source srcset="./img/ChasAcademyLogo.jpg" media="(prefers-color-scheme: light)">
+                <source srcset="./img/ChasAcademyLogo-dark.png" media="(prefers-color-scheme: dark)">
+                <img class="image__logo--chas" src="./img/ChasAcademyLogo.jpg" alt="Chas Academy Logo">
+            </picture>
             <input id="input__checkbox" type="checkbox">
             <nav class="flex--menu paragraph__size--default-bold">
                 <ul class="menu__list menu__list--buttons">
