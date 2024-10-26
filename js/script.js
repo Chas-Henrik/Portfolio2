@@ -22,9 +22,9 @@ function updateScrollPaddingTop() {
 populateGrid();
 
 // Fetch JSON file
-async function fetchJSONData(file) {
+async function fetchJSONData(url) {
     try {
-        const response = await fetch(new URL(file, "https://chas-henrik.github.io/Portfolio2/"));
+        const response = await fetch(url);
         return await response.json();
     } catch (error) {
         console.error("Error fetching JSON data:", error);
@@ -34,7 +34,7 @@ async function fetchJSONData(file) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData("./../json/cv.json");
+        const dataObj = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/cv.json"));
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
     } catch (error) {
@@ -119,15 +119,15 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 // Authenticate on GitHub
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
 
-const projectData = await getProjectData('./../json/projects.json');
+const projectData = await getProjectData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
 const GITHUB_ACCESS_TOKEN = projectData.accessToken;
 // const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); // Use this line if you want to authenticate with a personal access token
 const octokit = new Octokit({});
 
 // Fetch JSON file
-async function getProjectData(file) {
+async function getProjectData(url) {
     try {
-        return await fetchJSONData(file);
+        return await fetchJSONData(url);
     } catch (error) {
         console.error("Unable to read JSON file:", error);
     }
