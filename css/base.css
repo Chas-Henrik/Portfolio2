@@ -22,6 +22,8 @@
     --black-content-dark-mode: #FFFFFF;
     --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
     --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
+    --progress-bar-color-value: #0f0bfc;
+    --progress-bar-color: #ddf5fc;
     --contact-light-mode: #1E0E62;
     --contact-dark-mode: #D9D9D9;
     --background-contact: #f1fbfc;
@@ -101,6 +103,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    background: conic-gradient(var(--progress-bar-color-value) 0deg, var(--progress-bar-color) 0deg);
 }
 
 #progress-value {
