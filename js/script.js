@@ -121,7 +121,8 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 const projectData = await getProjectData('./../json/projects.json');
 const GITHUB_ACCESS_TOKEN = projectData.accessToken;
-const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
+// const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); // Use this line if you want to authenticate with a personal access token
+const octokit = new Octokit({});
 
 // Fetch JSON file
 async function getProjectData(file) {
@@ -133,9 +134,9 @@ async function getProjectData(file) {
 }
 
 // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-const {data: { login }} = await octokit.rest.users.getAuthenticated();
-
-console.log("Hello, %s", login);
+// Use these lines if you want to authenticate with a personal access token
+// const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
+// console.log("Hello, %s", login);
 
 // Fetch selected repositories & populate project cards
 
