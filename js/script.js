@@ -1,6 +1,22 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
 import { Octokit, App } from "https://esm.sh/octokit";
 
+
+// *** Update scroll-padding-top after DOM is loaded & when window is resized ***
+
+// Initialize scroll-padding-top after DOM is loaded
+document.addEventListener("DOMContentLoaded", updateScrollPaddingTop);
+
+// We use globalThis instead of window because globalThis works in both Node.js and browsers, instead of global or window.
+globalThis.addEventListener("resize", updateScrollPaddingTop);
+
+function updateScrollPaddingTop() {
+    const htmlElement = document.getElementsByTagName("html")[0];
+    const headerElement = document.getElementById("header");
+
+    htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 20}px`;
+}
+
 // ***Populate grids from JSON file***
 
 populateGrid();
@@ -173,8 +189,6 @@ async function getRepos(repoNames) {
         const repoObj = await getRepo(repoName);
         updateProgressBar(100*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
-        console.log("repoObj.data.name", repoObj.data.name);
-        console.log("repoObj.data.description", repoObj.data.description);
     };
     updateProgressControlDisplay("none");
 

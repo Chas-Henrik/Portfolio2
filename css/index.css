@@ -7,7 +7,6 @@
 }
 
 html {
-    scroll-padding-top: 32rem;
     font-family: var(--primary-font);
     font-weight: 400;
     font-style: normal;
@@ -597,7 +596,6 @@ section {
 
     html {
         font-size: calc(62.5% / 1.25);
-        scroll-padding-top: 20rem;
     }
 
     /*** Header ***/
@@ -730,10 +728,6 @@ section {
 
 /* On screens that are 1024px or more (Medium & Large Desktops) */
 @media (min-width: 1024px) {
-
-    html {
-        scroll-padding-top: 10rem;
-    }
 
     /*** Header ***/
 
