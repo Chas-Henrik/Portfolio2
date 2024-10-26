@@ -54,29 +54,39 @@ async function fetchJSONData(url) {
     }
 }
 
-// Use the following lines if you want to authenticate with a personal access token
-// const projectData = await fetchJSONData(new URL("./../json/projects.json", "https://chas-henrik.github.io/Portfolio2/"));
-// const GITHUB_ACCESS_TOKEN = projectData.accessToken;
-// const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); 
+async function connectToGitHub(authenticate) {
+    if(authenticate){
+        const projectData = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
+        const GITHUB_ACCESS_TOKEN = projectData.accessToken;
+        const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
+        const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
+        console.log("Hello, %s", login);
+        return octokit;
+    } else {
+        return new Octokit({})
+    }
+}
 
-// Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-// Use these lines if you want to authenticate with a personal access token
-// const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
-// console.log("Hello, %s", login);
-
-const octokit = new Octokit({});
+await main();
 
 // *** Fetch selected repositories & populate project cards ***
 
-await populatePage();
+async function main() {
+    try {
+        const octokit = await connectToGitHub(false);
+        await populatePage(octokit);
+    } catch (error) {
+        console.error("Error fetching JSON data:", error);
+    }
+}
 
-async function populatePage() {
+async function populatePage(octokit) {
     updateProgressControlDisplay("flex");
     updateProgressAction("Populating page with JSON data...");
     updateProgressBar(0);
     try {
         await populateGrid();
-        await populateProjectCards();
+        await populateProjectCards(octokit);
     } catch (error) {
         console.error("Error fetching JSON data:", error);
     } finally {
@@ -172,9 +182,9 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 // *** Populate projects from GitHub ***
 
-async function populateProjectCards() {
+async function populateProjectCards(octokit) {
     const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
-    const repoObjs = await getRepos(repoNames);
+    const repoObjs = await getRepos(octokit, repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
 
@@ -192,12 +202,12 @@ async function populateProjectCards() {
     };
 }
 
-async function getRepos(repoNames) {
+async function getRepos(octokit, repoNames) {
     const repoObjs = [];
 
     for(let i=0; i<repoNames.length; i++) {
         const repoName = repoNames[i];
-        const repoObj = await getRepo(repoName);
+        const repoObj = await getRepo(octokit, repoName);
         updateProgressBar(10 + 90*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
     };
@@ -205,7 +215,7 @@ async function getRepos(repoNames) {
     return repoObjs;
 }
 
-async function getRepo(name) {
+async function getRepo(octokit, name) {
     try {
         const repoObj = await octokit.request('GET /repos/{owner}/{repo}', {
             owner: "Chas-Henrik",
