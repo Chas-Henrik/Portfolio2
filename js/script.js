@@ -44,8 +44,18 @@ function updateProgressBar(progress) {
 // Authenticate on GitHub
 // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
 
+// Fetch JSON data
+async function fetchJSONData(url) {
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching JSON data:", error);
+    }
+}
+
 // Use the following lines if you want to authenticate with a personal access token
-// const projectData = await getProjectData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
+// const projectData = await fetchJSONData(new URL("./../json/projects.json", "https://chas-henrik.github.io/Portfolio2/"));
 // const GITHUB_ACCESS_TOKEN = projectData.accessToken;
 // const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN }); 
 
@@ -75,16 +85,6 @@ async function populatePage() {
 }
 
 // *** Populate grids from JSON file ***
-
-// Fetch JSON file
-async function fetchJSONData(url) {
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error("Error fetching JSON data:", error);
-    }
-}
 
 // Populate grid containers
 async function populateGrid() {
@@ -171,15 +171,6 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 }
 
 // *** Populate projects from GitHub ***
-
-// Fetch JSON file
-async function getProjectData(url) {
-    try {
-        return await fetchJSONData(url);
-    } catch (error) {
-        console.error("Unable to read JSON file:", error);
-    }
-}
 
 async function populateProjectCards() {
     const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
