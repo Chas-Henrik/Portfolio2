@@ -19,7 +19,7 @@ new ResizeObserver(updateScrollPaddingTop).observe(headerElement);
 
 function updateScrollPaddingTop() {
     const htmlElement = document.getElementsByTagName("html")[0];
-    
+
     htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 20}px`;
 }
 
@@ -100,12 +100,20 @@ async function populatePage(octokit) {
 async function populateGrid() {
     try {
         const dataObj = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/cv.json"));
+        populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
         updateProgressBar(10);
     } catch (error) {
         console.error("Unable to read JSON file:", error);
     }
+}
+
+// Populate About Me
+function populateAboutMe(aboutMeObj) {
+    const aboutDescriptionElement = document.getElementById("about--description");
+    const p = document.createElement('p');
+    aboutDescriptionElement.innerText = aboutMeObj["description"];
 }
 
 // Populate grid container
