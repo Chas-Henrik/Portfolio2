@@ -168,8 +168,8 @@ section {
 
 .paragraph__size--introduction {
     font-weight: 600;
-    font-size: 2.5rem;
-    line-height: 5rem;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
     padding: 1rem;
 }
 
@@ -346,10 +346,10 @@ header {
 }
 
 .flex-container__size--medium {
-    width: 36.7rem;
-    min-width: 36.7rem;
-    height: 36.7rem;
-    min-height: 36.7rem;
+    width: 33rem;
+    min-width: 33rem;
+    height: 33rem;
+    min-height: 33rem;
 }
 
 .flex-container__border-radius--circle {
@@ -358,7 +358,7 @@ header {
 
 .image--profile {
     border-radius: 50%;
-    width: 34.9rem;
+    width: 31rem;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -377,10 +377,6 @@ header {
     white-space: nowrap;
     text-align: right;
     font-weight: 700;
-}
-
-.description.contact__link {
-    word-break: break-all;
 }
 
 
@@ -641,9 +637,15 @@ header {
 
 /*** Media Queries ***/
 
-/* On screens that are 768px to 1024px (Tablets & Small Desktops) */
-@media (min-width: 768px) {
+/* On screens that are 650px to 1024px (Tablets & Small Desktops) */
+@media (min-width: 650px) {
 
+    .paragraph__size--introduction {
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
+    
     html {
         font-size: calc(62.5% / 1.25);
     }
@@ -902,7 +904,7 @@ header {
     .flex-container__size--medium {
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
-    
+
     .grid--introduction {
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
