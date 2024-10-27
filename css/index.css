@@ -350,7 +350,6 @@ header {
     min-width: 36.7rem;
     height: 36.7rem;
     min-height: 36.7rem;
-    box-shadow: var(--box-shadow-tiny-light-mode);
 }
 
 .flex-container__border-radius--circle {
@@ -371,7 +370,6 @@ header {
     grid-template-areas: "profile description";
     column-gap: 3rem;
     border-radius: 20px;
-    box-shadow: var(--box-shadow-tiny-light-mode);
     padding: 2rem;
 }
 
@@ -596,7 +594,7 @@ header {
 }
 
 .container--contact {
-    width: 40rem;
+    width: fit-content;
     height: 20rem;
     border-radius: 20px;
     font-family: var(--secondary-font);
@@ -901,6 +899,14 @@ header {
         color: var(--black-content-light-mode);
     }
 
+    .flex-container__size--medium {
+        box-shadow: var(--box-shadow-tiny-light-mode);
+    }
+    
+    .grid--introduction {
+        box-shadow: var(--box-shadow-tiny-light-mode);
+    }
+
     .profile, .description {
         color: var(--solid-heading-light-mode);
     }
@@ -945,7 +951,7 @@ header {
     }
 
     .container--contact {
-        box-shadow: var(--box-shadow-light-mode);
+        box-shadow: var(--box-shadow-tiny-light-mode);
         background-color: var(--background-light-mode);
     }
 
