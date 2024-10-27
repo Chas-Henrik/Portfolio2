@@ -17,7 +17,7 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radley:ital@0;1&display=swap" rel="stylesheet">    <title>Henrik's Portfolio Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
     <title>Henrik's Portfolio Page</title>
 </head>
 
@@ -60,24 +60,22 @@
     </header>
     <main>
         <!-- Introduction (Home) -->
-        <section id="home" class="flex-row-wrap flex-row-wrap__gap--introduction">
-            <h2 class="heading--title heading__size--title">Hi👋,<br>
-                My name is<br>
-                <span class="gradient__text gradient-name">Henrik Suurik</span><br>
-                I build things<br>
-                for web
-            </h2>
+        <div id="home" class="flex-introduction">
             <figure
-                class="flex-container flex-container__border-radius--circle flex-container__size--medium gradient-border">
+                class="flex-container flex-container--profile-image flex-container__border-radius--circle flex-container__size--medium gradient-border">
                 <img class="image--profile" src="./img/Henrik.jpg" alt="Henrik Image">
             </figure>
-        </section>
+            <aside class="grid--introduction paragraph__size--introduction">
+                <p class="profile">Name :</p><p class="description">Henrik Suurik</p>
+                <p class="profile">Title :</p><p class="description">Senior Embedded Software & FullStack JavaScript Developer</p>
+                <p class="profile">Location :</p><p class="description">Nacka, Sweden</p>
+                <p class="profile">E-mail :</p><a class="description contact__link" href="mailto:henrik.suurik@chasacademy.se" target="_blank">henrik.suurik@chasacademy.se</a>
+            </aside>
+        </div>
         <!-- About Section -->
         <section id="section-about">
             <h2 class="heading__margin--vertical heading__size--default">About Me</h2>
-            <p id="about--description" class="first-paragraph paragraph__size--about">The Generator App is an online tool that helps you to export
-                ready-made templates ready to work as your future website. It helps you to combine slides, panels and
-                other components and export it as a set of static files: HTML/CSS/JS.</p>
+            <p id="about--description" class="first-paragraph paragraph__size--about"></p>
 
             <h2 class="heading__margin--vertical heading__size--default">Work Experience</h2>
             <!-- Work Experience Container -->
@@ -86,7 +84,6 @@
             <h2 class="heading__margin--vertical heading__size--default">Education</h2>
             <!-- Education Container -->
             <div id="grid-education"></div>
-
         </section>
         <!-- Tech Stack Section -->
         <section id="section-tech-stack">
@@ -368,16 +365,16 @@
         <section id="section-contact">
             <h2 class="heading__margin--vertical heading__size--default">Contact Information</h2>
             <address class="container--contact paragraph__size--contact-large">
-                <p class="contact__paragraph">E-mail:</p> 
-                <a class="contact__link paragraph__size--contact" href="mailto:henrik.suurik@chasacademy.se" target="_blank">
+                <p class="contact--text">E-mail:</p> 
+                <a class="contact--text contact__link paragraph__size--contact" href="mailto:henrik.suurik@chasacademy.se" target="_blank">
                     <picture>
                         <source srcset="./svg/email.svg" media="(prefers-color-scheme: light)">
                         <source srcset="./svg/email-dark.svg" media="(prefers-color-scheme: dark)">
                         <img class="icon__size--contact" src="./svg/email.svg" alt="E-mail Icon">                      
                     </picture>
                     henrik.suurik@chasacademy.se</a>
-                <p class="contact__paragraph">Mobile:</p>
-                <a class="contact__link paragraph__size--contact" href="tel:+46708798796" target="_blank">
+                <p class="contact--text">Mobile:</p>
+                <a class="contact--text contact__link paragraph__size--contact" href="tel:+46708798796" target="_blank">
                     <picture>
                         <source srcset="./svg/cellphone.svg" media="(prefers-color-scheme: light)">
                         <source srcset="./svg/cellphone-dark.svg" media="(prefers-color-scheme: dark)">
@@ -387,13 +384,11 @@
             </address>
         </section>
     </main>
-    <footer>
-        <div class="footer">
-            <p class="paragraph__size--default-small">Designed and built by <span
-                    class="gradient__text gradient-name">Henrik Suurik</span> with <span
-                    class="gradient__text gradient-love">Love</span> & <span
-                    class="gradient__text gradient-coffee">Coffee</span></p>
-        </div>
+    <footer class="footer">
+        <p class="paragraph__size--default-small">Designed and built by <span
+                class="gradient__text gradient-name">Henrik Suurik</span> with <span
+                class="gradient__text gradient-love">Love</span> & <span
+                class="gradient__text gradient-coffee">Coffee</span></p>
     </footer>
     <script type="module" src="./js/script.js"></script>
 </body>

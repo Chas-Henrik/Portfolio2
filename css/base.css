@@ -23,6 +23,7 @@
     --black-content-dark-mode: #FFFFFF;
     --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
     --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
+    --box-shadow-tiny-light-mode: 2px 2px 10px 0px #00000033;
     --progress-bar-color-value: #0f0bfc;
     --progress-bar-color: #DDF5FC;
     --background-first-letter: #BCE9F5;
@@ -42,8 +43,8 @@
     /* gradient colors */
     --gradient-name-start: #25A5FA;
     --gradient-name-end: #A74AFD;
-    --gradient-border-start: #E70FAA;
-    --gradient-border-end: #00C0FD;
+    --gradient-border-start: #CCE8F4;
+    --gradient-border-end: #CCE8F4;
     --gradient-love-start: #9C27BA;
     --gradient-love-end: #A816B4;
     --gradient-coffee-start: #B106B1;

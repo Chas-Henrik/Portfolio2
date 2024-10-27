@@ -91,14 +91,6 @@ section {
 
 /*** Font Sizes ***/
 
-.heading__size--title {
-    text-align: left;
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 7.0rem;
-    letter-spacing: -0.1rem;
-}
-
 .heading__size--default {
     font-weight: 700;
     font-size: 4.2rem;
@@ -168,9 +160,16 @@ section {
 }
 
 .paragraph__size--default-bold {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 2.6rem;
+}
+
+.paragraph__size--introduction {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    padding: 1rem;
 }
 
 .first-paragraph::first-letter {
@@ -212,6 +211,10 @@ section {
 }
 
 /*** Header ***/
+
+header {
+    box-shadow: var(--box-shadow-light-mode);
+}
 
 .flex__nav {
     display: flex;
@@ -330,9 +333,14 @@ section {
 
 /*** Introduction (Home) Section ***/
 
-.flex-row-wrap__gap--introduction {
-    justify-content: space-between;
-    gap: 3rem;
+.flex-introduction {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7rem;
 }
 
 .flex-container__size--medium {
@@ -340,6 +348,7 @@ section {
     min-width: 36.7rem;
     height: 36.7rem;
     min-height: 36.7rem;
+    box-shadow: var(--box-shadow-tiny-light-mode);
 }
 
 .flex-container__border-radius--circle {
@@ -352,6 +361,24 @@ section {
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+
+.grid--introduction {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "profile description";
+    column-gap: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-tiny-light-mode);
+    padding: 1rem;
+}
+
+.profile {
+    white-space: nowrap;
+    text-align: right;
+    font-weight: 700;
+}
+
 
 /*** About, Work Experience & Education Section ***/
 
@@ -573,15 +600,15 @@ section {
     padding: 2rem;
 }
 
-.contact__paragraph {
+.contact--text {
     margin-bottom: 1rem;
 }
 
 .contact__link {
     display: inline-block;
     text-decoration: none;
-    color: var(--menu-color-hover);
     margin-bottom: 3rem;
+    color: inherit;
 }
 
 .contact__link:hover {
@@ -604,12 +631,13 @@ section {
     left: 0;
     text-align: center;
     padding: 0.5rem 0;
+    box-shadow: var(--box-shadow-light-mode);
 }
 
 /*** Media Queries ***/
 
-/* On screens that are 600px to 1024px (Tablets & Small Desktops) */
-@media (min-width: 600px) {
+/* On screens that are 768px to 1024px (Tablets & Small Desktops) */
+@media (min-width: 768px) {
 
     html {
         font-size: calc(62.5% / 1.25);
@@ -618,9 +646,7 @@ section {
     /*** Header ***/
 
     header {
-        height: 20rem;
         padding: 1rem 6vw;
-        padding-top: 3rem;
     }
 
     .label__size--hamburger {
@@ -747,9 +773,7 @@ section {
     /*** Header ***/
 
     header {
-        height: 10rem;
         padding: 1rem var(--main-horizontal-margin);
-        padding-top: 3rem;
     }
 
     .flex__nav {
@@ -801,6 +825,10 @@ section {
     .menu__list--icons img {
         filter: none;
         /* => #666666*/
+    }
+
+    .flex-introduction {
+        flex-wrap: nowrap;
     }
 
     .heading__size--contact {
@@ -866,6 +894,10 @@ section {
         color: var(--black-content-light-mode);
     }
 
+    .profile, .description {
+        color: var(--solid-heading-light-mode);
+    }
+
     .grid {
         border-bottom: 0.2rem solid var(--border-color-light-mode);
     }
@@ -910,7 +942,7 @@ section {
         background-color: var(--background-light-mode);
     }
 
-    .contact__paragraph, .contact__link {
+    .contact--text {
         color: var(--black-content-light-mode);
     }
 
@@ -980,8 +1012,8 @@ section {
         filter: invert(100%);
     }
 
-    .heading--title {
-        color: var(--very-light-content-dark-mode);
+    .profile, .description {
+        color: var(--solid-heading-dark-mode);
     }
 
     .grid {
@@ -1023,7 +1055,7 @@ section {
         background-color: var(--background-card-dark-mode);
     }
 
-    .contact__paragraph, .contact__link {
+    .contact--text {
         color: var(--black-content-dark-mode);
     }
 
