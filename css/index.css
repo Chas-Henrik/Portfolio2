@@ -173,6 +173,25 @@ section {
     line-height: 2.6rem;
 }
 
+.first-paragraph::first-letter {
+    width:fit-content;
+    height:fit-content;
+    font-size: 6.5rem;
+    padding: 1.5rem;
+    background-color: var(--background-first-letter);
+    color: var(--black-content-light-mode);
+    float: left;
+    margin-right: 1rem;
+}
+
+.paragraph__size--about {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.1rem;
+}
+
 .paragraph__size--contact {
     font-weight: 600;
     font-size: 2rem;
@@ -335,6 +354,10 @@ section {
 }
 
 /*** About, Work Experience & Education Section ***/
+
+#about--description {
+    font-family: var(--formal-font);
+}
 
 .grid {
     width: 100%;

@@ -8,6 +8,7 @@
     /* Fonts*/
     --primary-font: "Poppins", sans-serif;
     --secondary-font: "DM Sans", sans-serif;
+    --formal-font: "Radley", serif;
 
     /* Theme colors */
     --background-light-mode: #FFFFFF;
@@ -23,10 +24,11 @@
     --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
     --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
     --progress-bar-color-value: #0f0bfc;
-    --progress-bar-color: #ddf5fc;
+    --progress-bar-color: #DDF5FC;
+    --background-first-letter: #BCE9F5;
     --contact-light-mode: #1E0E62;
     --contact-dark-mode: #D9D9D9;
-    --background-contact: #f1fbfc;
+    --background-contact: #F1FBFC;
     --border-color-light-mode: #EBEAED;
     --border-color-dark-mode: #42446E;
     --button-text: #018C0F;
@@ -77,7 +79,6 @@
     color: var(--gradient-name-end) !important;
     text-shadow: 1px 1px 2px var(--gradient-name-start), 0 0 1em var(--gradient-name-end), 0 0 0.2em var(--gradient-name-end);
 }
-
 
 #progress-control {
     position: fixed;
