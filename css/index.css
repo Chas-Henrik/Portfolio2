@@ -371,7 +371,7 @@ header {
     column-gap: 3rem;
     border-radius: 20px;
     box-shadow: var(--box-shadow-tiny-light-mode);
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .profile {
