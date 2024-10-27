@@ -381,6 +381,10 @@ header {
     font-weight: 700;
 }
 
+.description.contact__link {
+    word-break: break-all;
+}
+
 
 /*** About, Work Experience & Education Section ***/
 
