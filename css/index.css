@@ -19,7 +19,8 @@ body {
 
 header {
     height: fit-content;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     position: sticky;
     padding: 1rem 3vw;
     padding-top: 3rem;
@@ -626,6 +627,7 @@ header {
 
 .footer {
     width: 100vw;
+    max-width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
