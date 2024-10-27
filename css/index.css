@@ -215,20 +215,10 @@ section {
     height: auto;
 }
 
-#input__checkbox {
-    display: none;
-    /* hide the checkbox (which is only used for Hamburger menu toggle) */
-}
-
 .flex--menu {
     flex: 1 1 70%;
     display: flex;
     flex-wrap: wrap;
-}
-
-/* Hide the Nav Bar Menu when Hamburger checkbox is checked */
-#input__checkbox:checked+.flex--menu {
-    display: none;
 }
 
 .icon__size--menu {
@@ -294,6 +284,10 @@ section {
     vertical-align: middle;
     filter: brightness(0%);
     /* => color #000000*/
+}
+
+.menu--collapsed {
+    display: none;
 }
 
 .icon__display--hamburger {
@@ -610,10 +604,8 @@ section {
         flex: 1 1 0%;
     }
 
-    /* Show the Nav Bar Menu (even when hidden by Hamburger checkbox) */
-    #input__checkbox:checked+.flex--menu, .flex--menu {
+    .flex--menu {
         flex: 1 1 85%;
-        display: flex;
     }
 
     .menu__list--buttons {

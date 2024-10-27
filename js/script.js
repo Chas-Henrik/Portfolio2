@@ -1,22 +1,27 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
 import { Octokit, App } from "https://esm.sh/octokit";
 
+// *** Hamburger menu ***
 
-// *** Update scroll-padding-top the whole page has loaded & when window is resized ***
+const hamburgerMenu = document.getElementById("hamburger-menu");
+hamburgerMenu.addEventListener("click", hamburgerMenuClicked);
 
-// Initialize scroll-padding-top the whole page has loaded
-window.addEventListener("load", updateScrollPaddingTop);
+function hamburgerMenuClicked() {
+    const menuNav = document.getElementById("menu");
+    menuNav.classList.toggle("menu--collapsed");
+    updateScrollPaddingTop();
+}
 
-// We use globalThis instead of window because globalThis works in both Node.js and browsers, instead of global or window.
-globalThis.addEventListener("resize", updateScrollPaddingTop);
+// *** Update scroll-padding-top when header is resized ***
+
+const headerElement = document.getElementById("header");
+new ResizeObserver(updateScrollPaddingTop).observe(headerElement);
 
 function updateScrollPaddingTop() {
     const htmlElement = document.getElementsByTagName("html")[0];
-    const headerElement = document.getElementById("header");
-
+    
     htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 20}px`;
 }
-
 
 // *** Progress Bar functions ***
 
