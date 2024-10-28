@@ -192,7 +192,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 // *** Populate projects from GitHub ***
 
 async function populateProjectCards(octokit) {
-    const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Flexbox-Playing-Card"];
+    const repoNames = ["Portfolio", "Profile-Card", "Menu-Nailbiter", "Word-Count", "Simple-ToDo-List", "Minesweeper"];
     const repoObjs = await getRepos(octokit, repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
