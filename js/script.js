@@ -100,9 +100,7 @@ async function populatePage(octokit) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        // const dataObj = await fetchJSONData("./../json/cv.json");  // Henrik
-        const response = await fetch("./../cv.json");
-        const dataObj = await response.json();
+        const dataObj = await fetchJSONData("./../json/cv.json");  // Henrik
         console.log(dataObj);
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
@@ -211,7 +209,7 @@ async function populateProjectCards(octokit) {
         const linkElements = card.querySelectorAll("a");
         titleElement.innerText = repoObj.data.name;
         descriptionElement.innerText = repoObj.data.description;
-        linkElements[0].href = `https://chas-henrik.github.io/${repoNames[i]}/`;  // Henrik
+        linkElements[0].href = `https://chas-henrik.github.io/${repoNames[i]}/`;
         linkElements[1].href = repoObj.data.html_url;
     };
 }
