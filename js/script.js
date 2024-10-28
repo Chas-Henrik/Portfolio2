@@ -101,7 +101,7 @@ async function populatePage(octokit) {
 async function populateGrid() {
     try {
         // const dataObj = await fetchJSONData("./../json/cv.json");  // Henrik
-        const response = await fetch("./../json/cv.json");
+        const response = await fetch("./cv.json");
         const dataObj = await response.json();
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
