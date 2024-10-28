@@ -66,7 +66,8 @@ async function main() {
 async function fetchJSONData(url) {
     try {
         const response = await fetch(url);
-        return await response.json();
+        const data = await response.json();
+        return data;
     } catch (error) {
         console.error("Error fetching JSON data:", error);
     }
@@ -99,7 +100,9 @@ async function populatePage(octokit) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData("./../json/cv.json");  // Henrik
+        // const dataObj = await fetchJSONData("./../json/cv.json");  // Henrik
+        const response = await fetch("./../json/cv.json");
+        const dataObj = await response.json();
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
