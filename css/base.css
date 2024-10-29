@@ -42,16 +42,16 @@
 
     /* gradient colors */
     --gradient-name-start: #25A5FA;
-    --gradient-name-end: #A74AFD;
+    --gradient-name-middle: #25A5FA;
+    --gradient-name-end: #25A5FA;
     --gradient-border-start: #CCE8F4;
     --gradient-border-end: #CCE8F4;
-
 }
 
 .gradient-name {
     background: var(--gradient-name-start);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-middle), var(--gradient-name-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-middle), var(--gradient-name-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .gradient-border {
