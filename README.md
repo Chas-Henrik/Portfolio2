@@ -41,8 +41,21 @@ The site is published on Netlify (see hyperlink below):
 ## Frågor:
 
 ### Vad kan man utveckla m.h.a av Javascript inom frontend?
+Man kan utveckla interaktion & funktionalitet m.h.a JavaScript.  
 
+Exempel på interaktion med användaren:
+1. Reagera på olika events (t.ex. click, mouseover, drag, drop)
+2. Ändra, lägga till och ta bort HTML element
+3. Visa & ta bort pop-ups
 
+Exempel på funktionalitet:
+1. Spara data i Local Storage
+2. Kommunicera med backend m.h.a Rest API
+3. Beräkningar i fronend såväl som backend
+4. Spara data i backend databas
+5. Kommunicera med externa tjänster m.h.a API (väderdata, recept, generera data från Chat GPT)
+  
+  
 ### Vad är JSON och hur används det inom frontend?
 
 
