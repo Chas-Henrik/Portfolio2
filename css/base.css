@@ -61,8 +61,8 @@
 }
 
 .text-shadow-active {
-    color: var(--gradient-name-end) !important;
-    text-shadow: 1px 1px 2px var(--gradient-name-start), 0 0 1em var(--gradient-name-end), 0 0 0.2em var(--gradient-name-end);
+    color: var(--menu-color-hover) !important;
+    text-shadow: 1px 1px 2px var(--menu-color-hover), 0 0 1em var(--menu-color-hover), 0 0 0.2em var(--progress-bar-color);
 }
 
 #progress-control {

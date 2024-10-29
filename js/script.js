@@ -1,7 +1,22 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
 import { Octokit, App } from "https://esm.sh/octokit";
 
-// *** Hamburger menu ***
+// *** Menu buttons (active indication) ***
+const menuListUlButtons = document.getElementById("menu__list--ul-buttons");
+const menuButtons = menuListUlButtons.querySelectorAll("a");
+
+menuButtons.forEach((button) => {
+    button.addEventListener("click", menuButtonClicked);
+});
+
+function menuButtonClicked(event) {
+    menuButtons.forEach((button) => {
+        button.classList.remove("text-shadow-active");
+    });
+    event.target.classList.add("text-shadow-active");
+}
+
+// *** Hamburger menu (toggle menu) ***
 
 const hamburgerMenu = document.getElementById("hamburger-menu");
 hamburgerMenu.addEventListener("click", hamburgerMenuClicked);
