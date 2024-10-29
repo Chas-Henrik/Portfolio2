@@ -13,6 +13,11 @@ Two additional content driven breakpoints have been set at 815px and 1350px:
 - The 815px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint.  
 - The 1350px breakpoint prevents navigation bar overflow and 'profile picture bouncing' when resizing the Web Browser on a Desktop.  
   
+The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' has been added:
+1. Progress bar when user loads the page
+2. Hamburger menu
+3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the site internal menu links
+
 The site supports ‘dark theme’ (configured through the operating system settings).  
   
 All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size. The profile picture is jpg formatted as that's the only available format for that particular image.  

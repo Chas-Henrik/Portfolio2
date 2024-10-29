@@ -11,6 +11,7 @@ html {
     font-weight: 400;
     font-style: normal;
     font-size: calc(62.5% / 1.5);
+    scroll-behavior: smooth;
 }
 
 body {
