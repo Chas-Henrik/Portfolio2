@@ -55,7 +55,7 @@ function updateProgressBar(progress) {
     let progressValue = document.getElementById("progress-value");
 
     progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
-    container.style.background = `conic-gradient(#0f0bfc ${progress * 3.6}deg, #ddf5fc 0deg)`;
+    container.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
 }
 
 // *** Connect to GitHub & populate page ***

@@ -222,7 +222,7 @@ section {
 }
 
 .flex__logo--chas {
-    flex: 1 1 15%;
+    flex: 1 1 10%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -235,7 +235,7 @@ section {
 }
 
 .flex--menu {
-    flex: 1 1 70%;
+    flex: 1 1 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -248,7 +248,7 @@ section {
 }
 
 .label__size--hamburger {
-    flex: 1 1 15%;
+    flex: 1 1 10%;
 }
 
 .menu__list {
@@ -651,7 +651,7 @@ section {
     }
 
     .flex--menu {
-        flex: 1 1 85%;
+        flex: 1 1 90%;
     }
 
     .menu__list--buttons {
@@ -830,7 +830,7 @@ section {
 }
 
 /* Content driven breakpoint for screens that are larger than 1350px (Large Desktops) */
-@media (min-width: 1350px) {
+@media (min-width: 1200px) {
     html {
         font-size: 62.5%;
     }
@@ -852,15 +852,16 @@ section {
     }
 
     #progress-control {
-        background-color: var(--background-light-mode);
+        background-color: var(--background-progress-bar);
     }
 
     #progress-value {
-        background-color: var(--background-light-mode);
+        background-color: var(--background-progress-bar);
+        color: var(--progress-bar-text-color);
     }
     
     #progress-action {
-        color: var(--black-content-light-mode);
+        color: var(--progress-bar-text-color);
     }
 
     header {
@@ -955,15 +956,16 @@ section {
     }
 
     #progress-control {
-        background-color: var(--background-card-dark-mode);
+        background-color: var(--background-progress-bar-dark-mode);
     }
 
     #progress-value {
         background-color: var(--background-card-dark-mode);
+        color: var(--progress-bar-text-color-dark-mode);
     }
     
     #progress-action {
-        color: var(--black-content-dark-mode);
+        color: var(--progress-bar-text-color-dark-mode);
     }
 
     header {
