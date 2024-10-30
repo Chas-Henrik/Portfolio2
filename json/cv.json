@@ -192,7 +192,7 @@
             "description": ["Fullstack JavaScript", "220 'YH-credits'"]
         },
         {
-            "role": "MS, CS",
+            "role": "Master of Science, Computer Science",
             "type": "Full-Time",
             "provider": "University of New Haven",
             "date": "1999 - 2001",
@@ -200,7 +200,7 @@
             "description": ["Master of Science, Computer Science", "Advanced Applications Concentration", "48 American credits", "GPA 4.16 (on a 4.3 scale)"]
         },
         {
-            "role": "BS, EE",
+            "role": "Bachelor of Science, Electrical Engineering",
             "type": "Full-Time",
             "provider": "Royal Institute of Technology",
             "date": "1990 - 1993",
@@ -208,7 +208,7 @@
             "description": ["Bachelor of Science, Electrical Engineering", "Telecommunication and Switching Concentration", "120 Swedish credits ~ 81 American credits"]
         },
         {
-            "role": "Bachelor's Degree",
+            "role": "Bachelor's Degree, Mathematics",
             "type": "Half-Time",
             "provider": "University of Stockholm",
             "date": "1992 - 1993",
