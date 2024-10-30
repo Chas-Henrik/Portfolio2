@@ -100,8 +100,8 @@ section {
 }
 
 .heading__size--card-title {
-    font-size: 2.0rem;
-    line-height: 2.0rem;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     font-weight: 600;
 }
 
@@ -751,13 +751,6 @@ section {
 
 /* Content driven breakpoint for screens that are larger than 815px (Tablets & Desktops) */
 @media (min-width: 815px) {
-
-    /*** Font Sizes ***/
-
-    .heading__size--card-title {
-        font-size: 2.8rem;
-        line-height: 2.8rem;
-    }
 
     /*** Projects Section ***/
 
