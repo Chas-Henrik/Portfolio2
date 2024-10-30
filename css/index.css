@@ -110,18 +110,6 @@ section {
     margin-bottom: 4.2rem;
 }
 
-.paragraph__size--footnote-span {
-    font-weight: 300;
-    font-size: 1.4rem;
-    line-height: 2.6rem;
-}
-
-.paragraph__size--card-description {
-    font-weight: 300;
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-}
-
 .paragraph__size--grid-role {
     font-weight: 400;
     font-size: 2rem;
@@ -154,8 +142,20 @@ section {
     letter-spacing: 0.1rem;
 }
 
-.paragraph__size--card-footnote {
+.paragraph__size--card-description {
     font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+}
+
+.paragraph__size--footnote-span {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+.paragraph__size--card-footnote {
+    font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.6rem;
 }
@@ -213,10 +213,6 @@ section {
 }
 
 /*** Header ***/
-
-header {
-    box-shadow: var(--box-shadow-light-mode);
-}
 
 .flex__nav {
     display: flex;
@@ -305,8 +301,8 @@ header {
     width: 3rem;
     height: auto;
     vertical-align: middle;
-    filter: brightness(0%);
-    /* => color #000000*/
+    filter: none;
+    /* => #666666*/
 }
 
 .menu--collapsed {
@@ -631,7 +627,6 @@ header {
     left: 0;
     text-align: center;
     padding: 0.5rem 0;
-    box-shadow: var(--box-shadow-light-mode);
 }
 
 /*** Media Queries ***/
@@ -764,9 +759,6 @@ header {
         min-height: 56.7rem;
     }
 
-    .paragraph__size--card-footnote {
-        font-weight: 400;
-    }
 }
 
 /* On screens that are 1024px or more (Medium & Large Desktops) */
@@ -816,11 +808,6 @@ header {
 
     .menu__list--icons li {
         flex: 1;
-    }
-
-    .menu__list--icons img {
-        filter: none;
-        /* => #666666*/
     }
 
     .flex-introduction {
@@ -876,6 +863,10 @@ header {
         color: var(--black-content-light-mode);
     }
 
+    header {
+        box-shadow: var(--box-shadow-light-mode);
+    }
+
     header,
     .flex__nav {
         background-color: var(--background-light-mode);
@@ -883,7 +874,7 @@ header {
     }
 
     .menu__list li a {
-        color: var(--black-content-light-mode);
+        color: var(--dark-content-light-mode);
     }
 
     .flex-container__size--medium {
@@ -925,16 +916,11 @@ header {
     }
 
     .card * {
+        color: var(--dark-content-light-mode);
+    }
+
+    .card__title {
         color: var(--black-content-light-mode);
-    }
-
-    .card__description,
-    .card__footnote {
-        color: var(--dark-content-light-mode);
-    }
-
-    .card__footnote>span {
-        color: var(--dark-content-light-mode);
     }
 
     .container--contact {
@@ -949,20 +935,7 @@ header {
     .footer {
         background: var(--background-light-mode);
         color: var(--dark-content-light-mode);
-    }
-}
-
-/* On screens that are less than 1024px (Mobile & Tablets), we override Light Theme above to match Mobile Mode color */
-@media (max-width: 1023px) {
-    .card__footnote {
-        color: var(--black-content-light-mode);
-    }
-}
-
-/* On screens that are larger than 1024px (Desktops), we override Light Theme above to match Desktop Mode color */
-@media (min-width: 1024px) {
-    .menu__list li a {
-        color: var(--dark-content-light-mode);
+        box-shadow: var(--box-shadow-light-mode);
     }
 }
 
@@ -991,6 +964,10 @@ header {
     
     #progress-action {
         color: var(--black-content-dark-mode);
+    }
+
+    header {
+        box-shadow: var(--box-shadow-dark-mode);
     }
 
     header,
@@ -1046,6 +1023,10 @@ header {
         color: var(--solid-heading-dark-mode);
     }
 
+    .card__title {
+        color: var(--black-content-dark-mode);
+    }
+
     .card__footer * {
         color: var(--black-content-dark-mode);
     }
@@ -1062,5 +1043,6 @@ header {
     .footer {
         background: var(--background-dark-mode);
         color: var(--light-content-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
     }
 }

@@ -22,6 +22,7 @@
     --black-content-light-mode: #000000;
     --black-content-dark-mode: #FFFFFF;
     --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
+    --box-shadow-dark-mode: 2px 2px 30px 0px #d8d7d733;
     --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
     --box-shadow-tiny-light-mode: 2px 2px 10px 0px #00000033;
     --progress-bar-color-value: #0f0bfc;
