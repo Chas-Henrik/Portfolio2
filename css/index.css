@@ -23,7 +23,7 @@ header {
     width: 100vw;
     max-width: 100%;
     position: sticky;
-    padding: 1rem 3vw;
+    padding: 1rem;
     top: 0;
     font-family: var(--secondary-font);
     font-optical-sizing: auto;
@@ -230,7 +230,6 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-right: auto;
     margin-left: 0.5rem;
 }
 
@@ -242,6 +241,7 @@ header {
 .flex--menu {
     flex: 1 1 70%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -585,7 +585,7 @@ header {
 
 #section-contact {
     width: 100%;
-    height: 70svh;
+    height: 80svh;
 }
 
 .container--contact {
@@ -650,10 +650,6 @@ header {
     }
 
     /*** Header ***/
-
-    header {
-        padding: 1rem 6vw;
-    }
 
     .label__size--hamburger {
         flex: 1 1 0%;
@@ -778,16 +774,15 @@ header {
 
     /*** Header ***/
 
-    header {
-        padding: 1rem var(--main-horizontal-margin);
-    }
-
     .flex__nav {
         align-items: center;
     }
 
     .flex--menu {
         flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .label__size--hamburger {
@@ -795,13 +790,12 @@ header {
     }
 
     .menu__list--buttons {
-        flex: 1 1 auto;
-        justify-content: flex-end;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        column-gap: 2.0rem;
+        column-gap: 4.0rem;
         flex-wrap: nowrap;
         margin-block-end: 0;
-        margin-right: 2rem;
     }
 
     .menu__list--icons {
@@ -814,10 +808,6 @@ header {
         flex: unset;
         display: flex;
         justify-content: space-around;
-    }
-
-    .menu__list--buttons li:first-child {
-        margin-left: auto;
     }
 
     .menu__list--buttons li a {
@@ -856,10 +846,6 @@ header {
 @media (min-width: 1350px) {
     html {
         font-size: 62.5%;
-    }
-
-    .menu__list--buttons {
-        column-gap: 4.0rem;
     }
 }
 
