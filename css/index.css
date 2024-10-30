@@ -24,7 +24,6 @@ header {
     max-width: 100%;
     position: sticky;
     padding: 1rem 3vw;
-    padding-top: 3rem;
     top: 0;
     font-family: var(--secondary-font);
     font-optical-sizing: auto;
@@ -279,7 +278,6 @@ header {
 
 .menu__list--buttons {
     flex-wrap: wrap;
-    margin-block-start: 4rem;
     margin-block-end: 2rem;
 }
 
