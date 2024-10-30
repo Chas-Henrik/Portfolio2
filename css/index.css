@@ -374,6 +374,13 @@ section {
     font-weight: 700;
 }
 
+.introduction__link {
+    color: inherit;
+}
+
+.introduction__link:hover {
+    color: var(--menu-color-hover);
+}
 
 /*** About, Work Experience & Education Section ***/
 
@@ -570,6 +577,10 @@ section {
     text-align: center;
 }
 
+.footer__link:hover {
+    color: var(--menu-color-hover);
+}
+
 .footer__img--card {
     width: 2rem;
     height: auto;
@@ -601,7 +612,6 @@ section {
 
 .contact__link {
     display: inline-block;
-    text-decoration: none;
     margin-bottom: 3rem;
     color: inherit;
 }
