@@ -413,6 +413,7 @@ section {
 .grid__item--type {
     grid-area: type;
     justify-self: right;
+    text-align: right;
 }
 
 .grid__figure > * {
@@ -433,6 +434,7 @@ section {
 .grid__item--date {
     grid-area: date;
     justify-self: right;
+    text-align: right;
 }
 
 .grid__item--location {
