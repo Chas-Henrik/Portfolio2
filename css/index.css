@@ -858,6 +858,7 @@ section {
 
     #progress-control {
         background-color: var(--background-progress-bar);
+        box-shadow: var(--box-shadow-light-mode);
     }
 
     #progress-value {
@@ -962,6 +963,7 @@ section {
 
     #progress-control {
         background-color: var(--background-progress-bar-dark-mode);
+        box-shadow: var(--box-shadow-dark-mode);
     }
 
     #progress-value {
