@@ -1,4 +1,5 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
+import { loadJSONData } from "./json-loader.js";
 import { Octokit, App } from "https://esm.sh/octokit";
 
 // *** Menu buttons (active indication) ***
@@ -78,15 +79,6 @@ async function main() {
 
 // ***Connect to GitHub***
 
-async function fetchJSONData(url) {
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error("Error fetching JSON data:", error);
-    }
-}
-
 async function connectToGitHub(authenticate) {
     if(authenticate){
         // Authenticate on GitHub
@@ -114,7 +106,7 @@ async function populatePage(octokit) {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await fetchJSONData("./../json/cv.json");
+        const dataObj = await loadJSONData("./../json/cv.json");
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateGridContainer(dataObj["education"], "grid-education");
@@ -211,7 +203,6 @@ async function populateProjectCards(octokit) {
     const repoObjs = await getRepos(octokit, repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
-    //const projectData = await fetchJSONData(new URL("https://chas-henrik.github.io/Portfolio2/json/projects.json"));
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
