@@ -227,6 +227,7 @@ section {
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 0.5rem;
+    border-radius: 50%;
 }
 
 .image__logo--chas {
