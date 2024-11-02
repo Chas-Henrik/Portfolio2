@@ -59,7 +59,7 @@ Exempel på funktionalitet:
   
 ### Vad är JSON och hur används det inom frontend?
 
-JSON (JavaScript Object Notation) är ett lättviktigt format för att lagra och överföra data. Det är enkelt att läsa och skriva för människor och lätt att tolka och generera för maskiner. Formatet representerar data i arrayer och/eller 'nyckel-värde-par' och är språkoberoende, vilket innebär att det kan användas i många programmeringsspråk.  
+JSON (JavaScript Object Notation) är ett lättvikts format för att lagra och överföra data. Det är enkelt att läsa och skriva för människor och lätt att tolka och generera för maskiner. Formatet representerar data i arrayer och/eller 'nyckel-värde-par' och är språkoberoende, vilket innebär att det kan användas i många programmeringsspråk.  
   
 JSON används för att utbyta data mellan webbläsaren och servern i frontend. 
   
