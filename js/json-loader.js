@@ -6,6 +6,10 @@ export async function loadJSONData(url) {
         // If timestamp is missing or the timestamp is older than 24 hours, fetch the data again
         if(cvDataObj == null || cvDataObj.timeStamp == null || Date.now() > parseInt(cvDataObj.timeStamp) + oneDay) {
             const response = await fetch(url);
+            if(!response.ok) {
+                throw new Error(`HTTP ERROR status = ${response.status}`);
+            }
+
             cvDataObj = await response.json();
             saveToLocalStorage(cvDataObj);
         }
