@@ -61,10 +61,31 @@ Exempel på funktionalitet:
   
 ### Vad är JSON och hur används det inom frontend?
 
-JSON (JavaScript Object Notation) är ett lättvikts format för att lagra och överföra data. Det är enkelt att läsa och skriva för människor och lätt att tolka och generera för maskiner. Formatet representerar data i arrayer och/eller 'nyckel-värde-par' och är språkoberoende, vilket innebär att det kan användas i många programmeringsspråk.  
+JSON står för “JavaScript Object Notation” och är ett lättvikts format för att strukturera data. JSON är särskilt utformat för att vara enkelt att läsa och skriva för både människor och maskiner. JSON består av nyckel-värde-par och använder en syntax som liknar JavaScript-objekt, vilket gör det väldigt användbart och lätt att arbeta med i webbutveckling, särskilt på frontend-sidan.  
   
-JSON används för att utbyta data mellan webbläsaren och servern i frontend. 
+JSON används för att utbyta data mellan webbläsaren och servern i frontend.
+JSON är ett enkelt och effektivt dataformat som är centralt för frontendutveckling, särskilt när det gäller kommunikation mellan klient och server, hantering av dynamisk data och lagring av konfigurationer. Genom att arbeta med JSON kan frontendutvecklare enkelt hantera och manipulera data, vilket är viktigt för att skapa interaktiva och responsiva webbapplikationer.
+
+Här är några specifika användningsområden:
+1. API-kommunikation :  JSON är det vanligaste formatet för att skicka och ta emot data från API:er. 
+2. Datanavigering och rendering :  JSON-data kan hämtas från en server och direkt omvandlas till JavaScript-objekt vilket gör det enkelt att navigera och bearbeta data för att rendera dynamiskt innehåll i en webbsida.
+3. Lokalt lagrad data : JSON används också för att cacha data i webbläsarens “localStorage” för att snabbt kunna hämta datan utan nya API anrop.
+4. Konfiguration och inställningar : Vissa frontendverktyg och bibliotek använder JSON för konfigurationer och inställningar. 
+5. Serialisering och deserialisering av data : JSON gör det möjligt att “serialisera” (omvandla) JavaScript-objekt till en textsträng, vilket behövs för att kunna skicka objekt i ett HTTP-anrop.
   
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-HTTP (HyperText Transfer Protocol) är ett applikationslager protokoll i Internet-protokoll svitmodellen för distribuerade, kollaborativa hypermedia informationssystem.
+HTTP (HyperText Transfer Protocol) är ett applikationslager protokoll i Internet-protokoll svitmodellen för distribuerade, kollaborativa hypermedia informationssystem. HTTP används för att kommunicera med webbservrar och definierar hur förfrågningar och svar ska skickas mellan klient (ex. en webbläsare) och server.
+
+Kunskap om HTTP och dess protokoll hjälper frontendutvecklaren att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, vilket både förbättrar användarupplevelsen och säkerheten.
+
+Som frontendutvecklare är det viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. 
+
+Här är några skäl till varför det är viktigt:
+1. Förståelse för klient-server-kommunikation: Som frontendutvecklare behöver man förstå hur förfrågningar och svar hanteras mellan klient och server. Detta är avgörande när man bygger funktioner som hämtar data från API:er eller skickar information till servern.
+2. Förfrågningstyper (GET, POST, PUT, DELETE): HTTP använder olika typer av förfrågningar (s.k. “HTTP-metoder”) för att definiera syftet med en förfrågan, som att hämta, skicka, uppdatera eller ta bort data. Att förstå skillnaderna mellan dessa är viktigt när man arbetar med API-anrop i frontendkoden.
+3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
+4. Säkerhet (HTTPS): HTTPS är en säker version av HTTP som använder SSL/TLS-kryptering för att skydda datan som skickas mellan klient och server. Att förstå hur HTTPS fungerar är viktigt för att kunna säkra applikationer och se till att användardata skyddas.
+5. Caching och prestanda: HTTP har inbyggda funktioner för caching som gör det möjligt att förbättra sidladdningstider och prestanda. Som frontendutvecklare är det bra att förstå hur dessa fungerar och hur de kan utnyttjas för att optimera webbplatsen.
+6. CORS (Cross-Origin Resource Sharing): När din frontendapplikation kommunicerar med en backend på en annan domän är det viktigt att förstå CORS-regler, eftersom de bestämmer vilka domäner som får skicka förfrågningar till servern.
+
