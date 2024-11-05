@@ -79,9 +79,9 @@ HTTP (HyperText Transfer Protocol) är ett applikationslager protokoll i Interne
 
 Kunskap om HTTP och dess protokoll hjälper frontendutvecklaren att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, vilket både förbättrar användarupplevelsen och säkerheten.
 
-Som frontendutvecklare är det också viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. 
+Som frontendutvecklare är det också viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. Och det är viktigt att förstå hur man hämtar data på ett effektivt sätt med HTTP, och hur data skickas och skyddas i en webbapplikation då detta både förbättrar användarupplevelsen och säkerheten.
 
-Här är några skäl till varför det är viktigt:
+Här är några ytterligare skäl till att det är viktigt att ha kunskap om HTTP och dess protokoll:
 1. Förståelse för klient-server-kommunikation: Som frontendutvecklare behöver man förstå hur förfrågningar och svar hanteras mellan klient och server. Detta är avgörande när man bygger funktioner som hämtar data från API:er eller skickar information till servern.
 2. Förfrågningstyper (GET, POST, PUT, DELETE): HTTP använder olika typer av förfrågningar (s.k. “HTTP-metoder”) för att definiera syftet med en förfrågan, som att hämta, skicka, uppdatera eller ta bort data. Att förstå skillnaderna mellan dessa är viktigt när man arbetar med API-anrop i frontendkoden.
 3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
