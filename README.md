@@ -21,7 +21,7 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
 
 The site supports ‘dark theme’ (configured through the operating system settings).  
   
-The cv.json is cached in Local Storage. The data in Local Storage has been timestamped and 'automatically' invalidated after 24h, so that the cache eventually reflects the server content when cv.json is updated on the server.
+The cv.json is cached in Local Storage. The data in Local Storage has been timestamped and 'automatically' invalidated after 24h, so that the cache reflects the server content when cv.json is updated on the server.
 
 All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size.   
   
