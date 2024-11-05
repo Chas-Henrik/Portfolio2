@@ -87,5 +87,5 @@ Här är några ytterligare skäl till att det är viktigt att ha kunskap om HTT
 3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
 4. Säkerhet (HTTPS): HTTPS är en säker version av HTTP som använder SSL/TLS-kryptering för att skydda datan som skickas mellan klient och server. Att förstå hur HTTPS fungerar är viktigt för att kunna säkra applikationer och se till att användardata skyddas.
 5. Caching och prestanda: HTTP har inbyggda funktioner för caching som gör det möjligt att förbättra sidladdningstider och prestanda. Som frontendutvecklare är det bra att förstå hur dessa fungerar och hur de kan utnyttjas för att optimera webbplatsen.
-6. CORS (Cross-Origin Resource Sharing): När din frontendapplikation kommunicerar med en backend på en annan domän är det viktigt att förstå CORS-regler, eftersom de bestämmer vilka domäner som får skicka förfrågningar till servern.
+6. CORS (Cross-Origin Resource Sharing): När frontendapplikationen kommunicerar med en backend på en annan domän är det viktigt att förstå CORS-regler, eftersom de bestämmer vilka domäner som får skicka förfrågningar till servern.
 
