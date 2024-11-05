@@ -242,7 +242,7 @@ async function getRepo(octokit, name) {
         });
         return repoObj;
     } catch (error) {
-        console.error("Error fetching repository:", error);  
+        console.error(`Error fetching ${name} repository:`, error);  
     }
 }
 
