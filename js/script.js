@@ -200,49 +200,66 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 async function populateProjectCards(octokit) {
     const repoNames = ["Minesweeper", "Simple-ToDo-List", "Word-Count", "Profile-Card", "Menu-Nailbiter", "Portfolio"];
-    const repoObjs = await getRepos(octokit, repoNames);
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
+    const repoObjs = [];
+    const languageObjs = [];
+    await fetchRepoEndpoints(octokit, repoNames, repoObjs, languageObjs);
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
         const repoObj = repoObjs[i]; 
         const titleElement = card.querySelector(".card__title");
         const descriptionElement = card.querySelector(".card__description");
-        const footerElement = card.querySelector(".card__footer");
+        const techStackElement = card.querySelector(".card__tech-stack");
         const linkElements = card.querySelectorAll("a");
+        const languageStr = Object.keys(languageObjs[i].data).join(", ");
+
         titleElement.innerText = repoObj.data.name;
         descriptionElement.innerText = repoObj.data.description;
+        techStackElement.innerText = languageStr;
         linkElements[0].href = `https://chas-henrik.github.io/${repoNames[i]}/`;
         linkElements[1].href = repoObj.data.html_url;
     };
 }
 
-async function getRepos(octokit, repoNames) {
-    const repoObjs = [];
-
+async function fetchRepoEndpoints(octokit, repoNames, repoObjs, languageObjs) {
     for(let i=0; i<repoNames.length; i++) {
         const repoName = repoNames[i];
-        const repoObj = await getRepo(octokit, repoName);
+        const repoObj = await getRepoEndpoint(octokit, repoName, 'GET /repos/{owner}/{repo}');
+        const languageObj = await getRepoEndpoint(octokit, repoName, 'GET /repos/{owner}/{repo}/languages');
         updateProgressBar(10 + 90*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
+        languageObjs.push(languageObj);
     };
-
-    return repoObjs;
 }
 
-async function getRepo(octokit, name) {
+async function getRepoEndpoint(octokit, name, endpoint) {
     try {
-        const repoObj = await octokit.request('GET /repos/{owner}/{repo}', {
-            owner: "Chas-Henrik",
-            repo: name,
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28'
-            }
-        });
-        return repoObj;
+        const oneDay = 86400000; // 24 hours in milliseconds
+
+        // Check if data is in cache (Local Storage)
+        let endpointObj = JSON.parse(localStorage.getItem(`${name} : ${endpoint}`));
+        
+        // Check if data is older than 24h
+        if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + oneDay) {
+            // Fetch data from API
+            const endpointObj = await octokit.request(endpoint, {
+                owner: "Chas-Henrik",
+                repo: name,
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+
+            // Attach a timestamp to data object
+            endpointObj.timeStamp =  Date.now();
+
+            // Save to local storage
+            localStorage.setItem(`${name} : ${endpoint}`, JSON.stringify(endpointObj));
+        }
+        return endpointObj;
     } catch (error) {
         console.error(`Error fetching ${name} repository:`, error);  
     }
 }
-
