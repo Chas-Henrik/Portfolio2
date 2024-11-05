@@ -244,7 +244,7 @@ async function getRepoEndpoint(octokit, name, endpoint) {
         // Check if data is older than 24h
         if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + oneDay) {
             // Fetch data from API
-            const endpointObj = await octokit.request(endpoint, {
+            endpointObj = await octokit.request(endpoint, {
                 owner: "Chas-Henrik",
                 repo: name,
                 headers: {
