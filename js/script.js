@@ -68,7 +68,7 @@ async function main() {
         updateProgressControlDisplay("flex");
         updateProgressAction("Populating page with JSON data...");
         updateProgressBar(0);
-        const octokit = await connectToGitHub(false);
+        const octokit = await connectToGitHub();
         await populatePage(octokit);
     } catch (error) {
         console.error("Error:", error);
@@ -79,7 +79,7 @@ async function main() {
 
 // ***Connect to GitHub***
 
-async function connectToGitHub(authenticate) {
+async function connectToGitHub(authenticate=false) {
     if(authenticate){
         // Authenticate on GitHub
         // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
