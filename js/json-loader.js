@@ -21,7 +21,7 @@ export async function loadJSONData(url) {
 }
 
 function saveToLocalStorage(cvDataObj) {
-    // Add a new timestamp to the object
+    // Attach a timestamp to the object
     cvDataObj.timeStamp =  Date.now();
     localStorage.setItem("cvDataObj", JSON.stringify(cvDataObj));
 }
