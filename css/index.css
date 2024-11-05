@@ -349,6 +349,7 @@ section {
 
 .flex-container__border-radius--circle {
     border-radius: 50%;
+    background-color: var(--background-profile-border);
 }
 
 .image--profile {

@@ -44,16 +44,7 @@
     --background-details-technology-dark-mode: #CCCCCC;
     --menu-color-hover: #54C4F8;
     --border-color-card: rgb(77, 188, 224);
-
-    /* gradient colors */
-    --gradient-border-start: #CCE8F4;
-    --gradient-border-end: #CCE8F4;
-}
-
-.gradient-border {
-    background: var(--gradient-border-start);
-    background: -webkit-linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --background-profile-border: #BCE9F5;
 }
 
 .text-shadow-active {

@@ -32,8 +32,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. Contact gradient doesn't render properly when printed with Google Chrome.
-2. Gradients don't render properly when printed with Safari on iPad and iPhone.
+1. No effort has been spent on rendering the page properly when printing the page, and therefore the header is visible and the page breaks can occur anywhere on the page when it is printed.
 
 *Notes:*
 
