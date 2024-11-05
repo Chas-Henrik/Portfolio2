@@ -34,7 +34,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. Only some effort has been spent on rendering the page properly when printing the page, therefore page breaks can occur anywhere on the page when printed. The header & footer will be removed though.  
+1. Only some effort has been spent on rendering the page properly when printing the page, therefore page breaks can occur anywhere on the page when printed. The header & footer has been removed though.  
   
   
 *Notes:*
