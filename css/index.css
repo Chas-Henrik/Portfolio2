@@ -1055,3 +1055,10 @@ section {
         box-shadow: var(--box-shadow-dark-mode);
     }
 }
+
+@media only print {
+    /* Don't print the header & footer */
+    header, footer {
+        display: none !important;
+    }
+}
