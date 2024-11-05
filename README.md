@@ -21,6 +21,8 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
 
 The site supports ‘dark theme’ (configured through the operating system settings).  
   
+The cv.json is cached in Local Storage. The data in Local Storage is timestamped and 'automatically' invalidated after 24h, so that the cache eventually reflects the cv.json on the server, if the cv.json is updated on the server.
+
 All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size.   
   
 The `display: inline; vertical-align: middle;` solution has been selected over the 'flex-box' solution for the 'icon & text grid cells' even though the icon vertical alignment is slightly worse. The reason for this, is that the 'line wrap behavior' is way better for the 'vertical-align' solution when the (icon & text) line run out of horizontal space.
