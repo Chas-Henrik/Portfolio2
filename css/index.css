@@ -264,9 +264,14 @@ section {
 .menu__list li a {
     display: inline-block;
     text-decoration: none;
-    text-wrap: nowrap;
     color: inherit;
     vertical-align: middle;
+}
+
+@supports (text-wrap: nowrap) {
+    .menu__list li a {
+        text-wrap: nowrap; /* Not supported by Safari < 17.4 */
+    }
 }
 
 .menu__list li a:hover {
@@ -547,13 +552,18 @@ section {
     gap: 1rem;
 }
 
-.card__title{
+.card__title {
     flex: 1 1 15%;
     text-align: center;
-    text-wrap: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@supports (text-wrap: nowrap) {
+    .card__title {
+        text-wrap: nowrap; /* Not supported by Safari < 17.4 */
+    }
 }
 
 .card__description {
@@ -1083,7 +1093,13 @@ section {
     }
 
     .break-after--avoid {
-        break-after: avoid-page;
+        break-after: avoid;
+    }
+
+    @supports (break-after: avoid-page) {
+        .break-after--avoid {
+            break-after: avoid-page; /* Not supported by Firefox */
+        }
     }
 
     .break-inside--avoid {
