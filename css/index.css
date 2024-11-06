@@ -674,6 +674,7 @@ section {
     }
 
     .flex--menu {
+        display: flex;
         flex: 1 1 90%;
     }
 
