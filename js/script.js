@@ -1,6 +1,6 @@
 //import cvData from './../json/cv.json' with { type: 'json' };
 import { loadJSONData } from "./json-loader.js";
-import { Octokit, App } from "https://esm.sh/octokit";
+import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
 // *** Menu buttons (active indication) ***
 const menuListUlButtons = document.getElementById("menu__list--ul-buttons");
@@ -68,8 +68,8 @@ async function main() {
         updateProgressControlDisplay("flex");
         updateProgressAction("Populating page with JSON data...");
         updateProgressBar(0);
-        const octokit = await connectToGitHub();
-        await populatePage(octokit);
+        await connectToGitHub();
+        await populatePage();
     } catch (error) {
         console.error("Error:", error);
     } finally {
@@ -77,27 +77,11 @@ async function main() {
     }
 }
 
-// ***Connect to GitHub***
-
-async function connectToGitHub(authenticate=false) {
-    if(authenticate){
-        // Authenticate on GitHub
-        // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-        const GITHUB_ACCESS_TOKEN = "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";
-        const octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
-        const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
-        console.log("Hello, %s", login);
-        return octokit;
-    } else {
-        return new Octokit({})
-    }
-}
-
 // *** Populate Page ***
 
-async function populatePage(octokit) {
+async function populatePage() {
     await populateGrid();
-    await populateProjectCards(octokit);
+    await populateProjectCards();
 }
 
 
@@ -198,13 +182,13 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 // *** Populate projects from GitHub ***
 
-async function populateProjectCards(octokit) {
+async function populateProjectCards() {
     const repoNames = ["Minesweeper", "Simple-ToDo-List", "Word-Count", "Profile-Card", "Menu-Nailbiter", "Portfolio"];
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
     const repoObjs = [];
     const languageObjs = [];
-    await fetchRepoEndpoints(octokit, repoNames, repoObjs, languageObjs);
+    await fetchRepoEndpoints(repoNames, repoObjs, languageObjs);
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
@@ -223,43 +207,15 @@ async function populateProjectCards(octokit) {
     };
 }
 
-async function fetchRepoEndpoints(octokit, repoNames, repoObjs, languageObjs) {
+async function fetchRepoEndpoints(repoNames, repoObjs, languageObjs) {
     for(let i=0; i<repoNames.length; i++) {
         const repoName = repoNames[i];
-        const repoObj = await getRepoEndpoint(octokit, repoName, 'GET /repos/{owner}/{repo}');
-        const languageObj = await getRepoEndpoint(octokit, repoName, 'GET /repos/{owner}/{repo}/languages');
+        const repoObj = await getRepoEndpoint(repoName, 'GET /repos/{owner}/{repo}');
+        const languageObj = await getRepoEndpoint(repoName, 'GET /repos/{owner}/{repo}/languages');
         updateProgressBar(10 + 90*(i+1)/repoNames.length);
         repoObjs.push(repoObj);
         languageObjs.push(languageObj);
     };
 }
 
-async function getRepoEndpoint(octokit, name, endpoint) {
-    try {
-        const oneDay = 86400000; // 24 hours in milliseconds
 
-        // Check if data is in cache (Local Storage)
-        let endpointObj = JSON.parse(localStorage.getItem(`${name} : ${endpoint}`));
-        
-        // Check if data is older than 24h
-        if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + oneDay) {
-            // Fetch data from API
-            endpointObj = await octokit.request(endpoint, {
-                owner: "Chas-Henrik",
-                repo: name,
-                headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
-            });
-
-            // Attach a timestamp to data object
-            endpointObj.timeStamp =  Date.now();
-
-            // Save to local storage
-            localStorage.setItem(`${name} : ${endpoint}`, JSON.stringify(endpointObj));
-        }
-        return endpointObj;
-    } catch (error) {
-        console.error(`Error fetching ${name} repository:`, error);  
-    }
-}
