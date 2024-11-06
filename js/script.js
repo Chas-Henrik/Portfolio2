@@ -1,4 +1,3 @@
-//import cvData from './../json/cv.json' with { type: 'json' };
 import { loadJSONData } from "./json-loader.js";
 import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
