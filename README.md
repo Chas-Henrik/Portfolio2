@@ -23,7 +23,7 @@ The site supports ‘dark theme’ (configured through the operating system sett
   
 Some additional effort has been made to remove the header & footer when the page is printed, and effort has also been made to make the page print with suitable page breaks.  
   
-The cv.json is cached in Local Storage. The data in Local Storage is timestamped and 'automatically' invalidated after 24h, so that the cache reflects the latest server content when cv.json is updated on the server.
+Both the cv.json & the GitHub API data is cached in Local Storage. The data in Local Storage is timestamped and 'automatically' invalidated after 24h, so that the cache reflects the latest server content when cv.json and/or the the GitHub API data is updated on the server.
   
 All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size.   
   
@@ -32,7 +32,7 @@ The `display: inline; vertical-align: middle;` solution has been selected over t
 A 'three column menu' has been used for Tablet's & Small Desktop's in favor of a the 'two column menu' to reduce the header height as much as possible.
   
 The site is published on Netlify (see hyperlink below):  
-[https://chas-henrik-u02-designskiss.netlify.app/](https://chas-henrik-u02-designskiss.netlify.app/)
+[https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
 ***
 *Known problems:*
