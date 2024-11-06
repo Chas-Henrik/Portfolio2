@@ -111,7 +111,7 @@ function populateGridContainer(workExperienceObjs, parentElementId) {
     const workExperienceElement = document.getElementById(parentElementId);
     for(const obj in workExperienceObjs){
         const article = document.createElement('article');
-        article.classList.add('grid', 'grid--experience');
+        article.classList.add('grid', 'grid--experience', 'break-inside--avoid');
         workExperienceElement.appendChild(article);
         populateGridElements(workExperienceObjs[obj], article);
     };

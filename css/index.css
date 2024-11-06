@@ -1069,4 +1069,25 @@ section {
     header, footer {
         display: none !important;
     }
+
+    main {
+        break-after: auto;
+    }
+
+    main > section {
+        break-before: page;
+    }
+
+    .break-before--page {
+        break-before: page;
+    }
+
+    .break-after--avoid {
+        break-after: avoid-page;
+    }
+
+    .break-inside--avoid {
+        break-inside: avoid;
+    }
+
 }
