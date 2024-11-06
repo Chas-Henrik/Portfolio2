@@ -5,16 +5,20 @@ import { Octokit, App } from "https://esm.sh/octokit";
 let octokit = null;
 
 export async function connectToGitHub(authenticate=false) {
-    if(authenticate){
-        // Authenticate on GitHub
-        // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-        const GITHUB_ACCESS_TOKEN = "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";
-        octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
-        const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
-        console.log("Hello, %s", login);
-        return octokit;
-    } else {
-        octokit = new Octokit({})
+    try {
+        if(authenticate){
+            // Authenticate on GitHub
+            // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+            const GITHUB_ACCESS_TOKEN = "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";
+            octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
+            const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
+            console.log("Hello, %s", login);
+            return octokit;
+        } else {
+            octokit = new Octokit({})
+        }
+    } catch (error) {
+        console.error(`Error connecting to GitHub:`, error);  
     }
 }
 
