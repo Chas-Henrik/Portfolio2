@@ -18,7 +18,9 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
 2. Hamburger menu
 3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the site internal menu links
 4. Active menu indication
-
+5. 'Expand/Collapse All' button to expand/collapse all 'Description' & 'Technology' details in the grid below.
+  
+  
 The site supports ‘dark theme’ (configured through the operating system settings).  
   
 Some additional effort has been made to remove the header & footer when the page is printed, and effort has also been made to make the page print with suitable page breaks.  

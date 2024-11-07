@@ -58,6 +58,27 @@ function updateProgressBar(progress) {
     container.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
 }
 
+// *** Grid functions ***
+
+function expandAllDetails(e) {
+    const expandAllButton = e.target;
+    const container = e.target.parentElement.parentElement;
+    const details = container.querySelectorAll("details");
+
+    if (expandAllButton.innerText === "Expand All") {
+        expandAllButton.innerText = "Collapse All";
+        details.forEach((detail) => {
+            detail.open = true;
+        });
+    } else {
+        expandAllButton.innerText = "Expand All";
+        details.forEach((detail) => {
+            detail.open = false;
+        });
+    }
+    e.preventDefault();
+}
+
 // *** Connect to GitHub & populate page ***
 
 await main();
@@ -109,6 +130,15 @@ function populateAboutMe(aboutMeObj) {
 // Populate grid container
 function populateGridContainer(workExperienceObjs, parentElementId) {
     const workExperienceElement = document.getElementById(parentElementId);
+    const detailsExpandAll = document.createElement('details');
+
+    detailsExpandAll.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-fig-caption");
+    detailsExpandAll.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Expand All</summary>`;
+    workExperienceElement.appendChild(detailsExpandAll);
+
+    const summary = detailsExpandAll.querySelector("summary");
+    summary.addEventListener("click", (e) => expandAllDetails(e));
+
     for(const obj in workExperienceObjs){
         const article = document.createElement('article');
         article.classList.add('grid', 'grid--experience', 'break-inside--avoid');
