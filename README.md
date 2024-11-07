@@ -38,7 +38,8 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-  
+1. A gray square appears around the profile image when printed from Safari.
+
 *Notes:*
 
 ***
