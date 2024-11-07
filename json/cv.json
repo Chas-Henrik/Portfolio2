@@ -150,7 +150,7 @@
             "Installation and management of Sun Solaris workstations."],
             "technologies": ["Bridges (GDC APEX)", "IP routing & switching", "RIP", "OSPF", "BGP", 
             "ATM (PNNI & UNI signaling, PVC & SPVC connections)", "SDH (Marconi's SDH cross connectors)", 
-            "MPLS", "WAN & LAN Routers (Junipers M40, Bay Networks BLN, AM and ASM routers, Cisco's 7507 and 4000 series routers)", 
+            "MPLS", "WAN Routers", "LAN Routers", "Junipers M40", "Bay Networks BLN", "AM and ASM routers", "Cisco's 7507 and 4000 series routers", 
             "Access Routers (ACCs Danube)", "Firewalls (Cisco's PIX firewall)", "Modem Pools (ACCs Tigris)", "ATM Switches (Ericsson's AXD 301)"]
         },
         {
