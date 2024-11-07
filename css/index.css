@@ -885,6 +885,7 @@ section {
 
     .image--profile {
         box-shadow: var(--box-shadow-tiny-light-mode);
+        background-color: var(--background-light-mode);
     }
 
     .profile, .description {
@@ -991,6 +992,10 @@ section {
 
     .image__color--invert img {
         filter: invert(100%);
+    }
+
+    .image--profile {
+        background-color: var(--background-dark-mode);
     }
 
     .profile, .description {
