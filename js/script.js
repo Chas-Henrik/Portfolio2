@@ -40,7 +40,7 @@ function updateScrollPaddingTop() {
 
 // *** Progress Bar functions ***
 
-function updateProgressControlDisplay(value) {
+function displayProgressControl(value) {
     let progressControl = document.getElementById("progress-control");
     progressControl.style.display = value;
 }
@@ -85,7 +85,7 @@ await main();
 
 async function main() {
     try {
-        updateProgressControlDisplay("flex");
+        displayProgressControl("flex");
         updateProgressAction("Populating page with JSON data...");
         updateProgressBar(0);
         await connectToGitHub();
@@ -93,7 +93,7 @@ async function main() {
     } catch (error) {
         console.error("Error:", error);
     } finally {
-        updateProgressControlDisplay("none");
+        displayProgressControl("none");
     }
 }
 
