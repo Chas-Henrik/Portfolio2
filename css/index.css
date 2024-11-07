@@ -84,11 +84,6 @@ section {
     flex-wrap: wrap;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /*** Font Sizes ***/
 
@@ -345,23 +340,12 @@ section {
     gap: 7rem;
 }
 
-.flex-container__size--medium {
-    width: 33rem;
-    min-width: 33rem;
-    height: 33rem;
-    min-height: 33rem;
-}
-
-.flex-container__border-radius--circle {
-    border-radius: 50%;
-    background-color: var(--background-profile-border);
-}
-
 .image--profile {
     border-radius: 50%;
     width: 31rem;
     aspect-ratio: 1/1;
     object-fit: cover;
+    border: 8px solid var(--background-profile-border);
 }
 
 .grid--introduction {
@@ -895,16 +879,12 @@ section {
         color: var(--dark-content-light-mode);
     }
 
-    .flex-container__size--medium {
-        box-shadow: var(--box-shadow-tiny-light-mode);
-    }
-
     .grid--introduction {
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
 
     .image--profile {
-        background-color: var(--background-light-mode);
+        box-shadow: var(--box-shadow-tiny-light-mode);
     }
 
     .profile, .description {
@@ -1011,10 +991,6 @@ section {
 
     .image__color--invert img {
         filter: invert(100%);
-    }
-
-    .image--profile {
-        background-color: var(--background-dark-mode);
     }
 
     .profile, .description {
