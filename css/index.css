@@ -343,7 +343,7 @@ section {
 .image--profile {
     border-radius: 50%;
     width: 31rem;
-    aspect-ratio: 1/1;
+    height: 31rem;
     border: 8px solid var(--background-profile-border);
 }
 
