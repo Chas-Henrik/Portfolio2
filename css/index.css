@@ -849,7 +849,7 @@ section {
     }
 
     p {
-        color: var(--dark-content-light-mode);
+        color: var(--light-content-light-mode);
     }
 
     #progress-control {
@@ -898,7 +898,7 @@ section {
     }
 
     .grid * {
-        color: var(--light-content-dark-mode);
+        color: var(--light-content-light-mode);
     }
 
     .grid__item--role {

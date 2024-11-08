@@ -16,7 +16,8 @@
     --background-card-dark-mode: #363636;
     --solid-heading-light-mode: #42446E;
     --solid-heading-dark-mode: #CCCCCC;
-    --dark-content-light-mode: #666666;
+    --dark-content-light-mode: #555555;
+    --light-content-light-mode: #757575;
     --light-content-dark-mode: #A7A7A7;
     --very-light-content-dark-mode: #D9D9D9;
     --black-content-light-mode: #000000;
@@ -37,9 +38,9 @@
     --background-contact: #F1FBFC;
     --border-color-light-mode: #EBEAED;
     --border-color-dark-mode: #42446E;
-    --button-text: #018C0F;
+    --button-text: #00770c;
     --background-button-success: #D7FFE0;
-    --details-technology: #018C0F;
+    --details-technology: #00770c;
     --background-details-technology: #F1F0F0;
     --background-details-technology-dark-mode: #CCCCCC;
     --menu-color-hover: #54C4F8;
