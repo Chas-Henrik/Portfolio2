@@ -344,7 +344,6 @@ section {
     border-radius: 50%;
     width: 31rem;
     aspect-ratio: 1/1;
-    object-fit: cover;
     border: 8px solid var(--background-profile-border);
 }
 
