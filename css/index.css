@@ -482,6 +482,7 @@ section {
 .image__size--tech-stack {
     width: 11rem;
     height: auto;
+    object-fit: cover;
 }
 
 /*** Projects Section ***/
