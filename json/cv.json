@@ -6,7 +6,7 @@
         "email": "henrik.suurik@chasacademy.se"
     },
     "aboutMe": {
-        "description": "I am a FullStack JavaScript Developer & Senior Embedded Software Developer with over 25 years of experience in the field. I have a Master of Science in Computer Science from University of New Haven (CT USA), and a Bachelor of Science in Electrical Engineering from Royal Institute of Technology (Stockholm Sweden). I have worked in various roles, including Senior Embedded Software Consultant, Senior Software Engineer, Project Leader, Software Manager, and Sr. Applications Engineer. I have experience with a wide range of technologies, including JavaScript, C, C++, C#, Python, and ARM assembler. My last position was Senior Embedded Software Consultant at Evidente ES East AB, where I worked as a consultant for 5 years. I am passionate about software development and enjoy working on challenging projects that push me to learn new skills and technologies."
+        "description": "I am a FullStack JavaScript Developer & Senior Embedded Software Developer with over 25 years of experience in the field. I have a Master of Science in Computer Science from University of New Haven (CT, USA), and a Bachelor of Science in Electrical Engineering from Royal Institute of Technology (Stockholm, Sweden). I have worked in various roles, including Senior Embedded Software Consultant, Senior Software Engineer, Project Leader, Software Manager, and Sr. Applications Engineer. I have experience with a wide range of technologies, including JavaScript, C, C++, C#, Python, and ARM assembler. My last position was Senior Embedded Software Consultant at Evidente ES East AB, where I worked as a consultant for 5 years. I am passionate about software development and enjoy working on challenging projects that push me to learn new skills and technologies."
     },
     "workExperience": [
         {
@@ -57,7 +57,7 @@
             "Software design/implementation of 4 applications (Air Permeance tester, PPS tester, Bendtsen tester & Sheffield tester) using 'Platform 4'.",
             "Software design/implementation of 'Fiber tester Plus'.",
             "Hardware & Software design/implementation of new RS485 full duplex port & Temperature Sensor (I2C) on 'Platform 4'."],
-            "technologies": ["SW Architecture", "System Design", "C++", "C", "Embedded Linux", "Linux kernel device drivers", "Eclipse", "QT Creator", "PXA27x", "Delphi", "Git", "UART", "I2C"]
+            "technologies": ["SW Architecture", "System Design", "C++", "C", "Embedded Linux", "Linux Kernel device drivers", "Eclipse", "QT Creator", "PXA27x", "Delphi", "Git", "UART", "I2C"]
         },
         {
             "role": "Project Leader",
@@ -69,7 +69,7 @@
             "Hardware/software design/implementation of a new HW/SW platform called 'Platform 4'.",
             "GUI development using QT Creator.",
             "Kernel device driver development for Embedded Linux."],
-            "technologies": ["SW Architecture", "System Design", "Embedded Linux", "Linux kernel device drivers", "C", "C++", "Eclipse", "QT Creator", "Combitech's development board", "PXA27x", "Git", "Delphi", "SPI", "I2C", "UART", "PWM", "ADC", "VGA", "LVDS", "Timers", "NOR & NAND Flash", "U-Boot Bootloader", "DMA",
+            "technologies": ["SW Architecture", "System Design", "Embedded Linux", "Linux Kernel device drivers", "C", "C++", "Eclipse", "QT Creator", "Combitech's development board", "PXA27x", "Git", "Delphi", "SPI", "I2C", "UART", "PWM", "ADC", "VGA", "LVDS", "Timers", "NOR & NAND Flash", "U-Boot Bootloader", "DMA",
             "Ethernet", "USB", "RTC"]
         },
         {
@@ -88,7 +88,7 @@
             "date": "2009 - 2010",
             "location": "Kista, Sweden",
             "description": ["Further development of Lorenzen & Wettre’s Fiber tester and L&W Autoline Formation."],
-            "technologies": ["Delphi", "MS SQL 2000, 2005 & 2008"]
+            "technologies": ["Delphi", "MS SQL 2000", "MS SQL 2005", "MS SQL 2008"]
         },
         {
             "role": "Software Manager",
