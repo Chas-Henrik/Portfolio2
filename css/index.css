@@ -523,6 +523,7 @@ section {
 .card__image {
     display: block;
     width: 100%;
+    aspect-ratio: 375 / 260;
     object-fit: cover; 
 }
 
