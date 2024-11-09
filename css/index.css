@@ -227,7 +227,7 @@ section {
 
 .image__logo--chas {
     width: 6rem;
-    height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 .flex--menu {

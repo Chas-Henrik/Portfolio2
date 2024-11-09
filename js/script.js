@@ -30,7 +30,7 @@ function hamburgerMenuClicked() {
 // *** Update scroll-padding-top when header is resized ***
 
 const headerElement = document.getElementById("header");
-new ResizeObserver(updateScrollPaddingTop).observe(headerElement);
+const reSizeObserver = new ResizeObserver(updateScrollPaddingTop).observe(headerElement);
 
 function updateScrollPaddingTop() {
     const htmlElement = document.getElementsByTagName("html")[0];
