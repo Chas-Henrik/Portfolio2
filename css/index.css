@@ -285,6 +285,7 @@ section {
 
 .menu__list--buttons li a {
     padding: 0.25em 0.5em;
+    font-display: optional;
 }
 
 .menu__list--icons {
@@ -357,6 +358,10 @@ section {
     padding: 2rem;
 }
 
+.grid--introduction p {
+    font-display: optional;
+}
+
 .profile {
     white-space: nowrap;
     text-align: right;
@@ -373,8 +378,13 @@ section {
 
 /*** About, Work Experience & Education Section ***/
 
+#section-about > * {
+    font-display: optional;
+}
+
 #about--description {
     font-family: var(--formal-font);
+    font-display: optional;
 }
 
 .grid {
@@ -687,6 +697,7 @@ section {
 
     #section-about {
         max-width: 900px;
+        font-display: optional;
     }
 
     .grid--experience {

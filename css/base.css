@@ -1,6 +1,17 @@
 
 /*** Fonts ***/
 
+/*** Radley ***/
+    
+/* radley-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/radley-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /*** Poppins ***/
 
 /* poppins-regular - latin */
@@ -133,17 +144,6 @@
     font-style: italic;
     font-weight: 700;
     src: url('../fonts/dm-sans-v15-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-    
-/*** Radley ***/
-    
-/* radley-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Radley';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/radley-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 *, *::before, *::after {
