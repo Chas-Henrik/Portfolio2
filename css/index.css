@@ -105,13 +105,6 @@ section {
     margin-bottom: 4.2rem;
 }
 
-.paragraph__size--grid-role {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.8rem;
-    letter-spacing: 0.1rem;
-}
-
 .paragraph__size--footer-link {
     font-weight: 400;
     font-size: 1.6rem;
@@ -132,8 +125,8 @@ section {
 
 .paragraph__size--grid-fig-caption {
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 3.2rem;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
     letter-spacing: 0.1rem;
 }
 
@@ -153,6 +146,13 @@ section {
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.6rem;
+}
+
+.paragraph__size--grid-role {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.1rem;
 }
 
 .paragraph__size--default-bold {
