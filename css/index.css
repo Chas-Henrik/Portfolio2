@@ -690,7 +690,7 @@ section {
     }
 
     .grid--experience {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 6fr 5fr 3fr;
         grid-template-areas: "role role type"
             "provider location date"
             "description description description"
@@ -723,10 +723,6 @@ section {
 
     .grid--experience :nth-child(7) {
         order: 7;
-    }
-
-    .grid__item--location {
-        justify-self: center;
     }
 
     /*** General Selectors ***/
