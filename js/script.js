@@ -35,7 +35,7 @@ const reSizeObserver = new ResizeObserver(updateScrollPaddingTop).observe(header
 function updateScrollPaddingTop() {
     const htmlElement = document.getElementsByTagName("html")[0];
 
-    htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 40}px`;
+    htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 30}px`;
 }
 
 // *** Progress Bar functions ***
