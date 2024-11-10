@@ -9,7 +9,7 @@ export async function connectToGitHub(authenticate=false) {
         if(authenticate){
             // Authenticate on GitHub
             // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-            const GITHUB_ACCESS_TOKEN = "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";
+            const GITHUB_ACCESS_TOKEN = "GitHub_Access_Token";
             octokit = new Octokit({ auth: GITHUB_ACCESS_TOKEN });
             const {data: { login }} = await octokit.rest.users.getAuthenticated(); 
             console.log("Hello, %s", login);
