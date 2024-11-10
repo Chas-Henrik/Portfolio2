@@ -364,17 +364,17 @@ section {
     font-display: optional;
 }
 
-.profile {
+.col1--introduction {
     white-space: nowrap;
     text-align: right;
     font-weight: 700;
 }
 
-.introduction__link {
+.link--introduction {
     color: inherit;
 }
 
-.introduction__link:hover {
+.link--introduction:hover {
     color: var(--menu-color-hover);
 }
 
@@ -896,10 +896,9 @@ section {
 
     .image--profile {
         box-shadow: var(--box-shadow-tiny-light-mode);
-        background-color: var(--background-light-mode);
     }
 
-    .profile, .description {
+    .col1--introduction, col2--introduction {
         color: var(--solid-heading-light-mode);
     }
 
@@ -1006,10 +1005,14 @@ section {
     }
 
     .image--profile {
-        background-color: var(--background-dark-mode);
+        box-shadow: var(--box-shadow-tiny-dark-mode);
     }
 
-    .profile, .description {
+    .grid--introduction {
+        box-shadow: var(--box-shadow-tiny-dark-mode);
+    }
+
+    .col1--introduction, col2--introduction {
         color: var(--solid-heading-dark-mode);
     }
 
@@ -1036,7 +1039,7 @@ section {
     }
 
     .card {
-        background-color: var(--background-card-dark-mode);
+        box-shadow: var(--box-shadow-tiny-dark-mode);
     }
 
     .card * {
@@ -1052,8 +1055,7 @@ section {
     }
 
     .container--contact {
-        box-shadow: none;
-        background-color: var(--background-card-dark-mode);
+        box-shadow: var(--box-shadow-tiny-dark-mode);
     }
 
     .contact--text {
