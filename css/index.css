@@ -364,7 +364,7 @@ section {
     font-display: optional;
 }
 
-.col1--introduction {
+.grid__col1--props {
     white-space: nowrap;
     text-align: right;
     font-weight: 700;
@@ -898,7 +898,7 @@ section {
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
 
-    .col1--introduction, col2--introduction {
+    .grid__col1--props, grid__col2--props {
         color: var(--solid-heading-light-mode);
     }
 
@@ -1012,7 +1012,7 @@ section {
         box-shadow: var(--box-shadow-tiny-dark-mode);
     }
 
-    .col1--introduction, col2--introduction {
+    .grid__col1--props, grid__col2--props {
         color: var(--solid-heading-dark-mode);
     }
 
