@@ -38,7 +38,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. A gray square appears around the profile image when printed from Safari.
+1. Page breaks can cut grid & card items in half when printed from Safari.
 
 *Notes:*
 
