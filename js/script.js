@@ -226,7 +226,7 @@ async function populateProjectCards() {
         const descriptionElement = card.querySelector(".card__description");
         const techStackElement = card.querySelector(".card__tech-stack");
         const linkElements = card.querySelectorAll("a");
-        const languageStr = Object.keys(languageObjs[i].data).join(", ");
+        const languageStr = Object.keys(languageObjs[i].data).sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1).join(", ");
 
         titleElement.innerText = repoObj.data.name;
         descriptionElement.innerText = repoObj.data.description;
