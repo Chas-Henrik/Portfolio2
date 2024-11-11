@@ -14,11 +14,11 @@ Two additional content driven breakpoints have been set at 815px and 1200px:
 - The 1200px breakpoint shrinks the Introduction Card to prevent 'screen overflow' when resizing the Web Browser on a Desktop.  
   
 The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' has been added:
-1. Progress bar when user loads the page
-2. Hamburger menu
-3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the site internal menu links
+1. Progress bar when user loads the page.
+2. Hamburger menu.
+3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the internal menu links.
 4. Active menu indication
-5. 'Expand/Collapse All' button to expand/collapse all 'Description' & 'Technology' details in the grid below.
+5. 'Expand/Collapse All' button to expand/collapse all 'Description' & 'Technology' details.
   
   
 The site supports ‘dark theme’ (configured through the operating system settings).  
