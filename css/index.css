@@ -1123,7 +1123,7 @@ section {
     }
 
     .break-inside--avoid {
-        page-break-inside: avoid;
+        break-inside: avoid;
         display: inline-table; /* Make card unbreakable for Safari */
     }
 

@@ -38,7 +38,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. Page breaks can cut grid & card items in half when printed from Safari.
+1. Safari doesn't respect `break-inside: avoid` so page breaks can at any place when printed from Safari.
 
 *Notes:*
 
