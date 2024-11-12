@@ -202,7 +202,7 @@
     text-shadow: 1px 1px 2px var(--menu-color-hover), 0 0 1em var(--menu-color-hover), 0 0 0.2em var(--progress-bar-color);
 }
 
-#progress-control {
+#progress-control-id {
     position: fixed;
     top: calc(50svh - 125px);
     left: calc(50vw - 125px);
@@ -218,7 +218,7 @@
     text-align: center;
 }
 
-#progress-container {
+#progress-container-id {
     width: 150px;
     height: 150px;
     z-index: 1;
@@ -229,7 +229,7 @@
     background: conic-gradient(var(--progress-bar-color-value) 0deg, var(--progress-bar-color) 0deg);
 }
 
-#progress-value {
+#progress-value-id {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,7 +241,7 @@
     text-align: center;
 }
 
-#progress-action {
+#progress-action-id {
     margin-top: 1rem;
     font-size: 2.5rem;
     font-weight: 600;
