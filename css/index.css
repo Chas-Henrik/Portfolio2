@@ -877,17 +877,17 @@ section {
         color: var(--light-content-light-mode);
     }
 
-    #progress-control {
+    #progress-control-id {
         background-color: var(--background-progress-bar);
         box-shadow: var(--box-shadow-light-mode);
     }
 
-    #progress-value {
+    #progress-value-id {
         background-color: var(--background-progress-bar);
         color: var(--progress-bar-text-color);
     }
     
-    #progress-action {
+    #progress-action-id {
         color: var(--progress-bar-text-color);
     }
 
@@ -990,17 +990,17 @@ section {
         color: var(--light-content-dark-mode);
     }
 
-    #progress-control {
+    #progress-control-id {
         background-color: var(--background-progress-bar-dark-mode);
         box-shadow: var(--box-shadow-dark-mode);
     }
 
-    #progress-value {
+    #progress-value-id {
         background-color: var(--background-card-dark-mode);
         color: var(--progress-bar-text-color-dark-mode);
     }
     
-    #progress-action {
+    #progress-action-id {
         color: var(--progress-bar-text-color-dark-mode);
     }
 
@@ -1102,7 +1102,7 @@ section {
 
 @media only print {
     /* Don't print the header & footer */
-    header, footer {
+    header, footer, #progress-control-id {
         display: none !important;
     }
 
@@ -1120,12 +1120,6 @@ section {
 
     .break-after--avoid {
         break-after: avoid;
-    }
-
-    @supports (break-after: avoid-page) {
-        .break-after--avoid {
-            break-after: avoid-page; /* Not supported by Firefox */
-        }
     }
 
     .break-inside--avoid {

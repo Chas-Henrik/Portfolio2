@@ -41,18 +41,18 @@ function updateScrollPaddingTop() {
 // *** Progress Bar functions ***
 
 function displayProgressControl(value) {
-    let progressControl = document.getElementById("progress-control");
+    let progressControl = document.getElementById("progress-control-id");
     progressControl.style.display = value;
 }
 
 function updateProgressAction(progress) {
-    let progressAction = document.getElementById("progress-action");
+    let progressAction = document.getElementById("progress-action-id");
     progressAction.textContent = progress;
 }
 
 function updateProgressBar(progress) {
-    let container = document.getElementById("progress-container");
-    let progressValue = document.getElementById("progress-value");
+    let container = document.getElementById("progress-container-id");
+    let progressValue = document.getElementById("progress-value-id");
 
     progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
     container.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
