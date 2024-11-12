@@ -1118,16 +1118,13 @@ section {
         break-before: page;
     }
 
-    .card {
-        display: inline-table; /* Make card unbreakable for Safari */
-    }
-
     .break-after--avoid {
         break-after: avoid;
     }
 
     .break-inside--avoid {
-        break-inside: avoid;
+        page-break-inside: avoid;
+        display: inline-table; /* Make card unbreakable for Safari */
     }
 
     header, .footer {
