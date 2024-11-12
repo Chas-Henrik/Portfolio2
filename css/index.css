@@ -1126,6 +1126,18 @@ section {
         break-inside: avoid;
     }
 
+    .grid.grid--experience.break-inside--avoid {
+        break-inside: avoid;
+    }
+
+    .card.break-inside--avoid {
+        break-inside: avoid;
+    }
+
+    .break-inside--avoid {
+        break-inside: avoid;
+    }
+
     header, .footer {
         box-shadow: none;
     }
