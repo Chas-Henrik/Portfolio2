@@ -1123,8 +1123,8 @@ section {
     }
 
     .break-inside--avoid {
-        break-inside: avoid;
-        display: inline-table; /* Make card unbreakable for Safari */
+        break-inside: avoid !important;
+        display: inline-table; /* Make element unbreakable for Safari */
     }
 
     header, .footer {
