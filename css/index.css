@@ -1118,6 +1118,10 @@ section {
         break-before: page;
     }
 
+    .card {
+        display: inline-table; /* Make card unbreakable for Safari */
+    }
+
     .break-after--avoid {
         break-after: avoid;
     }
