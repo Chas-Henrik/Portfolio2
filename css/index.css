@@ -1130,6 +1130,10 @@ section {
         display: inline-block; /* Make element unbreakable for Safari */
     }
 
+    .flex-row-wrap {
+        display: table; /* Workaround for Safari */
+    }
+
     .card {
         box-shadow: none;
         break-inside: avoid-page;
