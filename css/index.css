@@ -1121,25 +1121,32 @@ section {
         break-before: page;
     }
 
-    .break-after--avoid {
-        break-after: avoid;
-    }
-
-    .flex-row-wrap {
-        display: table; /* Workaround for Safari */
-    }
-
     .break-inside--avoid {
-        break-inside: avoid-page;
-        display: inline-block; /* Make element unbreakable for Safari */
-        margin: 2rem;
+        break-inside: avoid;
     }
 
     .card {
-        break-inside: avoid-page;
-        display: inline-block; /* Make element unbreakable for Safari */
-        margin: 2rem;
-        box-shadow: var(--box-shadow-tiny-light-mode);
+        break-inside: avoid;
+    }
+
+    /* Safari specific CSS */
+    @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+        .flex-row-wrap {
+            display: table; /* Workaround for to avoid page-breaks in flex-box for Safari */
+        }
+    
+        .break-inside--avoid {
+            break-inside: avoid-page;
+            display: inline-block; /* Make element unbreakable for Safari */
+            margin: 2rem;
+        }
+    
+        .card {
+            break-inside: avoid-page;
+            display: inline-block; /* Make element unbreakable for Safari */
+            margin: 2rem;
+            box-shadow: var(--box-shadow-tiny-light-mode);
+        }
     }
 
     .card:hover {
