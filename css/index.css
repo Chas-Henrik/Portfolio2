@@ -1131,11 +1131,13 @@ section {
 
     .break-inside--avoid {
         page-break-inside: avoid;
+        display: inline-table; /* Make element unbreakable for Safari */
     }
 
     .card {
         box-shadow: none;
         page-break-inside: avoid;
+        display: inline-table; /* Make element unbreakable for Safari */
         border: 1px solid black;
     }
 
