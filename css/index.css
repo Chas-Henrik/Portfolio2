@@ -1125,20 +1125,20 @@ section {
         break-after: avoid;
     }
 
+    .flex-row-wrap {
+        display: table; /* Workaround for Safari */
+    }
+
     .break-inside--avoid {
         break-inside: avoid-page;
         display: inline-block; /* Make element unbreakable for Safari */
         margin: 2rem;
     }
 
-    .flex-row-wrap {
-        display: table; /* Workaround for Safari */
-    }
-
     .card {
-        box-shadow: none;
         break-inside: avoid-page;
         display: inline-block; /* Make element unbreakable for Safari */
+        margin: 2rem;
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
 
