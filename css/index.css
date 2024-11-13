@@ -1136,8 +1136,7 @@ section {
     .card {
         box-shadow: none;
         page-break-inside: avoid;
-        display: inline-table; /* Make element unbreakable for Safari */
-        box-shadow: var(--box-shadow-tiny-light-mode);
+        border: 1px solid black;
     }
 
     .card:hover {
