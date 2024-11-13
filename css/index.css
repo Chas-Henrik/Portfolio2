@@ -1123,7 +1123,7 @@ section {
     }
 
     .break-inside--avoid {
-        break-inside: avoid !important;
+        break-inside: avoid;
         display: inline-table; /* Make element unbreakable for Safari */
     }
 
@@ -1132,6 +1132,8 @@ section {
     }
 
     .card {
+        break-inside: avoid;
+        display: inline-table; /* Make element unbreakable for Safari */
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
 }
