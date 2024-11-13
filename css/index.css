@@ -1127,13 +1127,20 @@ section {
         display: inline-table; /* Make element unbreakable for Safari */
     }
 
+    .card {
+        break-inside: avoid;
+        display: inline-table; /* Make element unbreakable for Safari */
+        box-shadow: none;
+        box-shadow: var(--box-shadow-tiny-light-mode);
+    }
+
+    .card:hover {
+        box-shadow: none;
+        box-shadow: var(--box-shadow-tiny-light-mode);
+    }
+
     header, .footer {
         box-shadow: none;
     }
 
-    .card {
-        break-inside: avoid;
-        display: inline-table; /* Make element unbreakable for Safari */
-        box-shadow: var(--box-shadow-tiny-light-mode);
-    }
 }
