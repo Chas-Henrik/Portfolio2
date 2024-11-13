@@ -38,7 +38,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. Safari doesn't respect `break-inside: avoid` so page breaks can at any place when printed from Safari.
+1. `break-inside: avoid` doesn't work properly when printed from Safari.
 
 *Notes:*
 
