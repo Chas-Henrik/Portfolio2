@@ -1130,13 +1130,12 @@ section {
     }
 
     .break-inside--avoid {
-        break-inside: avoid;
-        display: inline-table; /* Make element unbreakable for Safari */
+        page-break-inside: avoid;
     }
 
     .card {
         box-shadow: none;
-        break-inside: avoid;
+        page-break-inside: avoid;
         display: inline-table; /* Make element unbreakable for Safari */
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
