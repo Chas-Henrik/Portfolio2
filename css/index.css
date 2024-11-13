@@ -1128,10 +1128,12 @@ section {
     .break-inside--avoid {
         break-inside: avoid-page;
         display: inline-block; /* Make element unbreakable for Safari */
+        direction: ltr;
     }
 
     .flex-row-wrap {
         display: table; /* Workaround for Safari */
+        direction: rtl;
     }
 
     .card {
