@@ -1113,10 +1113,6 @@ section {
         display: none !important;
     }
 
-    main {
-        break-after: auto;
-    }
-
     main > section {
         break-before: page;
     }
