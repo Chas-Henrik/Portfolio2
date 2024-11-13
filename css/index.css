@@ -1132,7 +1132,7 @@ section {
     /* Safari specific CSS */
     @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
         .flex-row-wrap {
-            display: table; /* Workaround for to avoid page-breaks in flex-box for Safari */
+            display: table; /* Workaround to avoid page-breaks in flex-box for Safari */
         }
     
         .figure--tech-stack {
