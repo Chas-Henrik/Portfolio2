@@ -1125,7 +1125,7 @@ section {
         break-inside: avoid;
     }
 
-    .card {
+    .figure--tech-stack, .card {
         break-inside: avoid;
     }
 
@@ -1135,7 +1135,7 @@ section {
             display: table; /* Workaround for to avoid page-breaks in flex-box for Safari */
         }
     
-        .break-inside--avoid {
+        .figure--tech-stack {
             break-inside: avoid-page;
             display: inline-block; /* Make element unbreakable for Safari */
             margin: 2rem;
