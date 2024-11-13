@@ -38,7 +38,7 @@ The site is published on Netlify (see hyperlink below):
   
 ***
 *Known problems:*
-1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari, and workaround has been applied to alleviate this problem. Printing with 'HP Smart' from Safari still doesn't work though.
+1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari, and a workaround has been applied to alleviate this problem. Printing with 'HP Smart' from Safari still doesn't work though.
 
 *Notes:*
 
