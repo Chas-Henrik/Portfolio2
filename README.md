@@ -62,17 +62,16 @@ Exempel på funktionalitet:
   
 ### Vad är JSON och hur används det inom frontend?
 
-JSON står för “JavaScript Object Notation” och är ett lättvikts format för att strukturera data. JSON är särskilt utformat för att vara enkelt att läsa och skriva för både människor och maskiner. JSON består av nyckel-värde-par och använder en syntax som liknar JavaScript-objekt, vilket gör det väldigt användbart och lätt att arbeta med i webbutveckling, särskilt på frontend-sidan.  
+JSON står för “JavaScript Object Notation” och är ett lättvikts format för att strukturera data. JSON är särskilt utformat för att vara enkelt att läsa och skriva för både människor och maskiner. JSON består av nyckel-värde-par och använder en syntax som liknar JavaScript-objekt, vilket gör det väldigt lätt att arbeta med i webbutveckling, särskilt på frontend-sidan.  
   
-JSON används för att utbyta data mellan webbläsaren och servern i frontend.
-JSON är ett enkelt och effektivt dataformat som är centralt för frontendutveckling, särskilt när det gäller kommunikation mellan klient och server, hantering av dynamisk data och lagring av konfigurationer. Genom att arbeta med JSON kan frontendutvecklare enkelt hantera och manipulera data, vilket är viktigt för att skapa interaktiva och responsiva webbapplikationer.
+JSON används för att utbyta data mellan webbläsaren och servern, hantera dynamisk data & lagra konfigurationer. Frontendutvecklare använder även JSON för att hantera och manipulera data som behövs för att skapa interaktiva och responsiva webbapplikationer.
 
-Här är några specifika användningsområden:
-1. API-kommunikation :  JSON är det vanligaste formatet för att skicka och ta emot data från API:er. 
-2. Datanavigering och rendering :  JSON-data kan hämtas från en server och direkt omvandlas till JavaScript-objekt vilket gör det enkelt att navigera och bearbeta data för att rendera dynamiskt innehåll i en webbsida.
-3. Lokalt lagrad data : JSON används också för att cacha data i webbläsarens “localStorage” för att snabbt kunna hämta datan utan nya API anrop.
+Exempel på specifika användningsområden:
+1. API-kommunikation : JSON används för att skicka och ta emot data från API:er. 
+2. Datanavigering och rendering : JSON-data kan hämtas från en server och omvandlas direkt till ett JavaScript-objekt, och detta gör det enkelt att navigera (då JSON objekt kan innehålla länkar till andra JSON objekt) och bearbeta data för att rendera dynamiskt innehåll i en webbsida.
+3. Lokalt lagrad data : JSON används även för att cacha data i webbläsarens “localStorage” (m.h.a. `JSON.stringify(obj)`) för att snabbt kunna hämta datan utan nya API anrop (m.h.a. `JSON.parse(obj)`).
 4. Konfiguration och inställningar : Vissa frontendverktyg och bibliotek använder JSON för konfigurationer och inställningar. 
-5. Serialisering och deserialisering av data : JSON gör det möjligt att “serialisera” (omvandla) JavaScript-objekt till en textsträng, vilket behövs för att kunna skicka objekt i ett HTTP-anrop.
+5. Serialisering och deserialisering av data : JSON gör det möjligt att “serialisera” (omvandla) JavaScript-objekt till en textsträng, vilket behövs för att kunna skicka objekt i HTTP-anrop.
   
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
