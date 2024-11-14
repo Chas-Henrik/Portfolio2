@@ -195,7 +195,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
             case 'technologies':
                 const detailsTechnologies= document.createElement("details");
                 detailsTechnologies.classList.add("grid__item--details", "grid__item--technology", "paragraph__size--grid-fig-caption");
-                detailsTechnologies.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Technologies</summary><ul class="grid__ul--technology"></ul>`;
+                detailsTechnologies.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Technologies & Tools</summary><ul class="grid__ul--technology"></ul>`;
                 gridContainerElement.appendChild(detailsTechnologies);
                 const ulTechnologies = detailsTechnologies.querySelector("ul");
                 workExperienceObj[key].forEach((item) => {
