@@ -1,6 +1,12 @@
 import { loadJSONData } from "./json-loader.js";
 import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
+document.addEventListener("DOMContentLoaded", () => {
+    // *** Load full resolution profile image ***
+    const imgElement = document.getElementById("profile-image-id");
+    imgElement.src = imgElement.dataset.src;
+});
+
 // *** Menu buttons (active indication) ***
 const menuListUlButtons = document.getElementById("menu__list--ul-buttons");
 const menuButtons = menuListUlButtons.querySelectorAll("a");

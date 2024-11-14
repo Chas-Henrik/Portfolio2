@@ -22,7 +22,7 @@
     <link rel="preload" href="fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/radley-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./img/Henrik.jpg" as="image" type="image/jpg" crossorigin="anonymous">
+    <link rel="preload" href="./img/Henrik.jpg" as="image" type="image/jpg">
     <link rel="icon" href="./img/ChasAcademyLogo.jpg" type="image/jpg">
     <script src="./js/script.js" type="module"></script>
     <title>Henrik's Portfolio Page</title>
@@ -68,7 +68,7 @@
     <main>
         <!-- Introduction (Home) -->
         <div id="home" class="flex-introduction">
-            <img class="image--profile" src="./img/Henrik.png" alt="Henrik's Profile Image">
+            <img id="profile-image-id" class="image--profile" src="./img/Henrik.jpg" data-src="./img/Henrik.png" alt="Henrik's Profile Image">
             <aside class="grid--introduction paragraph__size--introduction">
                 <p class="header--introduction">Name :</p>
                 <p>Henrik Suurik</p>
