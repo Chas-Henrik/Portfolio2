@@ -75,8 +75,11 @@ Exempel på specifika användningsområden där JSON används:
   
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-HTTP (HyperText Transfer Protocol) är ett applikationslager protokoll i Internet-protokoll svitmodellen för distribuerade, kollaborativa hypermedia informationssystem. HTTP används för att kommunicera med webbservrar och definierar hur förfrågningar och svar ska skickas mellan klient (ex. en webbläsare) och server.
+Hypertext Transfer Protocol (HTTP) är det kommunikationsprotokoll som används för att överföra webbsidor på informationsnätverket WWW, World Wide Web på Internet. Det ursprungliga syftet med HTTP var att tillhandahålla en metod för att överföra HTML-sidor från webbservrar till webbklienter.
+Utvecklingen av HTTP koordinerades av World Wide Web Consortium (W3C) och arbetsgrupper i Internet Engineering Task Force.
 
+HTTP bygger på ett förfrågan/svar-förfarande mellan klient och server. En HTTP-klient, vanligen en webbläsare, som skall hämta en HTML-fil, en bild eller annan fil från en webbserver skickar en förfrågan bestående av en kort textsträng till en TCP-port på servern, vanligen nummer 80. Textsträngen innehåller information om vilken version av HTTP som används, och vilken fil (eller annan resurs eller information) som klienten vill att servern skall skicka. En HTTP-förfrågan kan till exempel se ut som följande: `GET /index.html HTTP/1.1` (vilket med hjälp av HTTP version 1.1 skulle begära en överföring av serverns indexdokument till webbläsaren).  
+  
 Kunskap om HTTP och dess protokoll hjälper frontendutvecklaren att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, vilket både förbättrar användarupplevelsen och säkerheten.
 
 Som frontendutvecklare är det också viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. Och det är viktigt att förstå hur man hämtar data på ett effektivt sätt med HTTP, och hur data skickas och skyddas i en webbapplikation då detta både förbättrar användarupplevelsen och säkerheten.
