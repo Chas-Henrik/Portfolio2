@@ -344,6 +344,7 @@ section {
 }
 
 .image--profile {
+    background: url("./../img/Henrik.jpg") no-repeat;
     border-radius: 50%;
     width: 31rem;
     height: 31rem;
