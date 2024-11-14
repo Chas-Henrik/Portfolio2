@@ -1,17 +1,6 @@
 import { loadJSONData } from "./json-loader.js";
 import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-    // *** Load full resolution profile image ***
-    const imgElement = document.getElementById("profile-image-id");
-    const new_img = new Image();
-    // Start loading image
-    new_img.src = imgElement.dataset.src;
-    // Once image is loaded replace the src of the HTML element
-    new_img.onload = () => {
-        imgElement.src = new_img.src;
-    };
-});
 
 // *** Menu buttons (active indication) ***
 const menuListUlButtons = document.getElementById("menu__list--ul-buttons");
