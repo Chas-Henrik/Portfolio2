@@ -9,9 +9,8 @@ This is a single-page, 'Portfolio Site' consisting of 5 sections:
 
 The design is a 'Mobile First' responsive design that also support Tablet's and Desktop's. Breakpoints have been set at 650px for Tablet's & Small Desktop's, and 1024px for Medium & Large Desktop's.  
   
-Two additional content driven breakpoints have been set at 815px and 1200px:  
-- The 815px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint.  
-- The 1200px breakpoint shrinks the Introduction Card to prevent 'screen overflow' when resizing the Web Browser on a Desktop.  
+One additional content driven breakpoints have been set at 830px:  
+- The 830px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint. 
   
 The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' has been added:
 1. Progress bar when user loads the page.
@@ -20,14 +19,13 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
 4. Active menu indication
 5. 'Expand/Collapse All' button to expand/collapse all 'Description' & 'Technology' details.
   
+The site supports ‘dark theme’ (configured through operating system settings).  
   
-The site supports ‘dark theme’ (configured through the operating system settings).  
+Some effort has been made to remove the header & footer when the page is printed and to make the page print with suitable page breaks.  
   
-Some additional effort has been made to remove the header & footer when the page is printed, and effort has also been made to make the page print with suitable page breaks.  
+Both the cv.json & the GitHub API data is cached in Local Storage. The data in Local Storage is timestamped and is invalidated after 24h, so that the cache reflects the latest server content when the cv.json and/or the the GitHub API data is updated on the server.
   
-Both the cv.json & the GitHub API data is cached in Local Storage. The data in Local Storage is timestamped and 'automatically' invalidated after 24h, so that the cache reflects the latest server content when cv.json and/or the the GitHub API data is updated on the server.
-  
-All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size.   
+All images, except the profile picture and the 'artistic images' (in the project section) are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size. All images except the profile picture are lazy loaded to improve performance. All fonts are hosted locally (as .woff2 files) and the landing-page fonts are preloaded to improve performance.
   
 The `display: inline; vertical-align: middle;` solution has been selected over the 'flex-box' solution for the 'icon & text grid cells' even though the icon vertical alignment is slightly worse. The reason for this, is that the 'line wrap behavior' is way better for the 'vertical-align' solution when the (icon & text) line run out of horizontal space.
   

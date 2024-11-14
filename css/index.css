@@ -770,8 +770,8 @@ section {
     }
 }
 
-/* Content driven breakpoint for screens that are larger than 815px (Tablets & Desktops) */
-@media (min-width: 815px) {
+/* Content driven breakpoint for screens that are larger than 830px (Tablets & Desktops) */
+@media (min-width: 830px) {
 
     /*** Projects Section ***/
 
@@ -788,6 +788,9 @@ section {
 @media (min-width: 1024px) {
 
     /*** Header ***/
+    html {
+        font-size: 62.5%;
+    }
 
     .flex__nav {
         align-items: center;
@@ -848,16 +851,6 @@ section {
     .flex__display--desktop {
         display: flex;
     }
-}
-
-/* Content driven breakpoint for screens that are larger than 1350px (Large Desktops) */
-@media (min-width: 1200px) {
-    html {
-        font-size: 62.5%;
-    }
-
-    /*** Introduction, About, Work Experience & Education Section ***/
-    
 }
 
 /* Light Theme */
