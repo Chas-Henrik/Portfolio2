@@ -68,13 +68,6 @@ section {
     display: none;
 }
 
-.gradient__text {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    border: 1px solid transparent; /* Workaround to alleviate the Google Chrome print bug */
-}
-
 .flex-row-wrap {
     width: 100%;
     display: flex;
