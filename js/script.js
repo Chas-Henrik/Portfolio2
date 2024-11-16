@@ -184,7 +184,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 break;                
             case 'description':
                 const detailsDescription = document.createElement("details");
-                detailsDescription.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-fig-caption");
+                detailsDescription.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-text");
                 detailsDescription.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Description</summary>`;
                 gridContainerElement.appendChild(detailsDescription);
                 workExperienceObj[key].forEach((item) => {
@@ -195,7 +195,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 break;
             case 'technologies':
                 const detailsTechnologies= document.createElement("details");
-                detailsTechnologies.classList.add("grid__item--details", "grid__item--technology", "paragraph__size--grid-fig-caption");
+                detailsTechnologies.classList.add("grid__item--details", "grid__item--technology", "paragraph__size--grid-text");
                 detailsTechnologies.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Technologies & Tools</summary><ul class="grid__ul--technology"></ul>`;
                 gridContainerElement.appendChild(detailsTechnologies);
                 const ulTechnologies = detailsTechnologies.querySelector("ul");

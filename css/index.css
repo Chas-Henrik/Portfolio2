@@ -122,6 +122,13 @@ section {
     letter-spacing: 0.1rem;
 }
 
+.paragraph__size--grid-text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+    letter-spacing: 0.1rem;
+}
+
 .paragraph__size--card-description {
     font-weight: 500;
     font-size: 1.6rem;
@@ -445,6 +452,7 @@ section {
     cursor: pointer;
     width: fit-content;
     padding: 0 0.5rem;
+    margin: 0.5rem 0;
     border-radius: 0.5rem;
 }
 
@@ -459,7 +467,8 @@ section {
     width: fit-content;
     height: fit-content;
     padding: 0.1rem 1rem;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+    margin-right: 1rem;
     border-radius: 0.5rem;
     text-align: center;
     justify-self: left;
