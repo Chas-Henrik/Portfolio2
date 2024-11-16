@@ -334,9 +334,10 @@ section {
 .flex-introduction {
     width: 100%;
     height: 100rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 7rem;
 }
@@ -702,6 +703,8 @@ section {
 
     .flex-introduction {
         height: 100rem;
+        margin-top: 0;
+        justify-content: center;
     }
     
     .paragraph__size--introduction {
