@@ -14,12 +14,12 @@
     <meta property="og:image:width" content="310" >
     <meta property="og:image:height" content="310" >
     <link rel="canonical" href="https://chas-henrik-u02-egen-portfoliosida.netlify.app/index.html">
-    <link rel="preload" href="fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/radley-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/radley-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload stylesheet" href="./css/base.css" as="style">
     <link rel="preload stylesheet" href="./css/index.css" as="style">
     <link rel="preconnect" href="https://esm.sh/octokit">
@@ -40,8 +40,8 @@
     <header id="header">
         <nav class="flex__nav">
             <picture class="flex__logo--chas">
-                <source srcset="./img/ChasAcademyLogo.png 60w" type="image/png" media="(prefers-color-scheme: light)">
-                <source srcset="./img/ChasAcademyLogo-dark.png 60w" type="image/png" media="(prefers-color-scheme: dark)">
+                <source srcset="./img/ChasAcademyLogo.png" type="image/png" media="(prefers-color-scheme: light)">
+                <source srcset="./img/ChasAcademyLogo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
                 <img class="image__logo--chas" src="./img/ChasAcademyLogo.png" alt="Chas Academy Logo">
             </picture>
             <nav id="menu" class="flex--menu paragraph__size--default-bold">
@@ -71,8 +71,8 @@
         <!-- Introduction (Home) -->
         <div id="home" class="flex-introduction">
             <picture>
-                <source type="image/webp" srcset="./img/Henrik.webp 310w" >
-                <source type="image/png" srcset="./img/Henrik.png 310w" >
+                <source srcset="./img/Henrik.webp" type="image/webp" >
+                <source srcset="./img/Henrik.png" type="image/png" >
                 <img class="image--profile" src="./img/Henrik.png" alt="Henrik's Profile Image" fetchpriority="high">
             </picture>
             <aside class="grid--introduction paragraph__size--introduction">
@@ -160,8 +160,8 @@
                 class="flex-row-wrap flex-row-wrap__gap--project-card flex-row-wrap__margin--project-card">
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project1.webp 375w">
-                        <source type="image/png" srcset="./img/Project1.png 375w">
+                        <source srcset="./img/Project1.webp" type="image/webp">
+                        <source srcset="./img/Project1.png" type="image/png">
                         <img class="card__image" src="./img/Project1.png" alt="Project1 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
@@ -201,8 +201,8 @@
                 </article>
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project2.webp 375w">
-                        <source type="image/png" srcset="./img/Project2.png 375w">
+                        <source srcset="./img/Project2.webp" type="image/webp">
+                        <source srcset="./img/Project2.png" type="image/png">
                         <img class="card__image" src="./img/Project2.png" alt="Project2 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
@@ -242,8 +242,8 @@
                 </article>
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project3.webp 375w">
-                        <source type="image/png" srcset="./img/Project3.png 375w">
+                        <source srcset="./img/Project3.webp" type="image/webp">
+                        <source srcset="./img/Project3.png" type="image/png">
                         <img class="card__image" src="./img/Project3.png" alt="Project3 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
@@ -283,8 +283,8 @@
                 </article>
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project4.webp 375w">
-                        <source type="image/png" srcset="./img/Project4.png 375w">
+                        <source srcset="./img/Project4.webp" type="image/webp">
+                        <source srcset="./img/Project4.png" type="image/png">
                         <img class="card__image" src="./img/Project4.png" alt="Project4 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
@@ -324,8 +324,8 @@
                 </article>
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project5.webp 375w">
-                        <source type="image/png" srcset="./img/Project5.png 375w">
+                        <source srcset="./img/Project5.webp" type="image/webp">
+                        <source srcset="./img/Project5.png" type="image/png">
                         <img class="card__image" src="./img/Project5.png" alt="Project5 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
@@ -365,8 +365,8 @@
                 </article>
                 <article class="card">
                     <picture class="card__picture">
-                        <source type="image/webp" srcset="./img/Project6.webp 375w">
-                        <source type="image/png" srcset="./img/Project6.png 375w">
+                        <source srcset="./img/Project6.webp" type="image/webp">
+                        <source srcset="./img/Project6.png" type="image/png">
                         <img class="card__image" src="./img/Project6.png" alt="Project6 Image" loading="lazy">
                     </picture>
                     <div class="card__content">
