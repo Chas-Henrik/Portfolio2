@@ -509,7 +509,7 @@ section {
     border: 3px solid var(--border-color-card);
 }
 
-.card__figure {
+.card__picture {
     width: 100%;
     height: fit-content;
     border-top-left-radius: inherit;
