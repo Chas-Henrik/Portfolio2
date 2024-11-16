@@ -1127,7 +1127,7 @@ section {
         break-inside: avoid;
     }
 
-    .figure--tech-stack, .card {
+    .grid--introduction, .figure--tech-stack, .card {
         break-inside: avoid;
     }
 

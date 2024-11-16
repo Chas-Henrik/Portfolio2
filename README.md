@@ -37,6 +37,7 @@ The site is published on Netlify (see hyperlink below):
 ***
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari, and a workaround has been applied to alleviate this problem. Printing with 'HP Smart' from Safari still doesn't work though.
+2. Lazy loaded images doesn't show up in 'Print Preview' in Safari until images has been browsed on page.
 
 *Notes:*
 
