@@ -752,7 +752,7 @@ section {
         line-height: 5rem;
     }
 
-    #section-about {
+    #section-about, #section-skills {
         max-width: 900px;
         font-display: optional;
     }
