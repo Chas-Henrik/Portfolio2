@@ -82,6 +82,8 @@ function expandAllDetails(e) {
 
 // *** Connect to GitHub & populate page ***
 
+const skillsAccumulated = {};
+
 await main();
 
 async function main() {
@@ -114,6 +116,7 @@ async function populateGrid() {
         const dataObj = await loadJSONData("./../json/cv.json");
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
+        populateAccumulatedSkillsElement();
         populateGridContainer(dataObj["education"], "grid-education");
         updateProgressBar(10);
     } catch (error) {
@@ -150,6 +153,9 @@ function populateGridContainer(workExperienceObjs, parentElementId) {
 
 // Populate grid elements
 function populateGridElements(workExperienceObj, gridContainerElement) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    let years = 0;
     for(const key in workExperienceObj) {
         switch(key) {
             case 'role':
@@ -172,6 +178,12 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 break;
             case 'date':
                 const figureDate = document.createElement("figure");
+                const yearsArr = workExperienceObj[key].split(" - ").map((item) => item.toLowerCase() === "present" ? currentYear : parseInt(item));
+                if(!isNaN(yearsArr[1]) && !isNaN(yearsArr[0])) {
+                    years = yearsArr[1] - yearsArr[0];
+                } else {
+                    years = 0;
+                }
                 figureDate.classList.add("grid__figure", "grid__item--date");
                 figureDate.innerHTML = `<img src="./svg/calender.svg" alt="Calender Icon" loading="lazy"><figcaption class="paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureDate);
@@ -181,7 +193,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 figureLocation.classList.add("grid__figure", "grid__item--location");
                 figureLocation.innerHTML = `<img src="./svg/location.svg" alt="Location Icon" loading="lazy"><figcaption class="paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureLocation);
-                break;                
+                break;
             case 'description':
                 const detailsDescription = document.createElement("details");
                 detailsDescription.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-text");
@@ -193,22 +205,53 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                     detailsDescription.appendChild(p);
                 });
                 break;
-            case 'technologies':
-                const detailsTechnologies= document.createElement("details");
-                detailsTechnologies.classList.add("grid__item--details", "grid__item--technology", "paragraph__size--grid-text");
-                detailsTechnologies.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Technologies & Tools</summary><ul class="grid__ul--technology"></ul>`;
-                gridContainerElement.appendChild(detailsTechnologies);
-                const ulTechnologies = detailsTechnologies.querySelector("ul");
+            case 'skills':
+                const detailsSkills= document.createElement("details");
+                detailsSkills.classList.add("grid__item--details", "grid__item--skill", "paragraph__size--grid-text");
+                detailsSkills.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Skills</summary><ul class="grid__ul--skill"></ul>`;
+                gridContainerElement.appendChild(detailsSkills);
+                const ulSkills = detailsSkills.querySelector("ul");
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
-                    ulTechnologies.appendChild(li);
+                    ulSkills.appendChild(li);
+                    skillsAccumulated[item] = item in skillsAccumulated ? skillsAccumulated[item] + years : years;
                 });
                 break;               
         }
     }
 }
 
+// *** Populate accumulated skills ***
+function populateAccumulatedSkillsElement() {
+    const MAX_SKILLS = 20;
+    const skillsAccumulatedArr = Object.entries(skillsAccumulated);
+    const skillsAccumulatedArrSorted = skillsAccumulatedArr.sort((a, b) => b[1] - a[1]);
+    const skillsAccumulatedElement = document.getElementById("grid-skills-accumulated-id");
+    const h4YearsElement = document.createElement("h4");
+    const h4SkillElement = document.createElement("h4");
+
+    //Populate grid caption
+    h4YearsElement.innerText = "Years";
+    h4SkillElement.innerText = "Skill";
+    h4YearsElement.classList.add("grid-skills__item--skills", "grid-skills__item--years", "paragraph__size--grid-role");
+    h4SkillElement.classList.add("grid-skills__item--skills", "grid-skills__item--skill", "paragraph__size--grid-role");
+    skillsAccumulatedElement.appendChild(h4YearsElement);
+    skillsAccumulatedElement.appendChild(h4SkillElement);
+
+    //Populate grid elements
+    for(let i=0; i<MAX_SKILLS && i<skillsAccumulatedArrSorted.length; i++) {
+        const item = skillsAccumulatedArrSorted[i];
+        const pYearsElement = document.createElement("p");
+        const pSkillElement = document.createElement("p");
+        pYearsElement.classList.add("grid-skills__item--skills", "grid-skills__item--years", "paragraph__size--grid-fig-caption");
+        pSkillElement.classList.add("grid-skills__item--skills", "grid-skills__item--skill", "paragraph__size--grid-fig-caption");
+        pYearsElement.innerText = `${item[1]}`;
+        pSkillElement.innerText = `${item[0]}`;
+        skillsAccumulatedElement.appendChild(pYearsElement);
+        skillsAccumulatedElement.appendChild(pSkillElement);
+    };
+}
 
 // *** Populate projects from GitHub ***
 

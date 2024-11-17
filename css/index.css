@@ -86,6 +86,13 @@ section {
     letter-spacing: -0.04rem;
 }
 
+.heading__size--small {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.04rem;
+}
+
 .heading__size--card-title {
     font-size: 2.8rem;
     line-height: 2.8rem;
@@ -113,6 +120,10 @@ section {
     font-weight: 400;
     font-size: 2rem;
     line-height: 2.6rem;
+}
+
+.paragraph__style-italic {
+    font-style: italic;
 }
 
 .paragraph__size--grid-fig-caption {
@@ -393,7 +404,7 @@ section {
         "provider date"
         "location location"
         "description description"
-        "technology technology";
+        "skill skill";
     row-gap: 0;
     padding-bottom: 1.8rem;
     margin: 2rem 0;
@@ -438,8 +449,8 @@ section {
     grid-area: description;
 }
 
-.grid__item--technology {
-    grid-area: technology;
+.grid__item--skill {
+    grid-area: skill;
 }
 
 .grid__item--details {
@@ -456,13 +467,13 @@ section {
     border-radius: 0.5rem;
 }
 
-.grid__ul--technology {
+.grid__ul--skill {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.grid__ul--technology > li {
+.grid__ul--skill > li {
     display: inline-block;
     width: fit-content;
     height: fit-content;
@@ -472,6 +483,41 @@ section {
     border-radius: 0.5rem;
     text-align: center;
     justify-self: left;
+}
+
+.grid-skills-accumulated {
+    margin: 0.5rem 0;
+    display: grid;
+    justify-items: left;
+    align-items: center;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: auto;
+    row-gap: 0;
+    border: 1px solid var(--border-color-light-mode);
+}
+
+.grid-skills-accumulated > h4 {
+    background: var(--background-zebra-grid-header);
+}
+
+.grid-skills-accumulated > p:nth-child(4n+1), .grid-skills-accumulated > p:nth-child(4n+2) {
+    background: var(--background-zebra-grid-element);
+}
+
+.grid-skills__item--skills {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color-light-mode);
+}
+
+.grid-skills__item--years {
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+.grid-skills__item--skill {
+    padding: 0 0.5rem;
+    text-align: left;
 }
 
 /*** Tech Stack Section ***/
@@ -722,7 +768,7 @@ section {
         grid-template-areas: "role role type"
             "provider location date"
             "description description description"
-            "technology technology technology";
+            "skill skill skill";
     }
 
     .grid--experience :nth-child(1) {
@@ -868,7 +914,7 @@ section {
         color: var(--solid-heading-light-mode);
     }
 
-    h2 {
+    h2, h3 {
         color: var(--solid-heading-light-mode);
     }
 
@@ -929,13 +975,13 @@ section {
     }
 
     .grid__item--clickable {
-        color: var(--details-technology);
-        background-color: var(--background-details-technology);
+        color: var(--details-button-color);
+        background-color: var(--background-details-buttons);
     }
 
-    .grid__ul--technology > li {
-        color: var(--button-text);
-        background-color: var(--background-details-technology);
+    .grid__ul--skill > li {
+        color: var(--skill-text-color);
+        background-color: var(--background-details-buttons);
     }
 
     .card {
@@ -986,7 +1032,7 @@ section {
         color: var(--solid-heading-dark-mode);
     }
 
-    h2 {
+    h2, h3 {
         color: var(--solid-heading-dark-mode);
     }
 
@@ -1056,13 +1102,13 @@ section {
     }
 
     .grid__item--clickable {
-        color: var(--details-technology);
-        background-color: var(--background-details-technology-dark-mode);
+        color: var(--details-button-color);
+        background-color: var(--background-details-buttons-dark-mode);
     }
 
-    .grid__ul--technology > li {
-        color: var(--button-text);
-        background-color: var(--background-details-technology-dark-mode);
+    .grid__ul--skill > li {
+        color: var(--skill-text-color);
+        background-color: var(--background-details-buttons-dark-mode);
     }
 
     .card {
