@@ -224,7 +224,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
 
 // *** Populate accumulated skills ***
 function populateAccumulatedSkillsElement() {
-    const MAX_SKILLS = 20;
+    const MAX_SKILLS = 15;
     const skillsAccumulatedArr = Object.entries(skillsAccumulated);
     const skillsAccumulatedArrSorted = skillsAccumulatedArr.sort((a, b) => b[1] - a[1]);
     const skillsAccumulatedElement = document.getElementById("grid-skills-accumulated-id");

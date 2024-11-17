@@ -184,8 +184,12 @@
     --background-first-letter: #BCE9F5;
     --contact-light-mode: #1E0E62;
     --contact-dark-mode: #D9D9D9;
-    --background-zebra-grid-header: #F8F8F8;
-    --background-zebra-grid-element: #F8FEFF;
+    --background-zebra-grid-header-light-mode: #F8F8F8;
+    --background-zebra-grid-odd-row-light-mode: #F8FEFF;
+    --background-zebra-grid-even-row-light-mode: #FFFFFF;
+    --background-zebra-grid-header-dark-mode: #282828;
+    --background-zebra-grid-odd-row-dark-mode: #1e1f29;
+    --background-zebra-grid-even-row-dark-mode: #000000;
     --border-color-light-mode: #EBEAED;
     --border-color-dark-mode: #42446E;
     --skill-text-color: #00770C;
