@@ -250,7 +250,8 @@ section {
 .icon__size--menu {
     display: inline-block;
     width: 3rem;
-    height: 3rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .label__size--hamburger {
@@ -327,7 +328,8 @@ section {
 
 .icon__size--hamburger {
     width: 5rem;
-    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .icon__position--hamburger {
