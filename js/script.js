@@ -1,4 +1,4 @@
-import { isCVUpdated, loadCV, readFromLocalStorage, saveToLocalStorage } from "./json-loader.js";
+import { isCVUpdated, loadCV, saveToLocalStorage, readFromLocalStorage } from "./json-loader.js";
 import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
 // *** Progress Bar functions ***
