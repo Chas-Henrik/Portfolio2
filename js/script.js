@@ -194,14 +194,13 @@ function sortAccumulatedSkills() {
 
 function getSortedSkillsArray() {
     // Check if CV has been updated
-
-    // if(!isCVUpdated) {
-    //     // Read from local storage (if available)
-    //     const sortedSkillsArray = readFromLocalStorage("sortedSkillsArray");
-    //     if(sortedSkillsArray) {
-    //         return sortedSkillsArray;
-    //     }
-    // }
+    if(!isCVUpdated) {
+        // Read from local storage (if available)
+        const sortedSkillsArray = readFromLocalStorage("sortedSkillsArray");
+        if(sortedSkillsArray) {
+            return sortedSkillsArray;
+        }
+    }
 
     return sortAccumulatedSkills();
 }
