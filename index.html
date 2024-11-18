@@ -26,7 +26,6 @@
     <link rel="preload stylesheet" href="./css/index.css" as="style">
     <link rel="preload" href="./img/Henrik.webp" as="image" fetchpriority="high">
     <link rel="preconnect" href="https://esm.sh/octokit">
-    <link rel="preconnect icon" href="./img/ChasAcademyLogo.png" type="image/png" fetchpriority="high">
     <script src="./js/landing-page.js" defer></script>
     <script src="./js/script.js" type="module"></script>
     <script src="./js/json-loader.js" type="module"></script>
@@ -46,7 +45,7 @@
             <picture class="flex__logo--chas">
                 <source srcset="./img/ChasAcademyLogo.png" type="image/png" media="(prefers-color-scheme: light)">
                 <source srcset="./img/ChasAcademyLogo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
-                <img class="image__logo--chas" src="./img/ChasAcademyLogo.png" alt="Chas Academy Logo">
+                <img class="image__logo--chas" src="./img/ChasAcademyLogo.png" alt="Chas Academy Logo" fetchpriority="high">
             </picture>
             <nav id="menu" class="flex--menu paragraph__size--default-bold">
                 <ul id="menu__list--ul-buttons" class="menu__list menu__list--buttons">
@@ -59,16 +58,16 @@
                 </ul>
                 <ul class="menu__list menu__list--icons">
                     <li><a href="https://github.com/Chas-Henrik" target="_blank"><img class="icon__size--menu"
-                                src="./svg/GitHubHeader.svg" alt="GitHub Icon"></a></li>
+                                src="./svg/GitHubHeader.svg" alt="GitHub Icon" fetchpriority="high"></a></li>
                     <li><a href="https://www.linkedin.com/in/henrik-suurik-90a3167" target="_blank"><img
-                                class="icon__size--menu" src="./svg/LinkedInHeader.svg" alt="LinkedIn Icon"></a></li>
+                                class="icon__size--menu" src="./svg/LinkedInHeader.svg" alt="LinkedIn Icon" fetchpriority="high"></a></li>
                     <li><a href="https://x.com/HSuurik8796" target="_blank"><img class="icon__size--menu"
-                                src="./svg/TwitterHeader.svg" alt="Twitter Icon"></a></li>
+                                src="./svg/TwitterHeader.svg" alt="Twitter Icon" fetchpriority="high"></a></li>
                 </ul>
             </nav>
             <label id="hamburger-menu" class="label__size--hamburger label__cursor--hamburger image__color--invert">
                 <img class="icon__display--hamburger icon__size--hamburger icon__position--hamburger"
-                    src="./svg/hamburger-menu.svg" alt="Hamburger Menu Icon">
+                    src="./svg/hamburger-menu.svg" alt="Hamburger Menu Icon" fetchpriority="high">
             </label>
         </nav>
     </header>
