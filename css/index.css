@@ -527,7 +527,7 @@ section {
 
 .image__size--tech-stack {
     width: 11rem;
-    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
@@ -626,7 +626,7 @@ section {
 
 .footer__img--card {
     width: 2rem;
-    height: auto;
+    aspect-ratio: 1 / 1;
     vertical-align: middle;
     margin-right: 1rem;
 }
