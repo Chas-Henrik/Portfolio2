@@ -1,17 +1,23 @@
-export async function loadJSONData(url) {
+export let isCVUpdated = false;
+
+export async function loadCV(url) {
     try {
         const oneDay = 86400000; // 24 hours in milliseconds
-        let cvDataObj = JSON.parse(localStorage.getItem("cvDataObj"));
+        let cvDataObj = readFromLocalStorage("cvDataObj");
 
-        // If timestamp is missing or the timestamp is older than 24 hours, fetch the data again
-        if(cvDataObj == null || cvDataObj.timeStamp == null || Date.now() > parseInt(cvDataObj.timeStamp) + oneDay) {
+        // If CV is not in Local Storage, timestamp is missing or timestamp is older than 24 hours, fetch CV from server
+        if(!cvDataObj || cvDataObj.timeStamp == null || Date.now() > parseInt(cvDataObj.timeStamp) + oneDay) {
             const response = await fetch(url);
             if(!response.ok) {
                 throw new Error(`HTTP ERROR status = ${response.status}`);
             }
-
             cvDataObj = await response.json();
-            saveToLocalStorage(cvDataObj);
+
+            // Attach a timestamp to the object
+            cvDataObj.timeStamp =  Date.now();
+            saveToLocalStorage("cvDataObj", cvDataObj);
+
+            isCVUpdated = true;
         }
 
         return cvDataObj;
@@ -20,8 +26,11 @@ export async function loadJSONData(url) {
     }
 }
 
-function saveToLocalStorage(cvDataObj) {
-    // Attach a timestamp to the object
-    cvDataObj.timeStamp =  Date.now();
-    localStorage.setItem("cvDataObj", JSON.stringify(cvDataObj));
+export function saveToLocalStorage(name, dataObj) {
+    localStorage.setItem(name, JSON.stringify(dataObj));
+}
+
+export function readFromLocalStorage(name) {
+    const lsData = localStorage.getItem(name);
+    return lsData ? JSON.parse(lsData) : null;
 }

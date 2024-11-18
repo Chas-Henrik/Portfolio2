@@ -1,4 +1,4 @@
-import { loadJSONData } from "./json-loader.js";
+import { isCVUpdated, loadCV, readFromLocalStorage, saveToLocalStorage } from "./json-loader.js";
 import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
 
 // *** Progress Bar functions ***
@@ -75,10 +75,10 @@ async function populatePage() {
 // Populate grid containers
 async function populateGrid() {
     try {
-        const dataObj = await loadJSONData("./../json/cv.json");
+        const dataObj = await loadCV("./../json/cv.json");
         populateAboutMe(dataObj["aboutMe"]);
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
-        populateAccumulatedSkillsElement();
+        populateAccumulatedSkillsElement(getSortedSkillsArray());
         populateGridContainer(dataObj["education"], "grid-education");
         updateProgressBar(10);
     } catch (error) {
@@ -184,11 +184,30 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
     }
 }
 
-// *** Populate accumulated skills ***
-function populateAccumulatedSkillsElement() {
-    const MAX_SKILLS = 15;
+// *** Sort accumulated skills (descending) ***
+function sortAccumulatedSkills() {
     const skillsAccumulatedArr = Object.entries(skillsAccumulated);
-    const skillsAccumulatedArrSorted = skillsAccumulatedArr.sort((a, b) => b[1] - a[1]);
+    const sortedSkillsArray = skillsAccumulatedArr.sort((a, b) => b[1] - a[1]);
+    saveToLocalStorage("sortedSkillsArray", sortedSkillsArray);
+    return sortedSkillsArray;
+}
+
+function getSortedSkillsArray() {
+    // Check if CV has been updated
+    if(!isCVUpdated) {
+        // Read from local storage (if available)
+        const sortedSkillsArray = readFromLocalStorage("sortedSkillsArray");
+        if(sortedSkillsArray) {
+            return sortedSkillsArray;
+        }
+    }
+
+    return sortAccumulatedSkills();
+}
+
+// *** Populate accumulated skills ***
+function populateAccumulatedSkillsElement(sortedSkillsArray) {
+    const MAX_SKILLS = 15;
     const skillsAccumulatedElement = document.getElementById("grid-skills-accumulated-id");
     const h4YearsElement = document.createElement("h4");
     const h4SkillElement = document.createElement("h4");
@@ -202,8 +221,8 @@ function populateAccumulatedSkillsElement() {
     skillsAccumulatedElement.appendChild(h4SkillElement);
 
     //Populate grid elements
-    for(let i=0; i<MAX_SKILLS && i<skillsAccumulatedArrSorted.length; i++) {
-        const item = skillsAccumulatedArrSorted[i];
+    for(let i=0; i<MAX_SKILLS && i<sortedSkillsArray.length; i++) {
+        const item = sortedSkillsArray[i];
         const pYearsElement = document.createElement("p");
         const pSkillElement = document.createElement("p");
         pYearsElement.classList.add("grid-skills__item--skills", "grid-skills__item--years", "paragraph__size--grid-fig-caption");
