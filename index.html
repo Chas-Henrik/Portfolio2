@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Henrik Suurik's online CV/Resume">
-    <meta http-equiv="cache-control" content="max-age=31536000">
     <meta property="og:url" content="https://chas-henrik-u02-egen-portfoliosida.netlify.app/index.html" >
     <meta property="og:type" content="website" >
     <meta property="og:title" content="Henrik's Portfolio Page" >
@@ -15,26 +14,34 @@
     <meta property="og:image:width" content="310" >
     <meta property="og:image:height" content="310" >
     <link rel="canonical" href="https://chas-henrik-u02-egen-portfoliosida.netlify.app/index.html">
-    <link rel="preload" href="./fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- A maximum of 6 items are preloaded in parallel -->
     <link rel="preload" href="./fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload stylesheet" href="./css/base.css" as="style" fetchpriority="high">
+    <link rel="preload stylesheet" href="./css/index.css" as="style" fetchpriority="high">
+    <link rel="preload" href="./img/Henrik.webp" as="image" fetchpriority="high">
+    <!-- A maximum of 6 items are preloaded in parallel -->
+    <link rel="preload icon" href="./img/favicon.png" as="image" fetchpriority="high">
+    <link rel="preload" href="./svg/hamburger-menu.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="./svg/GitHubHeader.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="./svg/LinkedInHeader.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="./svg/TwitterHeader.svg" as="image" fetchpriority="high">
+    <script rel="modulepreload" src="./js/landing-page.js" type="module" fetchpriority="high"></script>
+    <!-- A maximum of 6 items are preloaded in parallel -->
+    <link rel="preload" href="./fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/radley-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v21-latin-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v21-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preconnect" href="./svg/office-building.svg" as="image" type="image/svg" fetchpriority="high">
-    <link rel="preconnect" href="./svg/calender.svg" as="image" type="image/svg" fetchpriority="high">
-    <link rel="preconnect" href="./svg/location.svg" as="image" type="image/svg" fetchpriority="high">
-    <link rel="preload stylesheet" href="./css/base.css" as="style">
-    <link rel="preload stylesheet" href="./css/index.css" as="style">
-    <link rel="preload" href="./img/Henrik.webp" as="image" fetchpriority="high">
     <link rel="preconnect" href="https://esm.sh/octokit">
-    <link rel="preconnect icon" href="./img/ChasAcademyLogo.png" type="image/png" fetchpriority="high">
-    <script src="./js/landing-page.js" type="module"></script>
+    <!-- A maximum of 6 items are preloaded in parallel -->
     <script src="./js/script.js" type="module"></script>
     <script src="./js/json-loader.js" type="module"></script>
     <script src="./js/github-api.js" type="module"></script>
+    <!-- <link rel="preconnect" href="./svg/office-building.svg">
+    <link rel="preconnect" href="./svg/calender.svg">
+    <link rel="preconnect" href="./svg/location.svg"> -->
     <title>Henrik's Portfolio Page</title>
 </head>
 
@@ -48,9 +55,9 @@
     <header id="header">
         <nav class="flex__nav">
             <picture class="flex__logo--chas">
-                <source srcset="./img/ChasAcademyLogo.png" type="image/png" media="(prefers-color-scheme: light)">
-                <source srcset="./img/ChasAcademyLogo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
-                <img class="image__logo--chas" src="./img/ChasAcademyLogo.png" alt="Chas Academy Logo" fetchpriority="high">
+                <source srcset="./img/favicon.png" type="image/png" media="(prefers-color-scheme: light)">
+                <source srcset="./img/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                <img class="image__logo--chas" src="./img/favicon.png" alt="Chas Academy Logo" fetchpriority="high">
             </picture>
             <nav id="menu" class="flex--menu paragraph__size--default-bold">
                 <ul id="menu__list--ul-buttons" class="menu__list menu__list--buttons">
