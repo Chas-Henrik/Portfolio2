@@ -319,20 +319,18 @@ section {
     display: none;
 }
 
-.icon__display--hamburger {
+.svg-icon__display--hamburger {
     display: block;
 }
 
-.icon__size--hamburger {
-    width: 5rem;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.icon__position--hamburger {
+.svg-icon--hamburger {
     justify-self: center;
     align-self: start;
     margin-left: auto;
+}
+
+.svg-icon--hamburger:hover {
+    fill: var(--menu-color-hover);
 }
 
 .label__cursor--hamburger {
@@ -734,7 +732,7 @@ section {
         flex: 1;
     }
 
-    .icon__display--hamburger {
+    .svg-icon__display--hamburger {
         display: none;
     }
 

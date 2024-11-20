@@ -24,12 +24,11 @@
     <!-- A maximum of 6 items are preloaded in parallel -->
     <link rel="preload" href="./fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload icon" href="./img/favicon.png" as="image" fetchpriority="high">
-    <link rel="preload" href="./svg/hamburger-menu.svg" as="image" fetchpriority="high">
     <script rel="modulepreload" src="./js/landing-page.js" type="module" fetchpriority="high"></script>
     <link rel="preload" href="./fonts/radley-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/poppins-v21-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <!-- A maximum of 6 items are preloaded in parallel -->
     <link rel="preload" href="./fonts/poppins-v21-latin-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- A maximum of 6 items are preloaded in parallel -->
     <link rel="preload" href="./fonts/poppins-v21-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preconnect" href="https://esm.sh/octokit">
     <script src="./js/script.js" type="module"></script>
@@ -89,9 +88,10 @@
                     </li>
                 </ul>
             </nav>
-            <label id="hamburger-menu" class="label__size--hamburger label__cursor--hamburger image__color--invert">
-                <img class="icon__display--hamburger icon__size--hamburger icon__position--hamburger"
-                    src="./svg/hamburger-menu.svg" alt="Hamburger Menu Icon" fetchpriority="high">
+            <label id="hamburger-menu" class="label__size--hamburger label__cursor--hamburger image__color--invert" title="Expand/Collapse Menu">
+                <svg class="svg-icon__display--hamburger svg-icon--hamburger" xmlns="http://www.w3.org/2000/svg"  width="33px" height="33px" viewBox="0 -960 960 960" fill="#000000">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
             </label>
         </nav>
     </header>
