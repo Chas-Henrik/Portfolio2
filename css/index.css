@@ -863,7 +863,6 @@ section {
     .menu__list--icons {
         flex: 0 0 15rem;
         display: flex;
-        flex-direction: row-reverse;
     }
 
     .menu__list--buttons li {
