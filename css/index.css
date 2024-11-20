@@ -247,13 +247,6 @@ section {
     flex-wrap: wrap;
 }
 
-.icon__size--menu {
-    display: inline-block;
-    width: 3rem;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
 .label__size--hamburger {
     flex: 1 1 10%;
 }
@@ -310,12 +303,16 @@ section {
     /* => flex: 1 1 33.33%; */
 }
 
-.menu__list--icons img {
+.svg-icon--menu {
+    display: inline-block;
     width: 3rem;
-    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     vertical-align: middle;
-    filter: none;
-    /* => #666666*/
+}
+
+.svg-icon--menu:hover path {
+    fill: var(--menu-color-hover);
 }
 
 .menu--collapsed {
@@ -668,7 +665,7 @@ section {
 }
 
 .link--contact:hover .svg-icon--contact {
-    fill:#5CF;
+    fill: var(--icon-color-hover);
 }
 
 .link--contact:hover p {
@@ -945,6 +942,10 @@ section {
         color: var(--dark-content-light-mode);
     }
 
+    .svg-icon--menu path{
+        fill: var(--light-content-light-mode);
+    }
+
     .grid--introduction {
         box-shadow: var(--box-shadow-tiny-light-mode);
     }
@@ -1025,12 +1026,13 @@ section {
         color: var(--black-content-light-mode);
     }
 
-    .link--contact .svg-icon--contact {
-        fill: var(--black-content-light-mode);
-    }
-
-    .link--contact p {
-        border-bottom: 2px solid var(--light-content-light-mode);
+    .link--contact {
+        .svg-icon--contact {
+            fill: var(--black-content-light-mode);
+        }
+        p {
+            border-bottom: 2px solid var(--light-content-light-mode);
+        }
     }
 
     .footer {
@@ -1083,9 +1085,8 @@ section {
         color: var(--light-content-dark-mode);
     }
 
-    .flex--menu .menu__list--icons img {
-        filter: invert(100%) brightness(109%);
-        /* => #A7A7A7*/
+    .svg-icon--menu path{
+        fill: var(--light-content-dark-mode);
     }
 
     .image__color--invert img {
@@ -1174,12 +1175,13 @@ section {
         color: var(--black-content-dark-mode);
     }
 
-    .link--contact .svg-icon--contact {
-        fill: var(--black-content-dark-mode);
-    }
-    
-    .link--contact p {
-        border-bottom: 2px solid var(--light-content-dark-mode);
+    .link--contact {
+        .svg-icon--contact {
+            fill: var(--black-content-dark-mode);
+        }
+        p {
+            border-bottom: 2px solid var(--light-content-dark-mode);
+        }
     }
 
     .footer {
