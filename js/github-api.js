@@ -33,9 +33,9 @@ export async function getRepoEndpoint(name, endpoint) {
         // Check if data is in cache (Local Storage)
         let endpointObj = JSON.parse(localStorage.getItem(`${name} : ${endpoint}`));
         
-        // Check if data is older than 24h
+        // Check if data is not in cache or timestamp is missing or data is older than 24h
         if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + oneDay) {
-            // Fetch data from API
+            // Fetch data from GitHub API
             endpointObj = await octokit.request(endpoint, {
                 owner: "Chas-Henrik",
                 repo: name,
