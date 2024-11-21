@@ -1196,10 +1196,6 @@ section {
         display: none !important;
     }
 
-    main > section {
-        break-before: page;
-    }
-
     .break-before--page {
         break-before: page;
     }
