@@ -63,24 +63,35 @@ Exempel på funktionalitet:
   
 ### Vad är JSON och hur används det inom frontend?
 
-JSON står för “JavaScript Object Notation” och är ett lättvikts format för att strukturera data. JSON är särskilt utformat för att vara enkelt att läsa och skriva för både människor och maskiner. JSON består av nyckel-värde-par och använder en syntax som liknar JavaScript-objekt, vilket gör det väldigt lätt att arbeta med i webbutveckling, särskilt på frontend-sidan.  
+JSON står för “JavaScript Object Notation” och är ett text format för att lagra och transportera data. JSON är särskilt utformat för att vara enkelt att läsa och skriva för både människor och maskiner. JSON består av nyckel-värde-par och använder en syntax som liknar JavaScript-objekt, vilket gör det väldigt lätt att arbeta med i webbutveckling, särskilt på frontend-sidan.  
   
-JSON används för att utbyta data mellan webbläsaren och servern, hantera dynamisk data & lagra konfigurationer. Frontendutvecklare använder även JSON för att hantera och manipulera data som behövs för att skapa interaktiva och responsiva webbapplikationer.
+JSON används för att utbyta data mellan webbläsaren och servern, hantera dynamisk data och lagra konfigurationer. Frontendutvecklare använder även JSON för att hantera och manipulera data som behövs för att skapa interaktiva och responsiva webbapplikationer.
 
-Exempel på specifika användningsområden där JSON används:
-1. API-kommunikation : JSON används för att skicka och ta emot data från API:er. 
-2. Datanavigering och rendering : JSON-data kan hämtas från en server och omvandlas direkt till ett JavaScript-objekt, och detta gör det enkelt att navigera (JSON objekt kan innehålla länkar till andra JSON objekt) och bearbeta data för att rendera dynamiskt innehåll i en webbsida.
-3. Lokalt lagrad data : JSON används för att cacha data i webbläsarens “localStorage” (m.h.a. `JSON.stringify(obj)`) för att snabbt kunna hämta datan utan nya API anrop (m.h.a. `JSON.parse(obj)`).
-4. Konfiguration och inställningar : Vissa frontendverktyg och bibliotek använder JSON för konfigurationer och inställningar. 
-5. Serialisering och deserialisering av data : JSON gör det möjligt att serialisera JavaScript-objekt till en textsträng, vilket behövs för att kunna skicka objekt i HTTP-anrop.
+JSON används bland annat i:
+1. API-kommunikation : För att skicka och ta emot data från API:er. 
+2. Data-navigering och rendering : Då JSON-data kan hämtas från en server och omvandlas direkt till JavaScript-objekt, så blir det enkelt att navigera och bearbeta data för att rendera dynamiskt innehåll i en webbsida. Observera att JSON objekt kan innehålla länkar (URL:er) till andra JSON objekt och detta används för data-navigering.
+3. Lokalt lagrad data : JSON används för att cacha 'extern data', t.ex. API data, i webbläsarens “localStorage” (m.h.a. `JSON.stringify(obj)`) för att snabbt kunna hämta cachat data från den lokala maskinen (m.h.a. `JSON.parse(obj)`).
+4. Konfiguration och inställningar : Vissa frontendverktyg och bibliotek använder JSON som data format för sina konfigurationer och inställningar. 
+5. Serialisering och deserialisering av data : JSON gör det möjligt att serialisera JavaScript-objekt till en textsträng, och detta behövs för att kunna skicka objekt i HTTP-anrop.
   
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-Hypertext Transfer Protocol (HTTP) är det kommunikationsprotokoll som används för att överföra webbsidor på informationsnätverket WWW, World Wide Web på Internet. Det ursprungliga syftet med HTTP var att tillhandahålla en metod för att överföra HTML-sidor från webbservrar till webbklienter.
+Hypertext Transfer Protocol (HTTP) är det kommunikationsprotokoll som används för att överföra webbsidor. Det ursprungliga syftet med HTTP var att tillhandahålla en metod för att överföra HTML-sidor från webbservrar till webbklienter.
 Utvecklingen av HTTP koordinerades av World Wide Web Consortium (W3C) och arbetsgrupper i Internet Engineering Task Force.
-
+  
 HTTP bygger på ett förfrågan/svar-förfarande mellan klient och server. En HTTP-klient, vanligen en webbläsare, som skall hämta en HTML-fil, en bild eller annan fil från en webbserver skickar en förfrågan bestående av en kort textsträng till en TCP-port på servern, vanligen nummer 80. Textsträngen innehåller information om vilken version av HTTP som används, och vilken fil (eller annan resurs eller information) som klienten vill att servern skall skicka. En HTTP-förfrågan kan till exempel se ut som följande: `GET /index.html HTTP/1.1` (vilket med hjälp av HTTP version 1.1 skulle begära en överföring av serverns indexdokument till webbläsaren).  
   
+HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
+- **CONNECT** : Används för att sätta upp en tvåvägs kommunikation (tunnel) med servern. Används med proxy-servrar som kan fungera som SSL-tunnlar.
+- **OPTIONS** : Returnerar en lista över de HTTP-kommandon som servern stöder.
+- **HEAD** : Ber servern att skicka information om den utpekade resursen utan att skicka själva innehållet i filen.
+- **GET** : Ber servern att skicka den utpekade filen (eller resultatet av en programkörning, databasförfrågan eller motsvarande) till klienten.
+- **PUT** : Används för att skapa/uppdatera en resurs på servern, men används vanligtvis för att uppdatera en existerande resurs på servern.
+- **POST** : Används för att för att skapa/uppdatera en resurs på servern, men används vanligtvis för att skapa en ny resurs på servern. Om man skickar multipla POST kommandon, så kommer flera instanser av resursen att skapas.
+- **PATCH** : Används för att patcha en resurs.
+- **DELETE** : Raderar den utpekade filen. Detta kommando används sällan och många webbservrar inte har stöd för det.
+- **TRACE** : Ber servern att skicka tillbaka klientförfrågan precis i det skick som den anlände till servern. Detta kommando kan användas för att kontrollera om någon tredje part mellan klient och server har gjort några ändringar i förfrågan, eller som loop-back test i debug syfte.
+
 Kunskap om HTTP och dess protokoll hjälper frontendutvecklaren att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, vilket både förbättrar användarupplevelsen och säkerheten.
 
 Som frontendutvecklare är det också viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. Och det är viktigt att förstå hur man hämtar data på ett effektivt sätt med HTTP, och hur data skickas och skyddas i en webbapplikation då detta både förbättrar användarupplevelsen och säkerheten.
