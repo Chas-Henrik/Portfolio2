@@ -1,5 +1,5 @@
 import { isCVUpdated, loadCV, saveToLocalStorage, readFromLocalStorage } from "./json-loader.js";
-import { connectToGitHub, getRepoEndpoint } from "./github-api.js";
+import { connectToGitHub, getRepoEndpoint, getRepoEndpoints } from "./github-api.js";
 
 // *** Progress Bar functions ***
 
@@ -264,11 +264,10 @@ async function populateProjectCards() {
 async function fetchRepoEndpoints(repoNames, repoObjs, languageObjs) {
     for(let i=0; i<repoNames.length; i++) {
         const repoName = repoNames[i];
-        const repoObj = await getRepoEndpoint(repoName, 'GET /repos/{owner}/{repo}');
-        const languageObj = await getRepoEndpoint(repoName, 'GET /repos/{owner}/{repo}/languages');
-        updateProgressBar(10 + 90*(i+1)/repoNames.length);
-        repoObjs.push(repoObj);
-        languageObjs.push(languageObj);
+        const endpointObjs = await getRepoEndpoints(repoName, ['GET /repos/{owner}/{repo}', 'GET /repos/{owner}/{repo}/languages']);
+        updateProgressBar(10 + 90*(i+1)/repoNames.length); 
+        repoObjs.push(endpointObjs[0]);
+        languageObjs.push(endpointObjs[1]);
     };
 }
 

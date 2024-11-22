@@ -1,7 +1,7 @@
 import { Octokit, App } from "https://esm.sh/octokit";
 
 // ***Connect to GitHub***
-
+const CACHE_EXPIRATION_TIME = 86400000; // 24 hours in milliseconds
 let octokit = null;
 
 export async function connectToGitHub(authenticate=false) {
@@ -22,23 +22,22 @@ export async function connectToGitHub(authenticate=false) {
     }
 }
 
-export async function getRepoEndpoint(name, endpoint) {
+export async function getRepoEndpoint(repoName, endpoint) {
     try {
-        const oneDay = 86400000; // 24 hours in milliseconds
 
         if(octokit == null) {
             await connectToGitHub();
         }
 
         // Check if data is in cache (Local Storage)
-        let endpointObj = JSON.parse(localStorage.getItem(`${name} : ${endpoint}`));
+        let endpointObj = JSON.parse(localStorage.getItem(`${repoName} : ${endpoint}`));
         
         // Check if data is not in cache or timestamp is missing or data is older than 24h
-        if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + oneDay) {
+        if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + CACHE_EXPIRATION_TIME) {
             // Fetch data from GitHub API
             endpointObj = await octokit.request(endpoint, {
                 owner: "Chas-Henrik",
-                repo: name,
+                repo: repoName,
                 headers: {
                     'X-GitHub-Api-Version': '2022-11-28'
                 }
@@ -48,11 +47,89 @@ export async function getRepoEndpoint(name, endpoint) {
             endpointObj.timeStamp =  Date.now();
 
             // Save to local storage
-            localStorage.setItem(`${name} : ${endpoint}`, JSON.stringify(endpointObj));
+            localStorage.setItem(`${repoName} : ${endpoint}`, JSON.stringify(endpointObj));
         }
         return endpointObj;
     } catch (error) {
-        console.error(`Error fetching ${name} repository:`, error);  
+        console.error(`Error fetching ${repoName} repository:`, error);  
     }
 }
 
+function getCachedEndpoints(repoName, endpointArray) {
+    const cachedEndpointArray = [];
+
+    try {
+        for(let endpoint of endpointArray) {
+            const endpointObj = JSON.parse(localStorage.getItem(`${repoName} : ${endpoint}`));
+            if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + CACHE_EXPIRATION_TIME) {
+                return null; // Return null if any data is missing or older than 24h
+            }
+            cachedEndpointArray.push(endpointObj);
+        }
+        return cachedEndpointArray;
+    } catch (error) {
+        console.error(`Error reading ${repoName} repository from local storage:`, error);
+        return null; 
+    }
+}
+
+function cacheEndpoints(repoName, endpointArray, endpointObjArr) {
+    try {
+        // Save endpoint objects to local storage
+        for(let i=0; i < endpointObjArr.length;  i++) {
+            const endpoint = endpointArray[i];
+            const endpointObj = endpointObjArr[i];
+
+            // Attach a timestamp to data object
+            endpointObj.timeStamp =  Date.now();
+
+            // Save to local storage
+            localStorage.setItem(`${repoName} : ${endpoint}`, JSON.stringify(endpointObj));
+        }
+    } catch (error) {
+        console.error(`Error saving ${repoName} repository to local storage:`, error);
+    }
+}
+
+export async function getRepoEndpoints(repoName, endpointArray) {
+    const cachedEndpointArray = getCachedEndpoints(repoName, endpointArray);
+
+    if(cachedEndpointArray != null) {
+        return cachedEndpointArray;
+    }
+
+    const endpointPromiseArr = [];
+    let endpointObjArr = [];
+
+    try {
+        if(octokit == null) {
+            await connectToGitHub();
+        }
+        
+        for(let endpoint of endpointArray) {
+            const endpointPromise = octokit.request(endpoint, {
+                owner: "Chas-Henrik",
+                repo: repoName,
+                headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+            endpointPromiseArr.push(endpointPromise);
+        }
+
+        // Send all GitHub API requests in parallel using Promise.all
+        endpointObjArr = await Promise.all(endpointPromiseArr);
+
+        if(endpointObjArr.length != endpointArray.length) {
+            console.error(`Error fetching ${repoName} repository:`, error);  
+            return null;
+        }
+    
+    } catch (error) {
+        console.error(`Error fetching ${repoName} repository:`, error);  
+    }
+
+    cacheEndpoints(repoName, endpointArray, endpointObjArr);
+
+    return endpointObjArr;
+}
