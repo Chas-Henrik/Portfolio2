@@ -321,6 +321,8 @@ section {
 
 .svg-icon__display--hamburger {
     display: block;
+    width: 6.5rem;
+    height: 6.5rem;
 }
 
 .svg-icon--hamburger {
@@ -946,7 +948,7 @@ section {
     }
 
     .svg-icon--hamburger {
-        fill: var(--light-content-light-mode);
+        fill: var(--black-content-light-mode);
     }
 
     .grid--introduction {
@@ -1093,7 +1095,7 @@ section {
     }
 
     .svg-icon--hamburger {
-        fill: var(--light-content-dark-mode);
+        fill: var(--black-content-dark-mode);
     }
 
     .image__color--invert img {
