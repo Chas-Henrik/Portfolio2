@@ -40,7 +40,8 @@ The site is published on Netlify (see hyperlink below):
 2. Lazy loaded images doesn't show up in 'Print Preview' in Safari until images has been browsed on page.
 
 *Notes:*
-
+1. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still one thing that could be further optimized. The cv.json and GitHub API data could all be downloaded in parallel to reduce the 'total load time' substantially for the page when a brand new user enters the site. However if doing so, it is no longer possible to estimate the 'time to completion' in a progressbar, and for most cases a progressbar would not even be needed.
+  
 ***
 
 ## Frågor:
