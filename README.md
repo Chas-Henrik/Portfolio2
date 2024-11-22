@@ -87,7 +87,7 @@ HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
 - **HEAD** : Ber servern att skicka information om den utpekade resursen utan att skicka själva innehållet i filen.
 - **GET** : Ber servern att skicka den utpekade filen (eller resultatet av en programkörning, databasförfrågan eller motsvarande) till klienten.
 - **PUT** : Används för att skapa/uppdatera en resurs på servern, men används vanligtvis för att uppdatera en existerande resurs på servern.
-- **POST** : Används för att för att skapa/uppdatera en resurs på servern, men används vanligtvis för att skapa en ny resurs på servern. Om man skickar multipla POST kommandon, så kommer flera instanser av resursen att skapas.
+- **POST** : Används för att för att skapa/uppdatera en resurs på servern, men används vanligtvis för att skapa en ny resurs på servern. Notera även att om man skickar multipla POST kommandon, så kommer flera instanser av resursen att skapas.
 - **PATCH** : Används för att patcha en resurs.
 - **DELETE** : Raderar den utpekade filen. Detta kommando används sällan och många webbservrar inte har stöd för det.
 - **TRACE** : Ber servern att skicka tillbaka klientförfrågan precis i det skick som den anlände till servern. Detta kommando kan användas för att kontrollera om någon tredje part mellan klient och server har gjort några ändringar i förfrågan, eller som loop-back test i debug syfte.
