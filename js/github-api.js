@@ -22,39 +22,6 @@ export async function connectToGitHub(authenticate=false) {
     }
 }
 
-export async function getRepoEndpoint(repoName, endpoint) {
-    try {
-
-        if(octokit == null) {
-            await connectToGitHub();
-        }
-
-        // Check if data is in cache (Local Storage)
-        let endpointObj = JSON.parse(localStorage.getItem(`${repoName} : ${endpoint}`));
-        
-        // Check if data is not in cache or timestamp is missing or data is older than 24h
-        if(endpointObj == null || endpointObj.timeStamp == null || Date.now() > parseInt(endpointObj.timeStamp) + CACHE_EXPIRATION_TIME) {
-            // Fetch data from GitHub API
-            endpointObj = await octokit.request(endpoint, {
-                owner: "Chas-Henrik",
-                repo: repoName,
-                headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
-            });
-
-            // Attach a timestamp to data object
-            endpointObj.timeStamp =  Date.now();
-
-            // Save to local storage
-            localStorage.setItem(`${repoName} : ${endpoint}`, JSON.stringify(endpointObj));
-        }
-        return endpointObj;
-    } catch (error) {
-        console.error(`Error fetching ${repoName} repository:`, error);  
-    }
-}
-
 function getCachedEndpoints(repoName, endpointArray) {
     const cachedEndpointArray = [];
 
