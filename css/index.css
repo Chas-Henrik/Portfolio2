@@ -548,7 +548,7 @@ details {
 .image__size--tech-stack {
     width: 11rem;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /*** Projects Section ***/
