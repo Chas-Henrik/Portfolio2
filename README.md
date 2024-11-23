@@ -21,11 +21,11 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
   
 The site supports ‘dark theme’ (configured through operating system settings).  
   
-Some effort has been made to remove the header & footer when the page is printed and to make the page print with suitable page breaks.  
+Effort has been made to make the page print properly by removing header & footer and assuring suitable page breaks.  
   
-Both the cv.json & the GitHub API data is cached in Local Storage. The data in Local Storage is timestamped and is invalidated after 24h, so that the cache reflects the latest server content when the cv.json and/or the the GitHub API data is updated on the server.
+Both the cv.json & the GitHub API data is cached in Local Storage. The data in Local Storage is timestamped and is invalidated after 24h, so that the cache reflects the latest server content if the cv.json and/or the the GitHub API data is updated on the server.
   
-All images, except the profile picture and the 'artistic images' (in the project section) are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are webP formatted to achieve the best possible compression while still preserving the details of the image, and the images are also available in png format as fallback in case webP is not supported by the client browser. All images except images used on the landing page are lazy loaded to improve performance. All fonts are hosted locally (as .woff2 files) and the landing-page fonts are preloaded to improve performance.
+All images, except the profile picture and the 'artistic images' (in the project section) are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are webP formatted to achieve the best possible compression while still preserving the details of the image, and the images are also available in png format as fallback in case webP is not supported by the client browser. All images except images used on the landing page are lazy loaded to improve performance. The fonts are hosted locally (as .woff2 files) and the landing-page fonts are preloaded to improve performance.
   
 The `display: inline; vertical-align: middle;` solution has been selected over the 'flex-box' solution for the 'icon & text grid cells' even though the icon vertical alignment is slightly worse. The reason for this, is that the 'line wrap behavior' is way better for the 'vertical-align' solution when the (icon & text) line run out of horizontal space.
   
