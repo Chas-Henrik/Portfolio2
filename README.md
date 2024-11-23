@@ -86,22 +86,16 @@ HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
 - **CONNECT** : Används för att sätta upp en tvåvägs kommunikation (tunnel) med servern. Används med proxy-servrar som kan fungera som SSL-tunnlar.
 - **OPTIONS** : Returnerar en lista över de HTTP-kommandon som servern stöder.
 - **HEAD** : Ber servern att skicka information om den utpekade resursen utan att skicka själva innehållet i filen.
-- **GET** : Ber servern att skicka den utpekade filen (eller resultatet av en programkörning, databasförfrågan eller motsvarande) till klienten.
-- **PUT** : Används för att skapa/uppdatera en resurs på servern, men används vanligtvis för att uppdatera en existerande resurs på servern.
-- **POST** : Används för att för att skapa/uppdatera en resurs på servern, men används vanligtvis för att skapa en ny resurs på servern. Notera även att om man skickar multipla POST kommandon, så kommer flera instanser av resursen att skapas.
-- **PATCH** : Används för att patcha en resurs.
+- **GET** : Ber servern att skicka den utpekade resursen (t.ex. fil eller resultatet av en programkörning, databasförfrågan eller motsvarande) till klienten.
+- **PUT** : Används för att uppdatera en existerande resurs på servern.
+- **POST** : Används för att skapa en ny 'samling av resurser' på servern. Notera även att om man skickar multipla POST kommandon, så kommer flera instanser att skapas.
+- **PATCH** : Används för att patcha en resurs, dvs uppdatera en del av en resurs. Följande 'patch operationer' stöds: `test, remove, add, replace, move & copy`.
 - **DELETE** : Raderar den utpekade filen. Detta kommando används sällan och många webbservrar inte har stöd för det.
 - **TRACE** : Ber servern att skicka tillbaka klientförfrågan precis i det skick som den anlände till servern. Detta kommando kan användas för att kontrollera om någon tredje part mellan klient och server har gjort några ändringar i förfrågan, eller som loop-back test i debug syfte.
 
-Kunskap om HTTP och dess protokoll hjälper frontendutvecklaren att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, vilket både förbättrar användarupplevelsen och säkerheten.
-
-Som frontendutvecklare är det också viktigt att ha kunskap om HTTP och dess protokoll eftersom det påverkar hur en webbapplikation kommunicerar med backend-tjänster och hanterar data. Och det är viktigt att förstå hur man hämtar data på ett effektivt sätt med HTTP, och hur data skickas och skyddas i en webbapplikation då detta både förbättrar användarupplevelsen och säkerheten.
-
-Här är några ytterligare skäl till att det är viktigt att ha kunskap om HTTP och dess protokoll:
-1. Förståelse för klient-server-kommunikation: Som frontendutvecklare behöver man förstå hur förfrågningar och svar hanteras mellan klient och server. Detta är avgörande när man bygger funktioner som hämtar data från API:er eller skickar information till servern.
-2. Förfrågningstyper (GET, POST, PUT, DELETE): HTTP använder olika typer av förfrågningar (s.k. “HTTP-metoder”) för att definiera syftet med en förfrågan, som att hämta, skicka, uppdatera eller ta bort data. Att förstå skillnaderna mellan dessa är viktigt när man arbetar med API-anrop i frontendkoden.
+Som frontendutvecklare behöver man kunskap om HTTP och dess protokoll för att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, då detta förbättrar både användarupplevelsen och säkerheten. Och som frontendutvecklare bör man åtminstone känna till följande om HTTP och dess protokoll:
+1. Förståelse för klient-server-kommunikation: Man behöver förstå hur förfrågningar och svar hanteras mellan klient och server.
+2. Förfrågningstyper (GET, POST, PUT, DELETE): Det är viktigt att förstå skillnaderna mellan HTTP's förfrågningstyper när man arbetar med API-anrop i frontendkoden, och förstå 'när man ska använda vad'.
 3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
-4. Säkerhet (HTTPS): HTTPS är en säker version av HTTP som använder SSL/TLS-kryptering för att skydda datan som skickas mellan klient och server. Att förstå hur HTTPS fungerar är viktigt för att kunna säkra applikationer och se till att användardata skyddas.
-5. Caching och prestanda: HTTP har inbyggda funktioner för caching som gör det möjligt att förbättra sidladdningstider och prestanda. Som frontendutvecklare är det bra att förstå hur dessa fungerar och hur de kan utnyttjas för att optimera webbplatsen.
-6. CORS (Cross-Origin Resource Sharing): När frontendapplikationen kommunicerar med en backend på en annan domän är det viktigt att förstå CORS-regler, eftersom de bestämmer vilka domäner som får skicka förfrågningar till servern.
-
+4. Säkerhet (HTTPS): HTTPS är en säker version av HTTP som använder SSL/TLS-kryptering för att skydda datan som skickas mellan klient och server. Att förstå hur HTTPS fungerar är viktigt för att kunna göra säkra applikationer och se till att användardata skyddas.
+5. Caching och prestanda: HTTP har inbyggda funktioner för caching som gör det möjligt att förbättra sidladdningstider och prestanda och som frontendutvecklare är det bra att förstå hur dessa fungerar, och hur man kan utnyttja dessa för att optimera webbplatsen.
