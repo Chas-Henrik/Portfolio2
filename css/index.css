@@ -1,4 +1,3 @@
-
 /*** General Selectors ***/
 
 :root {
@@ -179,8 +178,8 @@ section {
 }
 
 .first-paragraph::first-letter {
-    width:fit-content;
-    height:fit-content;
+    width: fit-content;
+    height: fit-content;
     font-size: 6.5rem;
     padding: 1.5rem;
     background-color: var(--background-first-letter);
@@ -269,7 +268,8 @@ section {
 
 @supports (text-wrap: nowrap) {
     .menu__list li a {
-        text-wrap: nowrap; /* Not supported by Safari < 17.4 */
+        text-wrap: nowrap;
+        /* Not supported by Safari < 17.4 */
     }
 }
 
@@ -384,7 +384,7 @@ section {
     color: var(--menu-color-hover);
 }
 
-#section-about > * {
+#section-about>* {
     font-display: optional;
 }
 
@@ -420,12 +420,12 @@ section {
     text-align: right;
 }
 
-.grid__figure > * {
+.grid__figure>* {
     display: inline;
     vertical-align: middle;
 }
 
-.grid__figure > img {
+.grid__figure>img {
     width: 1.6rem;
     height: 1.2rem;
     margin-right: 0.5rem;
@@ -473,7 +473,7 @@ section {
     margin: 0;
 }
 
-.grid__ul--skill > li {
+.grid__ul--skill>li {
     display: inline-block;
     width: fit-content;
     height: fit-content;
@@ -522,10 +522,10 @@ details {
     &::details-content {
         opacity: 0;
         block-size: 0;
-        overflow-y: clip; 
+        overflow-y: clip;
         transition: content-visibility 0.6s allow-discrete,
-                    opacity 0.6s,
-                    block-size 0.6s;
+            opacity 0.6s,
+            block-size 0.6s;
     }
 
     &[open]::details-content {
@@ -589,11 +589,12 @@ details {
     display: block;
     width: 100%;
     aspect-ratio: 375 / 260;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .card__content {
-    flex: 1; /* Assure the content takes up the remaining space */
+    flex: 1;
+    /* Assure the content takes up the remaining space */
     height: auto;
     padding: 1.5rem 2.5rem;
     display: flex;
@@ -612,7 +613,8 @@ details {
 
 @supports (text-wrap: nowrap) {
     .card__title {
-        text-wrap: nowrap; /* Not supported by Safari < 17.4 */
+        text-wrap: nowrap;
+        /* Not supported by Safari < 17.4 */
     }
 }
 
@@ -680,9 +682,9 @@ details {
     text-decoration: none;
     padding-bottom: 0.3rem;
     margin-bottom: 3rem;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
 }
 
 .link--contact:hover .svg-icon--contact {
@@ -723,7 +725,7 @@ details {
 
 /* On screens that are 650px to 1024px (Tablets & Small Desktops) */
 @media (min-width: 650px) {
-    
+
     html {
         font-size: calc(62.5% / 1.25);
     }
@@ -765,14 +767,15 @@ details {
         height: 80rem;
         min-height: calc(100svh - 20rem);
     }
-    
+
     .paragraph__size--introduction {
         font-weight: 600;
         font-size: 2.5rem;
         line-height: 5rem;
     }
 
-    #section-about, #section-skills {
+    #section-about,
+    #section-skills {
         max-width: 900px;
         font-display: optional;
     }
@@ -914,7 +917,7 @@ details {
     .flex__display--mobile-tablet {
         display: none;
     }
-    
+
     .flex__display--desktop {
         display: flex;
     }
@@ -927,11 +930,13 @@ details {
         color: var(--solid-heading-light-mode);
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         color: var(--solid-heading-light-mode);
     }
 
-    p, a {
+    p,
+    a {
         color: var(--light-content-light-mode);
     }
 
@@ -944,7 +949,7 @@ details {
         background-color: var(--background-progress-bar);
         color: var(--progress-bar-text-color);
     }
-    
+
     #progress-action-id {
         color: var(--progress-bar-text-color);
     }
@@ -963,7 +968,7 @@ details {
         color: var(--dark-content-light-mode);
     }
 
-    .svg-icon--menu path{
+    .svg-icon--menu path {
         fill: var(--light-content-light-mode);
     }
 
@@ -1000,24 +1005,27 @@ details {
         background-color: var(--background-details-buttons);
     }
 
-    .grid__ul--skill > li {
+    .grid__ul--skill>li {
         color: var(--skill-text-color);
         background-color: var(--background-details-buttons);
     }
 
-    .grid-skills-accumulated, .grid-skills__item--skills {
+    .grid-skills-accumulated,
+    .grid-skills__item--skills {
         border: 0.1rem solid var(--border-color-light-mode);
     }
 
-    .grid-skills-accumulated > h4 {
+    .grid-skills-accumulated>h4 {
         background: var(--background-zebra-grid-header-light-mode);
     }
-    
-    .grid-skills-accumulated > p:nth-child(4n+1), .grid-skills-accumulated > p:nth-child(4n+2) {
+
+    .grid-skills-accumulated>p:nth-child(4n+1),
+    .grid-skills-accumulated>p:nth-child(4n+2) {
         background: var(--background-zebra-grid-odd-row-light-mode);
     }
-    
-    .grid-skills-accumulated > p:nth-child(4n+3), .grid-skills-accumulated > p:nth-child(4n+4) {
+
+    .grid-skills-accumulated>p:nth-child(4n+3),
+    .grid-skills-accumulated>p:nth-child(4n+4) {
         background: var(--background-zebra-grid-even-row-light-mode);
     }
 
@@ -1047,7 +1055,8 @@ details {
         background-color: var(--background-light-mode);
     }
 
-    .paragraph--contact, .link--contact{
+    .paragraph--contact,
+    .link--contact {
         color: var(--black-content-light-mode);
     }
 
@@ -1055,6 +1064,7 @@ details {
         .svg-icon--contact {
             fill: var(--black-content-light-mode);
         }
+
         p {
             border-bottom: 2px solid var(--light-content-light-mode);
         }
@@ -1074,11 +1084,13 @@ details {
         color: var(--solid-heading-dark-mode);
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         color: var(--solid-heading-dark-mode);
     }
 
-    p, a {
+    p,
+    a {
         color: var(--light-content-dark-mode);
     }
 
@@ -1091,7 +1103,7 @@ details {
         background-color: var(--background-card-dark-mode);
         color: var(--progress-bar-text-color-dark-mode);
     }
-    
+
     #progress-action-id {
         color: var(--progress-bar-text-color-dark-mode);
     }
@@ -1110,7 +1122,7 @@ details {
         color: var(--light-content-dark-mode);
     }
 
-    .svg-icon--menu path{
+    .svg-icon--menu path {
         fill: var(--light-content-dark-mode);
     }
 
@@ -1151,31 +1163,34 @@ details {
         background-color: var(--background-details-buttons-dark-mode);
     }
 
-    .grid__ul--skill > li {
+    .grid__ul--skill>li {
         color: var(--skill-text-color);
         background-color: var(--background-details-buttons-dark-mode);
     }
 
-    .grid-skills-accumulated, .grid-skills__item--skills {
+    .grid-skills-accumulated,
+    .grid-skills__item--skills {
         border: 0.1rem solid var(--border-color-dark-mode);
     }
 
-    .grid-skills-accumulated > h4 {
+    .grid-skills-accumulated>h4 {
         background: var(--background-zebra-grid-header-dark-mode);
     }
-    
-    .grid-skills-accumulated > p:nth-child(4n+1), .grid-skills-accumulated > p:nth-child(4n+2) {
+
+    .grid-skills-accumulated>p:nth-child(4n+1),
+    .grid-skills-accumulated>p:nth-child(4n+2) {
         background: var(--background-zebra-grid-odd-row-dark-mode);
     }
-    
-    .grid-skills-accumulated > p:nth-child(4n+3), .grid-skills-accumulated > p:nth-child(4n+4) {
+
+    .grid-skills-accumulated>p:nth-child(4n+3),
+    .grid-skills-accumulated>p:nth-child(4n+4) {
         background: var(--background-zebra-grid-even-row-dark-mode);
     }
 
     .grid-skills--note {
         color: var(--black-content-dark-mode);
     }
-    
+
     .card {
         box-shadow: var(--box-shadow-tiny-dark-mode);
     }
@@ -1200,7 +1215,8 @@ details {
         box-shadow: var(--box-shadow-tiny-dark-mode);
     }
 
-    .paragraph--contact, .link--contact {
+    .paragraph--contact,
+    .link--contact {
         color: var(--black-content-dark-mode);
     }
 
@@ -1208,6 +1224,7 @@ details {
         .svg-icon--contact {
             fill: var(--black-content-dark-mode);
         }
+
         p {
             border-bottom: 2px solid var(--light-content-dark-mode);
         }
@@ -1221,8 +1238,11 @@ details {
 }
 
 @media only print {
+
     /* Don't print the header & footer */
-    header, footer, #progress-control-id {
+    header,
+    footer,
+    #progress-control-id {
         display: none !important;
     }
 
@@ -1234,25 +1254,30 @@ details {
         break-inside: avoid;
     }
 
-    .grid--introduction, .figure--tech-stack, .card {
+    .grid--introduction,
+    .figure--tech-stack,
+    .card {
         break-inside: avoid;
     }
 
     /* Safari specific CSS */
     @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
         .flex-row-wrap {
-            display: table; /* Workaround to avoid page-breaks in flex-box for Safari */
+            display: table;
+            /* Workaround to avoid page-breaks in flex-box for Safari */
         }
-    
+
         .figure--tech-stack {
             break-inside: avoid-page;
-            display: inline-block; /* Make element unbreakable for Safari */
+            display: inline-block;
+            /* Make element unbreakable for Safari */
             margin: 2rem;
         }
-    
+
         .card {
             break-inside: avoid-page;
-            display: inline-block; /* Make element unbreakable for Safari */
+            display: inline-block;
+            /* Make element unbreakable for Safari */
             margin: 2rem;
             box-shadow: var(--box-shadow-tiny-light-mode);
         }
@@ -1262,7 +1287,8 @@ details {
         box-shadow: none;
     }
 
-    header, .footer {
+    header,
+    .footer {
         box-shadow: none;
     }
 
