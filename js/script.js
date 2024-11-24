@@ -80,7 +80,14 @@ function expandAllDetails(e) {
 }
 
 // *** Connect to GitHub & populate page ***
-
+const REPOS = [ 
+    {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
+    {name: "Simple-ToDo-List", site: "https://chas-henrik.github.io/Simple-ToDo-List/"},
+    {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
+    {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
+    {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"},
+    {name: "Portfolio", site: "https://chas-henrik.github.io/Portfolio/"}
+];
 const skillsAccumulated = {};
 
 await main();
@@ -274,12 +281,11 @@ function populateAccumulatedSkillsElement(sortedSkillsArray) {
 // *** Populate projects from GitHub ***
 
 async function populateProjectCards() {
-    const repoNames = ["Minesweeper", "Simple-ToDo-List", "Word-Count", "Profile-Card", "Menu-Nailbiter", "Portfolio"];
     const projectCardsDiv = document.getElementById("projectCards");
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
     const repoObjs = [];
     const languageObjs = [];
-    await fetchRepoEndpoints(repoNames, repoObjs, languageObjs);
+    await fetchRepoEndpoints(REPOS, repoObjs, languageObjs);
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
         const card = cardArticle[i];
@@ -293,16 +299,16 @@ async function populateProjectCards() {
         titleElement.innerText = repoObj.data.name;
         descriptionElement.innerText = repoObj.data.description;
         techStackElement.innerText = languageStr;
-        linkElements[0].href = `https://chas-henrik.github.io/${repoNames[i]}/`;
+        linkElements[0].href = REPOS[i].site;
         linkElements[1].href = repoObj.data.html_url;
     };
 }
 
-async function fetchRepoEndpoints(repoNames, repoObjs, languageObjs) {
-    for(let i=0; i<repoNames.length; i++) {
-        const repoName = repoNames[i];
+async function fetchRepoEndpoints(repos, repoObjs, languageObjs) {
+    for(let i=0; i<repos.length; i++) {
+        const repoName = REPOS[i].name;
         const endpointObjs = await getRepoEndpoints(repoName, ['GET /repos/{owner}/{repo}', 'GET /repos/{owner}/{repo}/languages']);
-        updateProgressBar(10 + 90*(i+1)/repoNames.length); 
+        updateProgressBar(10 + 90*(i+1)/repos.length); 
         repoObjs.push(endpointObjs[0]);
         languageObjs.push(endpointObjs[1]);
     };
