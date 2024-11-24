@@ -1,4 +1,4 @@
-import { Octokit, App } from "https://esm.sh/octokit";
+import { Octokit } from "https://esm.sh/octokit";
 
 // ***Connect to GitHub***
 const CACHE_EXPIRATION_TIME = 86400000; // 24 hours in milliseconds
