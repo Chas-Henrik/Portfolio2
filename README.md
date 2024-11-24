@@ -89,7 +89,9 @@ HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
 - **DELETE** : Raderar den utpekade filen. Detta kommando används sällan och många webbservrar inte har stöd för det.
 - **TRACE** : Ber servern att skicka tillbaka klientförfrågan precis i det skick som den anlände till servern. Kan användas för att kontrollera om någon tredje part mellan klient och server har gjort några ändringar i förfrågan, eller som loop-back test i debug syfte.
 
-Som frontendutvecklare behöver man kunskap om HTTP och dess protokoll för att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, då detta förbättrar både användarupplevelsen och säkerheten. Och som frontendutvecklare bör man åtminstone känna till följande om HTTP och dess protokoll:
+Som frontendutvecklare behöver man kunskap om HTTP och dess protokoll för att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, då detta förbättrar både användarupplevelsen och säkerheten.  
+  
+Som frontendutvecklare bör man åtminstone känna till följande om HTTP och dess protokoll:
 1. Förståelse för klient-server-kommunikation: Man behöver förstå hur förfrågningar och svar hanteras mellan klient och server.
 2. Förfrågningstyper (GET, POST, PUT, DELETE): Det är viktigt att förstå skillnaderna mellan HTTP's förfrågningstyper när man arbetar med API-anrop i frontendkoden, så att man förstår vilken förfrågan som är lämplig i vilket sammanhang.
 3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
