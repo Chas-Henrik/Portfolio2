@@ -1,43 +1,44 @@
 # Personal portfolio page
 
-This is a single-page, 'Portfolio Site' consisting of 5 sections:
+This is a single-page, 'Portfolio Site' consisting of 6 sections:
 - Home
 - About
+- Skills
 - Tech Stack
 - Projects
 - Contact
 
 The design is a 'Mobile First' responsive design that also support Tablet's and Desktop's. Breakpoints have been set at 650px for Tablet's & Small Desktop's, and 1024px for Medium & Large Desktop's.  
   
-One additional content driven breakpoints have been set at 830px:  
+One additional content driven breakpoint has been set at 830px:  
 - The 830px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint. 
   
-The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' has been added:
+The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' have been added:
 1. Progress bar when user loads the page.
 2. Hamburger menu.
 3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the internal menu links.
 4. Active menu indication
 5. 'Expand/Collapse All' button to expand/collapse all 'Description' & 'Skills' details.
   
-The site supports ‘dark theme’ (configured through the operating system settings).  
+The site supports ‘dark theme’ (configured through operating system settings).  
   
-Effort has been made to make the page print properly by removing header & footer and inserting/assuring suitable page breaks.  
+Effort has been made to make the page print properly, by removing header & footer and inserting/assuring suitable page breaks.  
   
-Both the cv.json and the GitHub API data is cached in Local Storage to improve performance and avoid hitting GitHub's API rate limit. The data in Local Storage is timestamped and is invalidated after 24h so the cache reflects the latest server content if the GitHub data is updated on the server.
+Both the cv.json and the GitHub API data is cached in Local Storage to improve performance and avoid hitting GitHub's API rate limit. And the data in Local Storage is timestamped and invalidated after 24h, to reflect the latest server content if the GitHub data is updated on the server.
   
-All icons are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are webP formatted to achieve the best possible compression while still preserving the details of the image, and the images are also available in png format as fallback in case webP is not supported by the browser. The fonts are hosted locally (as .woff2 files), a mobile, tablet & desktop version of the profile picture is available, the landing-page fonts are preloaded and all images except images used on the landing page are lazy loaded for improved performance.
+All icons are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are webP formatted to achieve the best possible compression while preserving the details of the image, and the images are also available in png format as fallback in case webP is not supported by the browser. Fonts are hosted locally (as .woff2 files), a desktop, tablet & mobile version of the profile picture is available, the landing-page fonts are preloaded and all images except landing page images are lazy loaded for improved performance.  
     
-The site is published on Netlify (see hyperlink below):  
+The site has been published on Netlify (see hyperlink below):  
 [https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
 ***
 *Known problems:*
-1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari, and a workaround has been applied to alleviate this problem. Printing with 'HP Smart' from Safari still doesn't work though.
-2. Lazy loaded images doesn't show up in 'Print Preview' in Safari until the images have been browsed on the page.
+1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate this problem.
+2. Lazy loaded images doesn't show up in 'Print Preview' in Safari until they have been browsed on the page.
 3. The Description & Skills details 'drop-down effect' is not supported on Firefox & Safari, since the `interpolate-size: allow-keywords` is not supported there.
 
 *Notes:*
-1. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further optimization. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially for the page when a brand new user enters the site. And if doing so, it is no longer possible to estimate the 'time to completion' in a Progress Bar, and for most cases a Progress Bar would not even be needed.  
+1. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further optimization. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in a Progress Bar, and for most cases a Progress Bar would not even be needed.  
   
 ***
 
