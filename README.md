@@ -75,9 +75,8 @@ JSON används bland annat för:
   
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-Hypertext Transfer Protocol (HTTP) är det kommunikationsprotokoll som används för att överföra webbsidor. Det ursprungliga syftet med HTTP var att tillhandahålla en metod för att överföra HTML-sidor från webbservrar till webbklienter.
-  
-HTTP bygger på ett förfrågan/svar-förfarande mellan klient och server. En HTTP-klient som skall hämta en HTML-fil, bild eller annan fil från en webbserver, skickar en förfrågan bestående av en kort textsträng till en TCP-port på servern (vanligtvis 80). Textsträngen innehåller information om vilken version av HTTP som används, och vilken fil (eller annan resurs eller information) som klienten vill att servern skall skicka och kan t.ex. se ut så här: `GET /index.html HTTP/1.1`  
+Hypertext Transfer Protocol (HTTP) är det kommunikationsprotokoll som används för att överföra webbsidor, bilder, video och andra resurser från en webbsida till en webbläsare. HTTP är ett tillståndslöst protokoll där varje begäran och svar är oberoende av varandra och det finns olika versioner av HTTP, där de två vanligaste är HTTP/1.1 och HTTP/2.  
+HTTP bygger på ett förfrågan/svar-förfarande mellan klient och server och kan se ut så här: `GET /index.html HTTP/1.1`  
   
 HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
 - **CONNECT** : Används för att sätta upp en tvåvägs kommunikation (tunnel) med servern. Används med proxy-servrar som kan fungera som SSL-tunnlar.
