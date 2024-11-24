@@ -273,7 +273,7 @@
     text-align: center;
 }
 
-#progress-container-id {
+#progress-bar-id {
     width: 150px;
     height: 150px;
     z-index: 1;
@@ -284,7 +284,7 @@
     background: conic-gradient(var(--progress-bar-color-value) 0deg, var(--progress-bar-color) 0deg);
 }
 
-#progress-value-id {
+#progress-bar-value-id {
     display: flex;
     align-items: center;
     justify-content: center;

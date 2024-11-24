@@ -14,11 +14,11 @@ function updateProgressAction(progress) {
 }
 
 function updateProgressBar(progress) {
-    let container = document.getElementById("progress-container-id");
-    let progressValue = document.getElementById("progress-value-id");
+    let progressBar = document.getElementById("progress-bar-id");
+    let progressBarValue = document.getElementById("progress-bar-value-id");
 
-    progressValue.textContent = `${Math.round(progress).toFixed(0)}%`;
-    container.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
+    progressBarValue.textContent = `${Math.round(progress).toFixed(0)}%`;
+    progressBar.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
 }
 
 // *** Grid functions ***
