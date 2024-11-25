@@ -34,3 +34,23 @@ function updateScrollPaddingTop() {
 
     htmlElement.style.scrollPaddingTop = `${headerElement.offsetHeight + 30}px`;
 }
+
+// *** Progress Bar functions ***
+
+function displayProgressControl(value) {
+    let progressControl = document.getElementById("progress-control-id");
+    progressControl.style.display = value;
+}
+
+function updateProgressAction(progress) {
+    let progressAction = document.getElementById("progress-action-id");
+    progressAction.textContent = progress;
+}
+
+function updateProgressBar(progress) {
+    let progressBar = document.getElementById("progress-bar-id");
+    let progressBarValue = document.getElementById("progress-bar-value-id");
+
+    progressBarValue.textContent = `${Math.round(progress).toFixed(0)}%`;
+    progressBar.style.background = `conic-gradient(#0F0BFC ${progress * 3.6}deg, #BCE9F5 0deg)`;
+}
