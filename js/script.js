@@ -285,6 +285,7 @@ async function populateProjectCards() {
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
     const repoObjs = [];
     const languageObjs = [];
+    // Fetch data from GitHub API
     await fetchRepoEndpoints(REPOS, repoObjs, languageObjs);
 
     for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
@@ -296,6 +297,7 @@ async function populateProjectCards() {
         const linkElements = card.querySelectorAll("a");
         const languageStr = Object.keys(languageObjs[i].data).sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1).join(", ");
 
+        // Populate card elements with data from GitHub API
         titleElement.innerText = repoObj.data.name;
         descriptionElement.innerText = repoObj.data.description;
         techStackElement.innerText = languageStr;
@@ -308,9 +310,11 @@ async function fetchRepoEndpoints(repos, repoObjs, languageObjs) {
     for(let i=0; i<repos.length; i++) {
         const repoName = REPOS[i].name;
         const endpointObjs = await getRepoEndpoints(repoName, ['GET /repos/{owner}/{repo}', 'GET /repos/{owner}/{repo}/languages']);
-        updateProgressBar(10 + 90*(i+1)/repos.length); 
-        repoObjs.push(endpointObjs[0]);
-        languageObjs.push(endpointObjs[1]);
+        updateProgressBar(10 + 90*(i+1)/repos.length);
+        if(endpointObjs != null) {
+            repoObjs.push(endpointObjs[0]);
+            languageObjs.push(endpointObjs[1]);
+        }
     };
 }
 
