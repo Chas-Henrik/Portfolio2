@@ -573,10 +573,6 @@ details {
     overflow: hidden;
 }
 
-.card:hover {
-    border: 3px solid var(--border-color-card);
-}
-
 .card__picture {
     width: 100%;
     height: fit-content;
