@@ -175,7 +175,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
-                    li.classList.add("paragraph__size--grid-text");
+                    li.classList.add("paragraph__size--grid-text", "text--wrap-anywhere");
                     olDescription.appendChild(li);
                 });
                 break;

@@ -75,6 +75,9 @@ section {
     flex-wrap: wrap;
 }
 
+.text--wrap-anywhere {
+    overflow-wrap: anywhere;
+}
 
 /*** Font Sizes ***/
 
