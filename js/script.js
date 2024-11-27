@@ -166,13 +166,17 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 break;
             case 'description':
                 const detailsDescription = document.createElement("details");
+                const olDescription = document.createElement("ol");
                 detailsDescription.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-text");
                 detailsDescription.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Description</summary>`;
                 gridContainerElement.appendChild(detailsDescription);
+                olDescription.classList.add("grid__ol--description");
+                detailsDescription.appendChild(olDescription);
                 workExperienceObj[key].forEach((item) => {
-                    const p = document.createElement("p");
-                    p.innerText = item;
-                    detailsDescription.appendChild(p);
+                    const li = document.createElement("li");
+                    li.innerText = item;
+                    li.classList.add("paragraph__size--grid-text");
+                    olDescription.appendChild(li);
                 });
                 break;
             case 'skills':

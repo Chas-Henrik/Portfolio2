@@ -467,6 +467,10 @@ section {
     border-radius: 0.5rem;
 }
 
+.grid__ol--description {
+    list-style-position: inside;
+}
+
 .grid__ul--skill {
     list-style: none;
     padding: 0;
@@ -1042,10 +1046,6 @@ details {
         color: var(--dark-content-light-mode);
     }
 
-    .card__title {
-        color: var(--black-content-light-mode);
-    }
-
     .container--contact {
         box-shadow: var(--box-shadow-tiny-light-mode);
         background-color: var(--background-light-mode);
@@ -1115,7 +1115,7 @@ details {
     }
 
     .menu__list li a {
-        color: var(--light-content-dark-mode);
+        color: var(--dark-content-dark-mode);
     }
 
     .svg-icon--menu path {
@@ -1151,7 +1151,7 @@ details {
     }
 
     .grid__item--role {
-        color: var(--solid-heading-dark-mode);
+        color: var(--dark-content-dark-mode);
     }
 
     .grid__item--clickable {
@@ -1196,11 +1196,7 @@ details {
     }
 
     .card * {
-        color: var(--solid-heading-dark-mode);
-    }
-
-    .card__title {
-        color: var(--black-content-dark-mode);
+        color: var(--dark-content-dark-mode);
     }
 
     .card__footer * {
@@ -1228,7 +1224,7 @@ details {
 
     .footer {
         background: var(--background-dark-mode);
-        color: var(--light-content-dark-mode);
+        color: var(--dark-content-dark-mode);
         box-shadow: var(--box-shadow-dark-mode);
     }
 }
