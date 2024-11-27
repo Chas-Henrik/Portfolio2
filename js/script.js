@@ -175,7 +175,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
-                    li.classList.add("paragraph__size--grid-text", "text--wrap-anywhere");
+                    li.classList.add("text--wrap-anywhere");
                     olDescription.appendChild(li);
                 });
                 break;
@@ -188,6 +188,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
+                    li.classList.add("text--wrap-anywhere");
                     ulSkills.appendChild(li);
                     skillsAccumulated[item] = item in skillsAccumulated ? skillsAccumulated[item] + years : years;
                 });
