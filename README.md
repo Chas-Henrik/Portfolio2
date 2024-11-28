@@ -39,7 +39,7 @@ The site has been published on Netlify (see hyperlink below):
 *Notes:*
 1. The Description & Skills details 'drop-down effect' is not supported by Firefox & Safari, since `interpolate-size: allow-keywords` is not supported there.
 2. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further improvements. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in a Progress Bar, and for most cases the Progress Bar would not even be needed.  
-3. 4 fonts are preloaded to improve performance, and this can produce some warnings in the console.
+3. Four fonts are preloaded to improve performance, and this can produce some warnings in the console.
 
 ***
 
