@@ -69,7 +69,7 @@ I frontend används JSON för att utbyta data mellan webbläsaren och servern, h
 JSON används bland annat för:
 1. API-kommunikation : För att skicka och ta emot data från API:er. 
 2. Data-navigering och rendering : Då JSON-data kan hämtas från en server och omvandlas direkt till ett JavaScript-objekt, så blir det enkelt att navigera och bearbeta data för att rendera dynamiskt innehåll i en webbsida. Notera att JSON-data kan innehålla länkar (URL:er) till annan JSON-data och detta används för data-navigering.
-3. Lokalt lagrad data : JSON används för att cacha 'extern data' i webbläsarens “Local Storage” (m.h.a. `str = JSON.stringify(jsObj)`) för att snabbt kunna hämta cachat data från den lokala maskinen (m.h.a. `obj = JSON.parse(str)`).
+3. Lokalt lagrad data : JSON används för att cacha 'extern data' i webbläsarens “Local Storage” (m.h.a. `str = JSON.stringify(jsObj)`) för att snabbt kunna hämta cachat data från den lokala maskinen (m.h.a. `jsObj = JSON.parse(str)`).
 4. Konfiguration och inställningar : Vissa frontendverktyg och bibliotek använder JSON data för sina konfigurationer och inställningar. 
 5. Serialisering och deserialisering av data : JSON gör det möjligt att serialisera JavaScript-objekt till en textsträng, och detta behövs för att kunna skicka objekt i HTTP-anrop.
   
