@@ -22,7 +22,7 @@ The site uses HTML5, CSS & JavaScript and the following Java Script 'user intera
   
 The site supports ‘dark theme’ (configured through operating system settings).  
   
-Some effort has been made to make the page print properly, by removing header & footer and inserting/assuring suitable page breaks.  
+Effort has been made to make the page print properly, by removing header & footer and inserting/assuring suitable page breaks.  
   
 Both the cv.json and the GitHub API data is cached in Local Storage to improve performance and avoid hitting GitHub's API rate limit. The data in Local Storage is timestamped and 'invalidated' after 24h, to reflect the latest server content if the GitHub data is updated on the server.
   
@@ -34,11 +34,11 @@ The site has been published on Netlify (see hyperlink below):
 ***
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate the problem.
-2. Lazy loaded images doesn't show up in 'Print Preview' in Safari until they have been browsed on the page.
+2. Lazy loaded images don’t show up in 'Print Preview' in Safari until they have been browsed on the page.
 
 *Notes:*
-1. The Description & Skills details 'drop-down effect' is not supported by Firefox & Safari, since `interpolate-size: allow-keywords` is not supported there.
-2. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further improvements. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in a Progress Bar, and for most cases the Progress Bar would not even be needed.  
+1. The Description & Skills details 'drop-down effect' is not supported on Firefox & Safari, since `interpolate-size: allow-keywords` is not supported by Firefox & Safari.
+2. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further improvements. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in the Progress Bar, and for most cases the Progress Bar would not even be needed.  
 3. Four fonts are preloaded to improve performance, and this can produce some warnings in the console.
 
 ***
@@ -93,7 +93,7 @@ HTTP definierar nio kommandon som en klient kan skicka till en HTTP-server:
 Som frontendutvecklare behöver man kunskap om HTTP och dess protokoll för att förstå hur man hämtar data på ett effektivt sätt, och hur data skickas och skyddas i en webbapplikation, då detta förbättrar både användarupplevelsen och säkerheten.  
 Och som frontendutvecklare bör man åtminstone känna till följande om HTTP och dess protokoll:
 1. Klient-server kommunikation: Man behöver förstå hur förfrågningar och svar hanteras mellan klient och server.
-2. Förfrågningstyper (GET, POST, PUT, DELETE): Det är viktigt att förstå skillnaderna mellan HTTP's förfrågningstyper när man arbetar med API-anrop i frontendkoden, så att man förstår vilken förfrågan man bör använda i vilket sammanhang.
+2. Förfrågningstyper (GET, POST, PUT, PATCH, DELETE): Det är viktigt att förstå skillnaderna mellan HTTP's förfrågningstyper när man arbetar med API-anrop i frontendkoden, så att man förstår vilken förfrågan man bör använda i vilket sammanhang.
 3. HTTP-statuskoder: Statuskoder som 200 (OK), 404 (Not Found) och 500 (Server Error) ger information om resultatet av en förfrågan. Dessa är viktiga att känna till för att kunna hantera fel i frontendkoden och ge användaren rätt information om vad som sker.
 4. Säkerhet (HTTPS): HTTPS är en säker version av HTTP som använder SSL/TLS-kryptering för att skydda datan som skickas mellan klient och server. Att förstå hur HTTPS fungerar är viktigt för att kunna göra säkra applikationer och se till att användardata skyddas.
 5. Caching och prestanda: HTTP har inbyggda funktioner för caching som gör det möjligt att förbättra sidladdningstider och prestanda och som frontendutvecklare är det bra att förstå hur dessa fungerar, och hur man kan utnyttja dessa för att optimera webbplatsen.
