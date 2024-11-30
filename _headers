@@ -1,0 +1,3 @@
+# Set Content-Type for SVG files
+/*.svg
+  Content-Type: image/svg+xml; charset=utf-8
