@@ -6,4 +6,18 @@
 /*
   X-Content-Type-Options: nosniff
 
-Cache-Control: max-age=3600
+# Cache static resources for one year
+
+/*.svg
+  Cache-Control: max-age=31536000
+
+/*.png
+  Cache-Control: max-age=31536000
+
+/*.webp
+  Cache-Control: max-age=31536000
+
+# Cache other resources for one hour
+
+  Cache-Control: max-age=3600
+
