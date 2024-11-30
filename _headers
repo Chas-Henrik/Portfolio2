@@ -6,28 +6,33 @@
 /*
   X-Content-Type-Options: nosniff
 
-# Don't cache html, css & js resources
+# Don't cache html & json resources
 
 /*.html
-  Cache-Control: no-store
+  Cache-Control: public, no-cache
+
+/*.json
+  Cache-Control: public, no-cache
+
+# Cache css & js resources for one week
 
 /*.css
-  Cache-Control: no-cache
+  Cache-Control: public, max-age=604800
 
 /*.js
-  Cache-Control: no-cache
+  Cache-Control: public, max-age=604800
 
-# Cache static resources for one year
+# Cache fonts & images for one year
 
 /*.woff2
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
 
 /*.svg
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
 
 /*.png
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
 
 /*.webp
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
 
