@@ -6,6 +6,10 @@
 /*
   X-Content-Type-Options: nosniff
 
+# Set default to no-cache
+/
+  Cache-Control: public, no-cache
+
 # Don't cache html & json resources
 
 /*.html
