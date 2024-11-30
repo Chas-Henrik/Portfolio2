@@ -34,6 +34,8 @@ Current Deploy Status:
 Link to site:  
 [https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
+A `_headers` file has also been added to the project to configure custom headers for the Netlify site (and eliminate console warnings in MS Edge).
+
 ***
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate the problem.
