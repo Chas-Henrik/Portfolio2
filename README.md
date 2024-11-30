@@ -40,6 +40,7 @@ The site has been published on Netlify (see hyperlink below):
 1. The Description & Skills details 'drop-down effect' is not supported on Firefox & Safari, since `interpolate-size: allow-keywords` is not supported by Firefox & Safari.
 2. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further improvements. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in the Progress Bar, and for most cases the Progress Bar would not even be needed.  
 3. Four fonts are preloaded to improve performance, and this can produce some warnings in the console.
+4. MS Edge issues a warning that fetchpriority is not supported by Firefox, but fetchpriority has been supported by Firefox since Oct 2024 (Ver. 132) (see [https://caniuse.com/?search=fetchpriority](https://caniuse.com/?search=fetchpriority)), so this warning is outdated and should be removed in MS Edge.
 
 ***
 
