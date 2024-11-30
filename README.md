@@ -28,9 +28,8 @@ Both the cv.json and the GitHub API data is cached in Local Storage to improve p
   
 All icons are 'svg formatted' to scale seamlessly with different screen resolutions. The profile picture and the 'artistic images' are webP formatted to achieve the best possible compression while preserving the details of the image, and the images are also available in png format as fallback in case webP is not supported by the browser. Fonts are hosted locally (as .woff2 files), desktop, tablet & mobile version of the profile picture is available, the landing-page fonts are preloaded and all images except landing page images are lazy loaded for improved performance.  
     
-The site has been published on Netlify (see hyperlink & publish status below):  
-[https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7d25fc1a-246d-4031-a991-cba8f62c01c9/deploy-status)](https://app.netlify.com/sites/chas-henrik-u02-egen-portfoliosida/deploys)
+The site has been published on Netlify (see hyperlink below):  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7d25fc1a-246d-4031-a991-cba8f62c01c9/deploy-status)](https://app.netlify.com/sites/chas-henrik-u02-egen-portfoliosida/deploys) [https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
 ***
 *Known problems:*
