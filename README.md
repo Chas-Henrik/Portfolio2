@@ -34,7 +34,7 @@ Current Deploy Status:
 Link to site:  
 [https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
-A `_headers` file has also been added to the project to configure custom headers for the Netlify site (and eliminate console warnings in MS Edge).
+A `_headers` file has also been added to the project to configure custom headers for the Netlify site, to eliminate console warnings for MS Edge by setting the proper `Content-Type` and configuring the cache for browsers and shared caches (e.g., Proxies, CDNs).
 
 ***
 *Known problems:*
