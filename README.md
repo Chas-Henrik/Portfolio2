@@ -40,6 +40,8 @@ A `_headers` file has also been added to the project to configure custom headers
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate the problem.
 2. Lazy loaded images don’t show up in 'Print Preview' in Safari until they have been browsed on the page.
+5. MS Edge issues a warning 'Resources should use cache bursting but URL does not match configured patterns'. The project do not use Cache Bursting since a build tool like Webpack, Gulp, or Grunt is needed to implement this (with a reasonable effort) for Netlify.
+6. MS Edge issues an error 'Response should include 'x-content-type-options' header for the https://esm.sh/octokit files. Since those files are hosted on an external site (without support for custom headers), the problem must be fixed there.  
 
 *Notes:*
 1. The Description & Skills details 'drop-down effect' is not supported on Firefox & Safari, since `interpolate-size: allow-keywords` is not supported by Firefox & Safari.
