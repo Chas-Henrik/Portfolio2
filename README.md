@@ -40,7 +40,7 @@ A `_headers` file has also been added to the project to configure custom HTTP he
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate the problem.
 2. Lazy loaded images don’t show up in 'Print Preview' in Safari until they have been browsed on the page.
-3. MS Edge issues a warning "A 'cache-control' header contains directives which are not recommended: 'must-revalidate'". This is coming from Netlify's default configuration, and seems to slip though despite my efforts to override it.
+3. MS Edge issues a warning "A 'cache-control' header contains directives which are not recommended: 'must-revalidate'". This is coming from Netlify's default configuration, and seems to 'slip though' despite efforts to override it.
 4. MS Edge issues a warning "Resources should use cache bursting but URL does not match configured patterns". The project currently do not use Cache Bursting since a build tool like Webpack, Gulp, or Grunt is needed to implement this (with a reasonable effort) for Netlify.
 5. MS Edge issues an error "Response should include 'x-content-type-options' header for the https://esm.sh/octokit files". Since those files are hosted on an external site (without support for custom HTTP headers), the problem must be fixed there.  
 
