@@ -143,7 +143,7 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
             case 'provider':
                 const figureProvider = document.createElement("figure");
                 figureProvider.classList.add("grid__figure", "grid__item--provider");
-                figureProvider.innerHTML = `<img src="./svg/office-building.svg" alt="Office Building Icon" loading="lazy"><figcaption class="paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureProvider.innerHTML = `<img class="grid__figure--item" src="./svg/office-building.svg" alt="Office Building Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureProvider);
                 break;
             case 'date':
@@ -155,13 +155,13 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                     years = 0;
                 }
                 figureDate.classList.add("grid__figure", "grid__item--date");
-                figureDate.innerHTML = `<img src="./svg/calender.svg" alt="Calender Icon" loading="lazy"><figcaption class="paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureDate.innerHTML = `<img class="grid__figure--item" src="./svg/calender.svg" alt="Calender Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureDate);
                 break;
             case 'location':
                 const figureLocation = document.createElement("figure");
                 figureLocation.classList.add("grid__figure", "grid__item--location");
-                figureLocation.innerHTML = `<img src="./svg/location.svg" alt="Location Icon" loading="lazy"><figcaption class="paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureLocation.innerHTML = `<img class="grid__figure--item" src="./svg/location.svg" alt="Location Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureLocation);
                 break;
             case 'description':

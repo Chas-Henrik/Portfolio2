@@ -387,7 +387,7 @@ section {
     color: var(--menu-color-hover);
 }
 
-#section-about>* {
+.section__item--about {
     font-display: optional;
 }
 
@@ -423,15 +423,15 @@ section {
     text-align: right;
 }
 
-.grid__figure>* {
-    display: inline;
-    vertical-align: middle;
-}
-
-.grid__figure>img {
+.grid__figure > img {
     width: 1.6rem;
     height: 1.2rem;
     margin-right: 0.5rem;
+}
+
+.grid__figure--item {
+    display: inline;
+    vertical-align: middle;
 }
 
 .grid__item--provider {
