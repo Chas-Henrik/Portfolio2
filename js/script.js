@@ -130,20 +130,20 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
         switch(key) {
             case 'role':
                 const h2 = document.createElement("h2");
-                h2.classList.add("grid__item--role", "paragraph__size--grid-role");
+                h2.classList.add("grid--text", "grid__item--role", "paragraph__size--grid-role");
                 h2.innerText = workExperienceObj[key];
                 gridContainerElement.appendChild(h2);
                 break;
             case 'type':
                 const p = document.createElement("p");
-                p.classList.add("grid__item--type", "paragraph__size--grid-fig-caption");
+                p.classList.add("grid--text", "grid__item--type", "paragraph__size--grid-fig-caption");
                 p.innerText = workExperienceObj[key];
                 gridContainerElement.appendChild(p);
                 break;
             case 'provider':
                 const figureProvider = document.createElement("figure");
                 figureProvider.classList.add("grid__figure", "grid__item--provider");
-                figureProvider.innerHTML = `<img class="grid__figure--item" src="./svg/office-building.svg" alt="Office Building Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureProvider.innerHTML = `<img class="grid__figure--item" src="./svg/office-building.svg" alt="Office Building Icon" loading="lazy"><figcaption class="grid--text grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureProvider);
                 break;
             case 'date':
@@ -155,44 +155,44 @@ function populateGridElements(workExperienceObj, gridContainerElement) {
                     years = 0;
                 }
                 figureDate.classList.add("grid__figure", "grid__item--date");
-                figureDate.innerHTML = `<img class="grid__figure--item" src="./svg/calender.svg" alt="Calender Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureDate.innerHTML = `<img class="grid__figure--item" src="./svg/calender.svg" alt="Calender Icon" loading="lazy"><figcaption class="grid--text grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureDate);
                 break;
             case 'location':
                 const figureLocation = document.createElement("figure");
                 figureLocation.classList.add("grid__figure", "grid__item--location");
-                figureLocation.innerHTML = `<img class="grid__figure--item" src="./svg/location.svg" alt="Location Icon" loading="lazy"><figcaption class="grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
+                figureLocation.innerHTML = `<img class="grid__figure--item" src="./svg/location.svg" alt="Location Icon" loading="lazy"><figcaption class="grid--text grid__figure--item paragraph__size--grid-fig-caption">${workExperienceObj[key]}</figcaption>`;
                 gridContainerElement.appendChild(figureLocation);
                 break;
             case 'description':
                 const detailsDescription = document.createElement("details");
                 const olDescription = document.createElement("ol");
                 detailsDescription.classList.add("grid__item--details", "grid__item--description", "paragraph__size--grid-text");
-                detailsDescription.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Description</summary>`;
+                detailsDescription.innerHTML = `<summary class="grid--text grid__item--clickable paragraph__size--grid-summary">Description</summary>`;
                 gridContainerElement.appendChild(detailsDescription);
                 olDescription.classList.add("grid__ol--description");
                 detailsDescription.appendChild(olDescription);
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
-                    li.classList.add("text--wrap-anywhere");
+                    li.classList.add("grid--text", "text--wrap-anywhere");
                     olDescription.appendChild(li);
                 });
                 break;
             case 'skills':
                 const detailsSkills= document.createElement("details");
                 detailsSkills.classList.add("grid__item--details", "grid__item--skill", "paragraph__size--grid-text");
-                detailsSkills.innerHTML = `<summary class="grid__item--clickable paragraph__size--grid-summary">Skills</summary><ul class="grid__ul--skill"></ul>`;
+                detailsSkills.innerHTML = `<summary class="grid--text grid__item--clickable paragraph__size--grid-summary">Skills</summary><ul class="grid__ul--skill"></ul>`;
                 gridContainerElement.appendChild(detailsSkills);
                 const ulSkills = detailsSkills.querySelector("ul");
                 workExperienceObj[key].forEach((item) => {
                     const li = document.createElement("li");
                     li.innerText = item;
-                    li.classList.add("text--wrap-anywhere");
+                    li.classList.add("grid--text", "text--wrap-anywhere");
                     ulSkills.appendChild(li);
                     skillsAccumulated[item] = item in skillsAccumulated ? skillsAccumulated[item] + years : years;
                 });
-                break;               
+                break;
         }
     }
 }

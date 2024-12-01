@@ -995,7 +995,7 @@ details {
         border-bottom: 0.2rem solid var(--border-color-light-mode);
     }
 
-    .grid * {
+    .grid--text {
         color: var(--light-content-light-mode);
     }
 
@@ -1045,7 +1045,7 @@ details {
         box-shadow: var(--box-shadow-hover-light-mode);
     }
 
-    .card * {
+    .card--text {
         color: var(--dark-content-light-mode);
     }
 
@@ -1149,7 +1149,7 @@ details {
         border-bottom: 0.2rem solid var(--border-color-dark-mode);
     }
 
-    .grid * {
+    .grid--text {
         color: var(--light-content-dark-mode);
     }
 
@@ -1198,7 +1198,7 @@ details {
         box-shadow: var(--box-shadow-hover-light-mode);
     }
 
-    .card * {
+    .card--text {
         color: var(--dark-content-dark-mode);
     }
 
