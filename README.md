@@ -34,20 +34,20 @@ Current Deploy Status:
 Link to site:  
 [https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
-A `_headers` file has also been added to the project to configure custom HTTP headers for the Netlify site, to eliminate console warnings for MS Edge by setting the proper `Content-Type` and configuring the cache for browsers and shared caches (e.g., Proxies, CDNs).
+A `_headers` file has also been added to the project to configure custom HTTP headers for the Netlify site. This is to eliminate console warnings for MS Edge, by setting the proper `Content-Type` & configuring cache for browsers and shared caches (e.g., Proxies, CDNs).
 
 ***
 *Known problems:*
 1. `break-inside: avoid-page` doesn't work properly on flex-boxes when printed from Safari. A workaround has been applied to alleviate the problem.
 2. Lazy loaded images don’t show up in 'Print Preview' in Safari until they have been browsed on the page.
-5. MS Edge issues a warning 'Resources should use cache bursting but URL does not match configured patterns'. The project do not use Cache Bursting since a build tool like Webpack, Gulp, or Grunt is needed to implement this (with a reasonable effort) for Netlify.
-6. MS Edge issues an error 'Response should include 'x-content-type-options' header for the https://esm.sh/octokit files. Since those files are hosted on an external site (without support for custom HTTP headers), the problem should be fixed there.  
+5. MS Edge issues a warning 'Resources should use cache bursting but URL does not match configured patterns'. The project currently do not use Cache Bursting since a build tool like Webpack, Gulp, or Grunt is needed to implement this (with a reasonable effort) for Netlify.
+6. MS Edge issues an error 'Response should include 'x-content-type-options' header for the https://esm.sh/octokit files. Since those files are hosted on an external site (without support for custom HTTP headers), the problem must be fixed there.  
 
 *Notes:*
 1. The Description & Skills details 'drop-down effect' is not supported on Firefox & Safari, since `interpolate-size: allow-keywords` is not supported by Firefox & Safari.
 2. The Site has been performance optimized to achieve as good Lighthouse performance as possible, but there is still potential for further improvements. The cv.json and all GitHub API data could be downloaded in parallel to reduce the 'total load time' substantially when a brand new user enters the site. But if doing so, it is no longer possible to estimate the 'time to completion' in the Progress Bar, and for most cases the Progress Bar would not even be needed.  
 3. Four fonts are preloaded to improve performance, and this might produce some warnings in the Firefox console.
-4. MS Edge issues a warning that fetchpriority is not supported by Firefox, but fetchpriority has been supported by Firefox since Oct 2024 (Ver. 132) (see [https://caniuse.com/?search=fetchpriority](https://caniuse.com/?search=fetchpriority)), so this warning is outdated and should be removed in MS Edge.
+4. MS Edge issues a warning that fetchpriority is not supported by Firefox, but fetchpriority has been supported by Firefox since Oct 29, 2024 (Ver. 132) (see [https://caniuse.com/?search=fetchpriority](https://caniuse.com/?search=fetchpriority)), so this warning is outdated and should be removed in MS Edge.
 
 ***
 
