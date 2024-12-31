@@ -46,11 +46,11 @@ function expandAllDetails(e) {
 // *** Connect to GitHub & populate page ***
 const REPOS = [ 
     {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
+    {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/"},
     {name: "Simple-ToDo-List", site: "https://chas-henrik.github.io/Simple-ToDo-List/"},
     {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
     {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
-    {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"},
-    {name: "Portfolio", site: "https://chas-henrik.github.io/Portfolio/"}
+    {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"}
 ];
 const skillsAccumulated = {};
 
