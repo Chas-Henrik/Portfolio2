@@ -47,7 +47,7 @@ function expandAllDetails(e) {
 const REPOS = [ 
     {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
     {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/"},
-    {name: "Simple-ToDo-List", site: "https://chas-henrik.github.io/Simple-ToDo-List/"},
+    {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"},
     {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
     {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
     {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"}

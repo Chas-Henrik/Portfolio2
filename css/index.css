@@ -145,19 +145,19 @@ section {
 .paragraph__size--card-description {
     font-weight: 500;
     font-size: 1.6rem;
-    line-height: 3.2rem;
+    line-height: 2.4rem;
 }
 
 .paragraph__size--footnote-span {
     font-weight: 500;
     font-size: 1.4rem;
-    line-height: 2.6rem;
+    line-height: 2.1rem;
 }
 
 .paragraph__size--card-footnote {
     font-weight: 600;
     font-size: 1.6rem;
-    line-height: 2.6rem;
+    line-height: 2.1rem;
 }
 
 .paragraph__size--grid-role {
@@ -614,15 +614,8 @@ details {
     align-items: center;
 }
 
-@supports (text-wrap: nowrap) {
-    .card__title {
-        text-wrap: nowrap;
-        /* Not supported by Safari < 17.4 */
-    }
-}
-
 .card__description {
-    flex: 1 1 45%;
+    flex: 1 1 40%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -630,10 +623,11 @@ details {
 }
 
 .card__footnote {
-    flex: 1 1 10%;
-    display: flex;
+    flex: 1 1 15%;
+    display: grid;
+    grid-template-columns: 10.5rem 1fr;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
 }
 
